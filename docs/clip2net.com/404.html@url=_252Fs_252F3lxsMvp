@@ -1,0 +1,511 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Clip2Net &mdash; screen capture tool for Windows, Android, iPad, Mac, Linux</title>
+<meta name="description" content="Clip2net — most popular image sharing tool">
+<!-- placecut metatags -->
+                        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+                        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon.png">
+                        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon.png">
+                        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon.png">
+                        <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png">
+                        <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png">
+                        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
+                        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+                        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+        
+                                
+                                        
+                                        <!--[if lt IE 9]><script src="/js/html5.js"></script><![endif]-->
+                                        
+                                        <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+                                        <link href="/css/stl.css" rel="stylesheet" type="text/css" />
+                                        <link href="/css/jquery.prettyCheckboxes.css" rel="stylesheet" type="text/css" />
+                                        <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+                                        <script type="text/javascript" src="/js/jquery-ui.js"></script>
+                                        <script type="text/javascript" src="/js/jquery.placeholder.min.js"></script>
+                                        <script type="text/javascript" src="/js/jquery.prettyCheckboxes.js"></script>
+                                        <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+                                        <link href="/js/fancybox_new/jquery.fancybox.css" rel="stylesheet" type="text/css">
+                                        <link href="/css/jquery.selectbox_cnm2.css" rel="stylesheet" type="text/css">
+                                        <script src="/js/fancybox_new/jquery.fancybox.pack.js" type="text/javascript"></script>
+                                        <script src="/js/jquery.selectbox.js" type="text/javascript"></script>
+                                        <script type="text/javascript" src="/js/scripts.js"></script>
+                                        
+                                
+        
+
+    
+    <link href="/css/stl2.css?r=kbhj" rel="stylesheet" type="text/css" />
+    
+</head>
+
+<body     class="image-page"   >
+
+
+
+
+        <header class="head head-404">
+        <div class="wrapper clearFix">
+                <a href="/" class="logo"><img src="/img/logo2.gif" alt="clip2net"></a>
+                        
+                        <a href="http://clip2net.com/upload/?getlatest=2"  onclick="var that=this;_gaq.push(['_trackEvent','Download','Clip2net2',this.href]);setTimeout(function(){location.href=that.href;},200);setTimeout(function(){location.href='http://clip2net.com/signup_and_download.html';},3000);return false;" class="btn-download">Download clip2net for free</a>
+                        <div class="head-txt head-txt-unregister"><span> Uploaded via </span> <a href="/"> Clip2net </a> - the most popular way to share screenshots</div>
+                        <div class="file-stored">
+                        <a href="/login.html" class="btn-my-files">Login</a>
+                        <a href="/signup.html" class="btn-my-files" style="margin-left:10px">Sign Up</a>
+                        </div>
+                        
+
+        </div>
+</header>
+
+
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1468917-6']);
+  _gaq.push(['_setDomainName', 'clip2net.com']);
+  _gaq.push(['_trackPageview']);
+
+ _gaq.push(['_setCustomVar',
+      1,           
+      'Design 2.0',
+      'Yes',       
+      3            
+   ]);
+
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter7835557 = new Ya.Metrika({
+                    id:7835557,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/7835557" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+
+        
+        
+
+        
+        
+
+
+
+
+
+
+
+<section class="center">
+        <div class="wrapper">
+
+
+                
+                                
+                
+                         
+                                <div class="text" attr="404">
+                           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <script type="text/javascript">
+    $(document).ready(function(){
+        $('body').addClass('bg-gray');
+        
+        $('section.center').css({
+            'padding-bottom': '22px'
+        });
+        $('div.text').css({
+            'margin-bottom': '0px'
+        });
+        
+        
+        var bg_rand = Math.floor((Math.random() * 10) + 1);
+        if(bg_rand > 5){
+            $('.b404, .bRecover-bg').addClass('b2bg');
+        }else{
+            $('.b404, .bRecover-bg').addClass('b1bg');
+        }
+        
+        setPopupOffset();
+        
+        $(window).resize(function() {
+            setPopupOffset();
+        });
+    });
+    
+    function setPopupOffset(){
+        var window_h = $('html').height();
+
+        
+            if(window_h > 756){
+                $('.footer.f-404').css({'position':'absolute', 'left':'50%', 'margin-left':'-470px', 'bottom':'0px'});
+                var sc_offset = (window_h - $('.head').height() - $('.footer').height() - 487) / 2;
+                $('section.center').css({
+                    'padding-top': sc_offset+'px',
+                    'padding-bottom': '0px'
+                });
+            }else{
+                $('.footer.f-404').css({'position':'relative', 'left':'auto', 'margin-left':'auto', 'bottom':'auto'});
+                $('section.center').css({
+                    'padding-top': '22px',
+                    'padding-bottom': '55px'
+                });
+            }
+        
+        
+        var body_h = $(document).height();
+        $('.bPopup-hover').css({
+            'height': body_h+'px'
+        });
+        
+        var bpopup_offret = $('#bCont').offset().top;
+        $('.bPopup-cont').css({
+            'margin-top': bpopup_offret+'px',
+            'display': 'block'
+        });
+        $('#bCont').css({
+            'height': 'auto'
+        });
+        return false;
+    }
+</script>
+
+
+
+        
+            <div class="b404">
+                <div class="b404-bg"></div>
+                <div class="b404-cont">
+                    <div class="bCont" id="bCont">
+                        <div class="b404-title">404</div>
+                        <div class="b404-text"> File is missed or expired due to the limit of storage</div>
+                        <div class="b404-dbtn"> <a href="/signup_and_download.html"  class="btn-404">Download Clip2net for Free</a></div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+        
+        
+
+
+
+
+
+
+
+        
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+                                
+                
+                
+                
+        </div>
+        
+                
+                
+</section>
+
+<footer class="footer f-404 clearFix">
+        
+    
+                
+        <div class="to-email-404"><span>Have a question or suggestion? <a href="/contact.html">Contact us</a></span></div>
+                
+    
+        <script language="javascript" type="text/javascript">
+ function switchLanguage(lang) {
+  var url=window.location.href;
+  
+  
+        var myregexp = /\/index.php/;
+        var match = myregexp.exec(url);
+        if (match != null) {
+                url=url.replace(/\&lang\=ru/, '/');
+            url=url.replace(/\&lang\=en/, '/');
+            url=url+'&lang='+lang;
+
+        } else {
+                url=url.replace(/\/ru\//, '/');
+            url=url.replace(/\/en\//, '/');
+            url=url.replace(/\.com/, '.com/'+lang);
+            url=url.replace(/\.dev/, '.dev/'+lang);
+        }
+
+
+ // url='/'+lang+'/';
+  
+  /*url=url.replace(/[?&]lang=([^=&]+)/, '');
+  if (url.indexOf('?')!=-1) {
+   url+='&lang='+lang;
+  } else {
+   url+='?lang='+lang;
+  }*/
+  
+//  alert(url);
+  location.href=url;
+  return false;
+ }
+</script>
+    <div class="menu menu404">
+         
+         <a href="/terms.html">Terms</a>
+         <a href="/contact.html">Contact us</a>
+        <a href="/about.html">About</a>
+
+         <div>
+             &copy; 2017 Clip2net
+            <a  style="cursor:pointer;" onclick="return switchLanguage('ru');" class="lang-404">Русская версия</a>
+        </div>
+    </div>
+
+    <div class="download-404">
+        <span>Download clip2net for free:</span>
+<a href="http://clip2net.com/upload/?getlatest=2" onclick="var that=this;_gaq.push(['_trackEvent','Download','Clip2net2',this.href]);setTimeout(function(){location.href=that.href;},200);setTimeout(function(){location.href='http://clip2net.com/signup_and_download.html';},3000);return false;"><img src="/img/new_main2/ico-win.png" alt="">Windows</a>
+
+<a href="https://itunes.apple.com/us/app/clip2net-image-sharing/id569597114?ls=1&mt=8" onclick="var that=this;_gaq.push(['_trackEvent','Download','Clip2netItunes',this.href]);setTimeout(function(){location.href=that.href;},200);return false;"><img src="/img/new_main2/ico-mac.png" alt="">iPad</a>
+<a href="https://play.google.com/store/apps/details?id=com.clip2net" onclick="var that=this;_gaq.push(['_trackEvent','Download','Clip2netAndroid',this.href]);setTimeout(function(){location.href=that.href;},200);return false;"><img src="/img/new_main2/ico-android2.png" alt="">Android</a>
+
+    </div>
+</footer>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+        
+
+
+
+<!-- nocode, place:404_page_afterbody ID: () -->
+
+
+
+<script language="javascript">
+ //ad place
+ _gaq.push(['_trackEvent', 'Adverts', 'Code', '']);
+ _gaq.push(['_trackEvent', 'Adverts', 'Showen', '']);
+</script>
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+<!-- BEGIN PERFORMANCE REPORT
+TOTAL (1): 0.0093 100% M (s): 338688b M (e): 504824b
+module_ad (1): 0.001 10.42% M (s): 611648b M (e): 621312b
+echo_big (1): 0 0.08% M (s): 503968b M (e): 504224b
+ END PERFORMANCE REPORT -->

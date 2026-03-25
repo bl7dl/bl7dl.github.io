@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Page not found | BDcraft</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+<meta name="keywords" content="minecraft,purebdcraft,texturepack,textures,comics,cartoon,draw,animation,manga,zelda,wind waker,sphax"/>
+<meta name="copyright" content="Copyright 2011-2014 - BDcraft.net"/>
+<meta name="revisit-after" content="2 days"/>
+<link type="text/css" rel="stylesheet" media="all" href="/modules/search/search.css?I"/>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/files/css/css_e21e8affef757bc0fa062f1590c470a8.css"/>
+<script type="text/javascript" src="/sites/default/files/js/js_3ffd2c5bbe624f299bfea95d1b48ec55.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "cron": { "basePath": "/poormanscron", "runNext": 1494845686 } });
+//--><!]]>
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/css/colorbox.css"/>
+<script src="/js/jquery.colorbox.js"></script>
+<script>
+$(function(){
+	$('.lbg').colorbox({rel:'lightbox-gal'});
+	$('.lbp').colorbox({rel:'lightbox-bb'});
+	$('.iframe').colorbox({iframe:true, width:'80%', height:'80%'});
+});
+</script>
+<link rel="stylesheet" type="text/css" media="screen,projection" href="/css/ui.totop.css"/>
+<script src="/js/easing.js" type="text/javascript" async></script>
+<script src="/js/jquery.ui.totop.js" type="text/javascript" async></script>
+<script type="text/javascript">$(document).ready(function() {$().UItoTop({ easingType: "easeOutQuart" });});</script>
+ 
+<link rel="stylesheet" href="/css/bdcraft.css" type="text/css" media="screen"/>
+ 
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-892520-9']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  function recordOutboundLink(link, category, action, label) {
+	if(!link) link='none';
+	if(!category) category='unknown';
+	if(!action) action='error';
+	if(!label) label='';
+	_gaq.push(['_trackEvent', category, action, label]);
+    //_gat._getTrackerByName()._trackEvent(category, action);
+    //setTimeout('window.open("' + link.href + '")', 100);
+  }
+</script>
+ 
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"This website uses cookies for Ads and for your BDcraft account","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"dark-bottom"};
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+ 
+</head>
+<body>
+<div id="page">
+<div id="header-top"> 
+<div id="header-top-inside" class="clearfix">
+<div id="header-top-inside-left"><div id="header-top-inside-left-content"><div id="block-block-4" class="clear-block block block-block">
+<div class="content"> Shortcuts:
+<a href="/patches-list" title="/patches-list">PureBDcraft for Mods</a> |
+<a href="/bonus" title="/bonus">Bonus</a> |
+<a href="/faq-frequently-asked-questions" title="/faq-frequently-asked-questions">FAQ</a> |
+<a href="/hall-of-donators" title="/hall-of-donators">Hall of Donators</a> </div>
+</div>
+<div id="block-block-18" class="clear-block block block-block">
+<div class="content"> | <a href="/user" title="Click to login or create an account">Sign in</a></div>
+</div>
+</div></div>
+<div id="header-top-inside-left-feed"></div>
+<div id="header-top-inside-right"><form action="/wp-content/uploads/2013/09/2913366-dungeon_keeper_wallpaper.jpg" accept-charset="UTF-8" method="post" id="search-theme-form">
+<div><div id="search" class="container-inline">
+<div class="form-item" id="edit-search-theme-form-1-wrapper">
+<label for="edit-search-theme-form-1">Search this site: </label>
+<input type="text" maxlength="128" name="search_theme_form" id="edit-search-theme-form-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text"/>
+</div>
+<input type="submit" name="op" id="edit-submit-1" value="Search" class="form-submit"/>
+<input type="hidden" name="form_build_id" id="form-bcfb16bc82564d407232c9ed04943100" value="form-bcfb16bc82564d407232c9ed04943100"/>
+<input type="hidden" name="form_id" id="edit-search-theme-form" value="search_theme_form"/>
+</div>
+</div></form>
+</div>
+</div>
+</div> 
+<div id="wrapper" class="page">
+<div id="header" class="clearfix">
+<div id="logo">
+<a href="/" title="BDcraft Featuring PureBDcraft ResourcePack, Mods patches, Cubik 3D software and awesome content for Gamers&amp;amp;Artists"><img src="/pictures/bdcraft_title.png" alt="BDcraft Featuring PureBDcraft ResourcePack, Mods patches, Cubik 3D software and awesome content for Gamers&amp;amp;Artists" id="logo-image"/><div style="display:none"><span>BDcraft</span> Featuring PureBDcraft ResourcePack, Mods patches, Cubik 3D software and awesome content for Gamers&amp;amp;Artists</div></a> </div>  
+<div id="navigation">
+<ul class="menu"><li class="leaf first"><a href="/downloads" title="Download BDcraft Products">Downloads</a></li>
+<li class="leaf"><a href="/patches-list" title="Download Patches for Mods Support">Patches</a></li>
+<li class="leaf"><a href="/shop" title="BDcraft Shop (Figurines, Tees, Mugs, Cases, ...)">Shop</a></li>
+<li class="leaf"><a href="/live-chat" title="BDcraft chat for everybody">Chat</a></li>
+<li class="leaf last"><a href="http://bdcraft.net/community" title="BDcraft Community: Texturepacks, Mods,... talk, post, exchange, enjoy!">Forums</a></li>
+</ul> </div> 
+</div> 
+<div id="main-area" class="clearfix">
+<div id="main-area-inside" class="clearfix">
+<div id="main_top" class="inside">
+<div id="block-block-37" class="clear-block block block-block">
+<div class="content"> <div style="margin-top:10px;margin-bottom:-10px;"><a href="https://cubik.studio" onClick="recordOutboundLink(this, 'partners', 'cubik.studio');" target="_blank" title="Cubik Studio, THE modeler for beginners and advances users!" rel="nofollow"><img src="https://cubik.studio/img/cubik_studio_banner2.png" alt="Cubik Studio - First 3D modeler for Minecraft!"/></a></div> </div>
+</div>
+<h2 class="page-title">Page not found</h2>
+</div> 
+<div id="right" class="clearfix">
+<div id="block-block-21" class="clear-block block block-block">
+<h2>Navigation</h2>
+<div class="content"> </div>
+</div>
+<div id="block-block-20" class="clear-block block block-block">
+<div class="content"><div class="square250 ad250">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8832845725649526";
+/* BDcraft - square menu */
+google_ad_slot = "4128946605";
+google_ad_width = 250;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div></div>
+</div>
+<div id="block-menu-menu-bdcraft" class="clear-block block block-menu">
+<div class="content"><ul class="menu"><li class="collapsed first"><a href="/downloads" title="All BDcraft Textures and Resources Packs">Downloads</a></li>
+<li class="collapsed"><a href="/bonus" title="Wallpapers, Fanarts, Icons, Papercrafts, Achievements Generator, Shop, ...">Wallpapers and Goodies</a></li>
+<li class="leaf"><a href="http://bdcraft.net/community" title="BDcraft Community: Texturepacks, Mods,... talk, post, share, enjoy!">Community Forums</a></li>
+<li class="leaf"><a href="/forum" title="Old BDcraft Forum for read only">Forum archives</a></li>
+<li class="leaf"><a href="/terms-and-conditions-of-sale" title="Terms and Conditions of Sale">Terms and Conditions of Sale</a></li>
+<li class="leaf"><a href="/faq-frequently-asked-questions" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf last"><a href="/hall-of-donators" title="List of all the Awesome Donators">Hall of Donators</a></li>
+</ul></div>
+</div>
+<div id="block-user-1" class="clear-block block block-user">
+<div class="content"><ul class="menu"><li class="leaf first last"><a href="/tracker" title="">Recent posts</a></li>
+</ul></div>
+</div>
+<div id="block-block-7" class="clear-block block block-block">
+<h2>Share this page</h2>
+<div class="content"> 
+<div class="col80" style="height:80px">
+<div class="g-plusone" data-size="tall"></div>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</div>
+ 
+<div class="col80">
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="Sphax84">Tweet</a>
+<script type="text/javascript" async="async">// <![CDATA[
+(function() {
+        var twitterScriptTag = document.createElement('script');
+        twitterScriptTag.type = 'text/javascript';
+        twitterScriptTag.async = true;
+        twitterScriptTag.src = 'http://platform.twitter.com/widgets.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(twitterScriptTag, s);
+})();
+// ]]></script>
+</div>
+ 
+<div class="col80">
+<div id="fb-root"></div>
+<script type="text/javascript" async="async">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.async=true;
+  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=298665570154535";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like" data-href="http://bdcraft.net/wp-content/uploads/2013/09/2913366-dungeon_keeper_wallpaper.jpg" data-send="false" data-layout="box_count" data-width="80" data-show-faces="false" data-font="arial"></div>
+</div></div>
+</div>
+<div id="block-block-30" class="clear-block block block-block">
+<h2>BDcraft on Twitter</h2>
+<div class="content"><script language="javascript">
+<!--
+$.ajaxSetup({ cache:true });
+$.get("/twitter/?" + new Date().getMinutes(), function(data) {
+     $("#twitter").html(data);
+});
+//-->
+</script>
+<div id="twitter">Follow me to get real time news. ;) <a href="https://twitter.com/Sphax84" title="View Sphax twitter profile..." target="_blank" rel="nofollow">@Sphax84</a></div></div>
+</div>
+<div id="block-block-17" class="clear-block block block-block">
+<h2>BDcraft on Facebook</h2>
+<div class="content"><div id="fb-root"></div>
+<script async="async">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.async=true;
+  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=298665570154535";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="square250">
+<div class="fb-like-box" data-href="http://www.facebook.com/pages/PureBDcraft/268785323172766" data-width="250" data-height="230" data-colorscheme="dark" data-show-faces="true" data-border-color="#343849" data-stream="false" data-header="false"></div>
+</div></div>
+</div>
+<div id="block-block-10" class="clear-block block block-block">
+<h2>Partners</h2>
+<div class="content"><div class="square250">
+<a href="http://www.creeperhost.net" onClick="recordOutboundLink(this, 'partners', 'creeperhost.net');" target="_blank" title="Partnered with CreeperHost.net"><img src="/partners/creeperhost_banner_small.png" alt="CreeperHost.net" width="250" height="50"/></a>
+<a href="http://delvergame.com" onClick="recordOutboundLink(this, 'partners', 'delver');" target="_blank" title="Partnered with Delver Game"><img src="/partners/delver.png" alt="DelverGame.com" width="250" height="50"/></a>
+<div class="more-link">
+<a href="/partners-and-friends">More partners and friends</a>
+</div>
+<div class="more-link">
+<br/>
+<img src="/img/ban250x50.png" alt="BDcraft.net" width="250" height="50"/>
+Like this site? Share it. ;)
+</br/></div>
+</div></div>
+</div>
+</div> 
+<div id="main" class="inside clearfix">
+<form action="/search/node" accept-charset="UTF-8" method="post" id="search-form" class="search-form">
+<div><div class="form-item" id="edit-keys-wrapper">
+<label for="edit-keys">Enter your keywords: </label>
+<div class="container-inline"><div class="form-item" id="edit-keys-wrapper">
+<input type="text" maxlength="255" name="keys" id="edit-keys" size="40" value="" class="form-text"/>
+</div>
+<input type="submit" name="op" id="edit-submit" value="Search" class="form-submit"/>
+</div>
+</div>
+<input type="hidden" name="form_build_id" id="form-b0ab4fd4fb938ed3b69eff016548cbbc" value="form-b0ab4fd4fb938ed3b69eff016548cbbc"/>
+<input type="hidden" name="form_id" id="edit-search-form" value="search_form"/>
+</div></form>
+</div> 
+<div id="main_bottom" class="inside">
+</div> 
+<div id="main_footer" class="inside">
+<div id="block-block-9" class="clear-block block block-block">
+<div class="content"><script type="text/javascript" async="async"><!--
+google_ad_client = "ca-pub-8832845725649526";
+/* BDcraft - banner main footer */
+google_ad_slot = "0468151367";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+</div> 
+</div>
+</div> 
+</div> 
+<div id="footer">
+<div id="footer-inside" class="clearfix">
+<div id="footer-left">
+<div id="footer-left-1">
+<div id="block-block-23" class="clear-block block block-block">
+<div class="content"><div class="small buttons"><a href="/user" title="Click to login or create an account">Sign in</a></div></div>
+</div>
+</div>
+<div id="footer-left-2">
+</div>
+</div>
+<div id="footer-center">
+</div>
+<div id="footer-right">
+<div id="block-block-8" class="clear-block block block-block">
+<div class="content"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8832845725649526";
+/* BDcraft - square footer (300x250) */
+google_ad_slot = "7080171133";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer-bottom">
+<div id="footer-bottom-inside" class="clearfix">
+<div style="float:left">
+© 2011-2015 - BDcraft.net is the official website dedicated to the BDcraft creations and its community (such as PureBDcraft, GrungeBDcraft, XmasBDcraft, Patches for Mods and Cubik software). PureBDcraft is a Comics-themed ResourcePack for Minecraft and other games. Text and Pictures of this site are licensed under a <a href="/license-terms-of-use">Creative Commons Attribution 3.0 License</a>. The downloadable files of this site are licensed under the license mentionned on their dedicated pages.<br/>
+"Minecraft" is a trademark of Mojang. This site is not affiliated with Mojang or Microsoft.<br/>
+BDcraft.net is partnered with <a href="http://creeperhost.net" target="_blank">CreeperHost.net</a>
+<div class="none">
+</div>
+</div>
+<div style="float:right">
+</div>
+</div>
+<div class="credits-container clearfix">
+</div>
+</div>
+<script type="text/javascript" src="/sites/default/files/js/js_a073eae5cc40a8bc2a2fe38f4d39eb6c.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "googleCSE": { "language": "en" } });
+//--><!]]>
+</script>
+</div> 
+</body>
+</html>
