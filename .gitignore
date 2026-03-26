@@ -1,4 +1,6 @@
 *
 !.gitignore
+!tools/
+!tools/**
 !docs/
 !docs/**
