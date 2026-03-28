@@ -1,0 +1,81 @@
+html, body{background:#FFFFEE;color:#800000}
+a{color:#0000EE}
+a:hover{color:#DD0000}
+#head{background-color:#F0E0D6;border:solid 1px #F0D0B6;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;height:50p}
+#headlinks a{border-left:dashed #F0D0B6 2px;padding:15px}
+.adminbar{text-align:right;background:inherit;clear:both;float:right}
+.activepost {background: #FAD6BF!important;}
+.logo{font-size:2em;color:#800000}
+.theader{background:#E04000;text-align:center;padding:2px;color:#FFFFFF;width:100%}
+.rules{font-size:0.8em}
+.postblock{background:#EEAA88;color:#800000;font-weight:800;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px}
+.footer{text-align:center;font-size:12px;font-family:serif}
+.passvalid{background:#EEAA88;text-align:center;width:100%;color:#ffffff}
+.dellist{font-weight:bold;text-align:center}
+.delbuttons{text-align:center;padding-bottom:4px}
+.managehead{background:#AAAA66;color:#400000;padding:0px}
+.postlists{background:#FFFFFF;width:100%;padding:0px;color:#800000}
+.row1{background:#EEEECC;color:#800000}
+.row2{background:#DDDDAA;color:#800000}
+.unkfunc{background:inert;color:#789922}
+.filesize{text-decoration:none}
+.filetitle{background:inherit;font-size:1.2em;color:#CC1105;font-weight:800}
+.postername{color:#117743;font-weight:bold}
+.postertrip{color:#228854}
+.oldpost{color:#CC1105;font-weight:800}
+.omittedposts{color:#707070}
+.reply{background:#F0E0D6;color:#800000;border:solid 1px #F0D0B6;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px}
+.doubledash{ vertical-align:top;clear:both;float:left}
+.replytitle{font-size:1.2em;color:#CC1105;font-weight:800}
+.commentpostername{color:#117743;font-weight:800}
+.thumbnailmsg{font-size:small;color:#800000}
+.abbrev{color:#707070}
+.highlight{background:#F0E0D6;color:#800000;border:2px dashed #EEAA88}
+.menu{border-left:1px solid #F0E0D6;border-right:1px solid #F0E0D6;border-bottom:1px solid #F0E0D6}
+.menu dt{background:#EEAA88;color:#800000;padding:0px 3px 0px 3px;font-weight:bold;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px}
+.menu dd{display:block;text-decoration:none;color:#800000;padding:0px 3px 0px 3px;background:#FFFFEE}
+dl.menu dd.hidden{display:none}
+p.spoiler > span.warning{color:#FF6600;font-weight:bolder}
+span.spoiler{background:#F0D0B6;color:#F0D0B6}
+span.spoiler:hover{background:#F0D0B6;color:#800000}
+span.mod{color:#CC1105}
+span.adm{color:#800080}
+#oekaki-form select[name="oek_painter"], #oekaki-form input[type="text"]{margin-right:.7em}
+.filesize img[alt="edit"]{border:0 none!important}
+#webcam, #canvas{width:320px;border:1px solid transparent;background:#FFFFFF;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px;-moz-box-shadow:
+inset 0 0 0 1px rgba(255,255,255,0.5),
+0 1px 3px rgba(0,0,0,0.1),
+0 0 0 1px rgba(0,0,0,0.05),
+0 3px 8px rgba(0,0,0,0.1);-webkit-box-shadow:
+inset 0 0 0 1px rgba(255,255,255,0.5),
+0 1px 3px rgba(0,0,0,0.1),
+0 0 0 1px rgba(0,0,0,0.05),
+0 3px 8px rgba(0,0,0,0.1);box-shadow:
+inset 0 0 0 1px rgba(255,255,255,0.5),
+0 1px 3px rgba(0,0,0,0.1),
+0 0 0 1px rgba(0,0,0,0.05),
+0 3px 8px rgba(0,0,0,0.1);padding:.4em}
+#webcam{position:relative;margin-top:50px;margin-bottom:50px}
+#webcam > span{z-index:2;position:absolute;color:#eee;font-size:10px;bottom:-16px;left:152px}
+#webcam > img{z-index:1;position:absolute;border:0px none;padding:0px;bottom:-40px;left:89px}
+#webcam > div{border:5px solid #333;position:absolute;right:-90px;padding:5px;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px;cursor:pointer}
+#webcam a{background:#fff;font-weight:bold}
+#webcam a > img{border:0px none}
+.markup {opacity: 0}
+.m_bold, .m_italic, .m_quote,
+.m_underline, .m_overline, .m_spoiler,
+.m_strike, .m_sup, .m_sub {
+    height: 27px;
+    width: 27px;
+    display: inline-block
+}
+.m_spoiler {width: 41px}
+.m_bold {background: url(../../2ch.so/icons/markup_buttons/muon/bold.png)}
+.m_italic {background: url(../../2ch.so/icons/markup_buttons/muon/italic.png)}
+.m_quote {background: url(../../2ch.so/icons/markup_buttons/muon/quote1.png)}
+.m_underline {background: url(../../2ch.so/icons/markup_buttons/muon/underline.png)}
+.m_overline {background: url(../../2ch.so/icons/markup_buttons/muon/overline.png)}
+.m_spoiler {background: url(../../2ch.so/icons/markup_buttons/muon/spoiler.png)}
+.m_strike {background: url(../../2ch.so/icons/markup_buttons/muon/strike.png)}
+.m_sup {background: url(../../2ch.so/icons/markup_buttons/muon/sup.png)}
+.m_sub {background: url(../../2ch.so/icons/markup_buttons/muon/sub.png)}

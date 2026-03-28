@@ -1,0 +1,37 @@
+@font-face {font-family: 'fsys';src: url("../../../res/webfonts/FSEX300.eot");src: url("../../../res/webfonts/FSEX300.eot@#iefix") format('embedded-opentype'), url("../../../res/webfonts/FSEX300.woff") format('woff'), url("../../../res/webfonts/FSEX300.ttf") format('truetype'), url("../../../res/webfonts/FSEX300.svg") format('svg');font-weight: normal;font-style: normal;}
+html, body{background-image:url(../../../images/konsole.gif);font-size:12pt;background:#000000;color:#00FF00;font-family: fsys, console, fixedsys, terminal, fixed, system;}
+#adminbar ul.menu ul li a {color: #00ff00!important}
+input[type="text"], input[type="password"], textarea, input, input[type="button"], input[type="submit"],select, .mselect{background-color:#000000 !important;color:#00ff00!important;border:1px solid #00ff00}
+input::-moz-focus-inner { 	border: 0; 	padding: 0; 	margin-top:0; 	margin-bottom: 0; }
+a,.a-link-emulator,span.spoiler:hover a{color:#00ff00}
+a:visited{color:#00ff00}
+a:hover, .a-link-emulator:hover{color:#00ff00}
+a.quotelink{background:inherit;color:#00ff00}
+.orange {color: #ffff00!important}
+.rmenu a {color: #00ff00!important}
+.logo{background:inherit;color:#00ff00;font-size:24pt}
+.unkfunc{color:#0000ff}
+.mess-post {color: #0000ff;font-size: 0.9em;}
+.post .file-attr{text-decoration:none}
+.post .post-title{background:inherit;color:#00ff00;font-weight:800}
+.postername{background:inherit;font-size:12pt;color:#00ff00;font-weight:bold}
+.postertrip{background:inherit;color:#0000ff}
+.reply, .modal, .pager, .boardstats, .favorites, .fm__header {background:rgba(0,0,0,0.75);color:#00ff00; border: 1px solid #00FF00;}
+.reply.hiclass, .fm__header:hover {background: #292929;}
+.postpanel {font-size: 14px;}
+.adminbar{text-align:right;background:inherit;clear:both;float:right}
+span.spoiler, span.spoiler a{background:#444444;color:#444444}
+span.spoiler:hover{background:#444444;color:#00ff00}
+.row1{background:#E6CBC0}
+.row2{background:#D9AF9E}
+code{font-family:monospace}
+span.mod{color:#0000ff; font-size:12pt}
+.highlight{border:2px dashed #AF0A0F}
+span.adm{color:#ff0000}
+.qr, .qr .qr-header, .dropd-board-list, .dropd-board-btn {background: #000;border: 1px solid #00FF00;}
+.dropd-board-list a:hover {background-color: #2C2C2C;color: #00ff00;}
+.qr input.qsubmit {padding: 2px 6px;}
+.error {border: 1px solid #FF0000 !important;}
+.qr-settings thead tr, .qr-settings tbody tr:last-child  {background-color: #000000;}
+.qr-settings tbody tr {background-color: #2C2C2C;}
+.qr-settings .hiderules-table td {border: 1px solid #474747;}

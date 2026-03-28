@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="37px" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Embed" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mouse-over-classic-Copy-46" transform="translate(-591.000000, -147.000000)">
+            <g id="Group" transform="translate(609.500000, 165.500000) scale(-1, 1) translate(-609.500000, -165.500000) translate(594.000000, 150.000000)">
+                <path d="M15.5,31 C6.93958638,31 0,24.0604136 0,15.5 C0,6.93958638 6.93958638,0 15.5,0 C24.0604136,0 31,6.93958638 31,15.5 C31,24.0604136 24.0604136,31 15.5,31 Z M12.5857864,19.8994949 C11.8047379,20.6805435 11.8047379,21.9468735 12.5857864,22.7279221 C13.366835,23.5089706 14.633165,23.5089706 15.4142136,22.7279221 L21.0710678,17.0710678 C21.8521164,16.2900192 21.8521164,15.0236893 21.0710678,14.2426407 L15.4142136,8.58578644 C14.633165,7.80473785 13.366835,7.80473785 12.5857864,8.58578644 C11.8047379,9.36683502 11.8047379,10.633165 12.5857864,11.4142136 L16.8284271,15.6568542 L12.5857864,19.8994949 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                <circle id="Combined-Shape-Copy-3" stroke="#0332FF" stroke-width="3" cx="15.5" cy="15.5" r="17"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

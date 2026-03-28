@@ -1,0 +1,64 @@
+/* Chevereto System CSS by Rodolfo Berríos */
+
+* {	margin: 0; padding: 0; }
+
+html, body {
+	height: 100%;
+	background: url(img/background.png) #FFFFFF repeat-x;
+}
+
+body {
+	background: url(img/bliss.png) no-repeat center top !important;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	line-height: 140%;
+}
+
+a {
+	color: #327FBE;
+	outline: 0;
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+
+#main {
+	background: url(img/bkg-content.png) no-repeat;
+	width: 520px; /* 624 - 52*2 */
+	padding: 42px 52px;
+	min-height: 334px;
+	margin: 0 auto 10px auto;
+	position: relative;
+	top: 30px;
+}
+
+#top, p, ul {
+	margin-bottom: 20px;
+}
+
+#top {
+	height: 72px;
+	clear: both;
+	text-align: left;
+}
+	#top img#icon {
+		float: right;
+		margin-top: 16px;
+	}
+
+ul {
+	list-style: outside disc;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+	ul li {
+		margin: 5px 0;
+	}
+
+code {
+	font-size: 12px;
+	padding: 1px 2px;
+	background: #EFEFEF;
+	border: 1px solid #D4D4D4;
+}

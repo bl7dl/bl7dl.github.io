@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="17px" height="21px" viewBox="0 0 17 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="../../../www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15588) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 145 + Imported Layers</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Mouse-over-classic-Copy" sketch:type="MSArtboardGroup" transform="translate(-566.000000, -13.000000)">
+            <g id="Path-145-+-Imported-Layers" sketch:type="MSLayerGroup" transform="translate(567.000000, 12.000000)">
+                <path d="M8.63274615,2.06625083 C8.10086037,1.5216651 7.22105047,1.50351933 6.67280216,2.02084611 L2.28653193,6.15972802 C1.73597053,6.67923742 1.89922865,7.10203097 2.66395311,7.10409838 L12.2076364,7.12989946 C12.9666418,7.13195141 13.1567424,6.69826754 12.6188728,6.14755515 L8.63274615,2.06625083 Z" id="Path-145" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M14.5,12.5 L14.5,19.3571429 C14.5,19.9885714 13.9779167,20.5 13.3333333,20.5 L1.66666667,20.5 C1.02208333,20.5 0.5,19.9885714 0.5,19.3571429 L0.5,12.5" id="Imported-Layers" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                <path d="M7.5,4.5 L7.5,15.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

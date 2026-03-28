@@ -1,0 +1,6 @@
+(function () {
+    function rand(min,max){return Math.floor(Math.random()*(max-min+1))+min};
+    var block = document.getElementById('ambn45928');
+    if (!block) {console.log('ambn45928 not found');return false;}
+    block.innerHTML = '<iframe name="00801c2f-08ef-4592-9763-1e6b9d2472e6'+rand(1,100000)+'" src="../am15.net/ssp/banner@upst=y9M_sBYhsBmuj8Fn&bid=00801c2f-08ef-4592-9763-1e6b9d2472e6" width="728px" height="90px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>';
+})();

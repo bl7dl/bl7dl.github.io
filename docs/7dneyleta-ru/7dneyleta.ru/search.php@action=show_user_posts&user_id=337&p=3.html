@@ -1,0 +1,1010 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" lang="ru" xml:lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8"/>
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<title>Результаты поиска</title>
+
+
+
+
+
+
+
+<link href="../forumstatic.ru/style/Mybb_Patriot/Mybb_Patriot.css" rel="stylesheet" type="text/css"/>
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="../forumstatic.ru/style/style_fix.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="../forumstatic.ru/style/style_fix7.css" /><![endif]-->
+<link href="../forumstatic.ru/style/extra.41.css" rel="stylesheet" type="text/css"/>
+<link href="../forumstatic.ru/style/mobile.5.css" rel="stylesheet" type="text/css"/>
+<meta content="noindex, nofollow" name="robots"/><link href="archive.css" rel="stylesheet" type="text/css"/></head>
+<body class="archive-readonly">
+<!-- body-header -->
+<div id="pun_wrap">
+<div class="ru isguest gid3" id="pun">
+<div class="punbb" id="pun-searchposts">
+
+<div id="html-header">
+<img src="../forumfiles.ru/files/0016/da/f1/41051.jpg"/>
+</div>
+<div class="section" id="pun-title">
+<table cellspacing="0" id="title-logo-table">
+<tbody id="title-logo-tbody">
+<tr id="title-logo-tr">
+<td class="title-logo-tdl" id="title-logo-tdl">
+<h1 class="title-logo"><span>7 дней лета</span></h1>
+</td>
+<td class="title-logo-tdr" id="title-logo-tdr"><!-- banner_top --></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="pun-navlinks">
+<h2><span>Меню навигации</span></h2>
+<ul class="container">
+<li id="navindex"><a href="index.html"><span>Форум</span></a></li>
+<li id="navuserlist"><a href="userlist.php.html" rel="nofollow"><span>Участники</span></a></li>
+<li id="navrules"><a href="misc.php@action=rules.html" rel="nofollow"><span>Правила</span></a></li>
+
+
+
+</ul>
+</div>
+
+<!-- pun_announcement -->
+
+
+<div class="section" id="pun-crumbs1">
+<p class="container crumbs"><strong>Вы здесь</strong> » <a href="index.html">7 дней лета</a> » Результаты поиска</p>
+</div>
+
+<!-- banner_mini_top -->
+<div class="main multipage" id="pun-main">
+<h1><span>Результаты поиска</span></h1>
+<div class="linkst">
+<div class="pagelink">Страница: <a class="prev" href="search.php@action=show_user_posts&amp;user_id=337&amp;p=2.html">«</a>  <a href="search.php@action=show_user_posts&amp;user_id=337.html">1</a> <a href="search.php@action=show_user_posts&amp;user_id=337&amp;p=2.html">2</a> <strong>3</strong> 4 5 6 <a href="search.php@action=show_user_posts&amp;user_id=337&amp;p=7.html">7</a>  »</div>
+</div>
+<div class="topic">
+<h2><span class="item1">Сообщения, соответствующие критериям поиска</span> <span class="item2">61 страница  из 191</span></h2>
+<div class="post">
+<h3><span><strong>61</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-02-27 11:35:04</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box spoiler-box"><div>Ключи</div><blockquote><p><strong>alt_route_common</strong><br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 15em"><pre>10717 "Промолчать и послушно выйти.":
+         $ alt_day1_sl_keys_took = 3 #Новая позиция ключей (1+2)
+         window hide
+         stop music fadeout 3
+         scene bg ext_house_of_mt_day with dissolve
+         "Наверное, в такие вещи лучше и правда не лезть посторонним."
+         play sound sfx_open_door_2
+         "Славя вышла через десять минут, расстроенная — зато с новой связкой."</pre></div></div></div><p>У Слави новые ключи, но у Семёна теперь проверки на ключи не работают, так как там почти везде if alt_day1_sl_keys_took == 1, кроме подсчёта заветного 111 у Алисы. После обхода со Славей всё ещё можно выйти на других девушек, если хорошо постараться, так что данная проверка вполне актуальна. Видимо, в проверки следует включить и значение 3. Или ОД нашла и отдала Славе те самые ключи, которые лежали в тумбочке Семёна? Тогда почему он на дежурство не загремел? </p>
+<p><strong>alt_route_dv_7dl</strong><br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 19.5em"><pre>6742 if alt_day1_sl_keys_took == 1 or alt_day4_dv_7dl_extra_key:
+         me "Вообще-то, есть."
+         "Я продемонстрировал ей связку с ключами."
+         "Память девичья, события пятидневной давности уже не помнит."
+         dv "Ну и хорошо, меньше мороки."
+     elif alt_day1_sl_keys_took == 1 or alt_day4_dv_7dl_extra_key:
+         me "Я тебя в первый день, помнится, выручал…"
+         "Я позвенел ключами у неё перед носом."
+         me "И позавчера кое-что себе добыл, если помнишь."
+         dv "Это облегчает задачу."
+         "Алису, казалось, ничего не в состоянии вывести из равновесия."</pre></div></div></div><p>Условия одинаковые. Судя по тексту, во второй проверке and подразумевалось, а в первой только связка Слави.<br/>"Выручал" и "события пятидневной давности", которые могла бы помнить Алиса - это события альтернативного дня.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 18em"><pre>10693
+label alt_day6_dv_7dl_catchup:
+    if alt_day1_sl_keys_took != 0:
+        if alt_day6_dv_7dl_sl_route:
+            if alt_day4_dv_7dl_extra_key:
+                $ alt_day6_dv_7dl_key_hentai = 100
+            else:
+                $ alt_day6_dv_7dl_key_hentai = 0
+        else:
+            $ alt_day6_dv_7dl_key_hentai = 100</pre></div></div></div><p>alt_day1_sl_keys_took != 0 соответствует и значению 2, когда ключи отданы в первый же день Ольге. Тоже нужно 1 или 3.<br/>Возврат ключей после запирания под сценой можно тоже разнообразить вариантом 3 с более негативной реакцией Слави.</p></blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>62</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-02-26 02:09:36</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<p>Извините за неровный почерк - крошки в клавиатуре размокли от слёз.</p>
+<div class="quote-box spoiler-box"><div><strong>alt_route_mi_dj</strong></div><blockquote><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>1228 "По счастью, мне было не туда — обогнув здание слева, я направился к двери, где в первый же день получал комплект постельного белья."</pre></div></div></div><p>За постелью Семён ходил только при alt_day_binder != 1.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>6490 "А потом — как в дне третьем, был тонкий слой ткани, и под тканью не было никого, кроме Мику."</pre></div></div></div><p>Под проверку на танец, видимо второй (if alt_day3_dancing = 40 or alt_day3_dancing = 41), так как в первом Семён на это внимания не обратил.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 6em"><pre>7201 dreamgirl "Помнится, тебе там от родичей твоих мифических что-то должно было приехать."
+     th "Едва ли этим можно накормить одного голодного пионера и одну голодную пионерку. Так что лучше обзавестись местными дошираками."dreamgirl "Помнится, тебе там от родичей твоих мифических что-то должно было приехать."</pre></div></div></div><p>А Сеня-то не в курсе.<br/>Понял, откуда ноги растут у рюкзака. В старом четвёртом дне 7ДЛ-рута Семёну действительно родители привозили гостинцы.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>7849 me "Ну… Это неплохое продолжение романтической цепочки из танца два дня назад, наших посиделок при луне позавчера и вчерашнего дождя. Специально задумала?"</pre></div></div></div><p>О каком "танце два дня назад" речь? Если у клуба, то это часть "посиделок при луне позавчера", а если на дискотеке, то это уже три дня назад и должно быть спрятано под if alt_day3_dancing = 4 or alt_day3_dancing = 40 or alt_day3_dancing = 41.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>7878 "Вспомнив о том, как она сидела под роялем, я только многозначительно хмыкнул."</pre></div></div></div><p>Под <del>рояль </del>if alt_day2_muz_done.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 7.5em"><pre>8078 mi "Ну а потом мне сказали, чтобы я ждала — ко мне новый мальчик знакомиться придёт."
+     mi "И так глупо с этой губной гармошкой случилось!"
+     "Судя по её довольной улыбке, она считала совсем иначе."</pre></div></div></div><p>Тоже под if alt_day2_muz_done.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 12em"><pre>9834 scene cg d3_mi_dance_close_7dl
+     with flash
+     jump alt_day6_mi_dj_dance2_success
+...
+10352 label alt_day6_mi_dj_dance2_success:
+      show mi normal dress with dissolve</pre></div></div></div><p>Спрайт поверх ЦГ. В остальных случаях ЦГшка заранее перед прыжком не выводится, так что убрать лучше её, а не спрайт.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 33em"><pre>10731 if alt_day6_mi_dj_hentai2: #20 лп (19+порез), танец и хентай — гуд эндинг
+      $ routetag = "mi7dlgood"
+      $ persistent.sprite_time = "sunset"
+      $ sunset_time()
+      $ alt_chapter(7, u"Мику. DJ. Эпилог")
+      window hide
+      stop ambience fadeout 2
+      scene bg int_extra_house_7dl
+      with dissolve
+      play ambience ambience_int_cabin_evening fadein 2
+      play music tellyourworld fadein 6
+
+      "И… С добрым утром!"
+      "Проснуться на новом месте — тогда, когда глаза открываются потому что выспался, а не потому что будильник заорал."
+      "Проснуться, обнимая самое ласковое существо из всех, кого когда-либо знал."
+      "Проснуться и первым впечатлением утра впитать её тепло, запах, волнующее чувство соприкосновения обнажённой гладкой кожи."
+      "На губы сама собой выпрыгивает самая глупая улыбка из тех, что я могу изобразить — с меня взятки гладки, я молод, глуп и влюблён."
+      show mi normal dress with dspr
+      mi "Привет, Сенечка."
+      "Шепнула она."</pre></div></div></div><p>Если не было хентаев за повторное прохождение, но был хентай после танцев, то после пробуждения переход из домика на сборы перед отъездом получается слишком резкий. После того, что выше, сразу следует это:<br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 12em"><pre>11199 label alt_day7_mi_dj_preparations:
+      window hide
+      scene bg ext_square_sunset with dissolve
+      play ambience ambience_camp_center_evening
+      show mi normal pioneer with dspr
+      mi "Ну что? Кого собираем первым?"</pre></div></div></div><p>Вероятно, это связано с тем, что к проверке "if alt_day6_mi_dj_hentai1"(11031) отсутствует else с вариантом событий, когда Мику не чувствует себя плохо после совместного пробуждения.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>11993 "Электроник говорил, что детей привозят, наряжают Генду, наряжают ёлку…"</pre></div></div></div><p>Под alt_day_binder == 1.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>12392 "Для того, чтобы поговорить с Фудзита-сама, пришлось одалживаться у родителей — они не стали задавать вопросов, но…"</pre></div></div></div><p>Не стыкуется с Герком как минимум, а как максимум - и с информацией из 7ДЛ-рута(8784).<br/>Попытку звонка родителям в коммоне тоже проверить бы на соответствие.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 7.5em"><pre>12575 show mi shy pioneer with dissolve
+      voice "Намики, у тебя полчаса перед выходом!"
+      И далее.</pre></div></div></div><p>Так и задумано, что девочка-косплеерша из "Обязательно дождись" одета в пионерскую форму, а не в сценический костюм Мику?</p></blockquote></div><div class="quote-box spoiler-box"><div><strong>alt_route_common</strong></div><blockquote><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>19137 dv "И что это такое — утром впервые увидеть человека, а вечером…"</pre></div></div></div><p>Может быть познакомиться, а не увидеть? В альтернативном дне они гораздо раньше увиделись, и Алиса должна быть в курсе, так как уводила Семёна из медпункта. В обычном первом дне Алиса с Мику вместе на него в автобусе смотрели.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 6em"><pre>23914 if alt_day3_mi_dj:
+      "Я пожал плечами — после предложения Мику поучиться втроём…"</pre></div></div></div><p>В проверке не хватает and alt_day3_mi_invite.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 12em"><pre>25276 if alt_day3_mi_invite:
+          dreamgirl "Давай, а теперь спроси у неё, не хочет ли она после дискотеки сходить в клуб, и там в реквизиторской…"
+          mi "Ты тоже выглядишь замечательно."
+          me "Так твоими молитвами. Я ведь тебя так и не поблагодарил."
+      else:
+          mi "Жаль, ты не зашёл сегодня, так бы тебе тоже что-нибудь нарядное подобрали."</pre></div></div></div><p>Подбирали при alt_day3_mi_invite2. При alt_day3_mi_invite Семён просто получил приглашение прийти в клуб и подобрать, но не факт, что им воспользовался. Более того, "Жаль, ты не зашёл сегодня" не соответствует сцене вербовки диджея, где Семён всё-таки зашёл, но рубашку ему не искали.</p></blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>63</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-02-25 19:06:35</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box spoiler-box"><div><strong>alt_route_mi_dj</strong></div><blockquote><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 6em"><pre>8512 " {i}Но я продолжала петь. Как тогда, помнишь? Утренняя звезда, 83-й, землетрясение в Киото и рвущиеся к выходу гости из других стран.{/i} "
+     " {i}Отчаянная Мику пела потому, что не умела ничего иного. Всё быстрее и быстрее, будто чувствую своё скорое исчезновение.{/i} "</pre></div></div></div><p>Помнит только при alt_day2_date == 4 and not alt_day2_mi_hyst.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 7.5em"><pre>9009 if alt_day_binder != 1:
+         "И снова полукомическое наше знакомство, снова ощущение, что делает она такие телодвижения далеко не случайно."
+     "И точно."</pre></div></div></div><p>Добавить and alt_day2_muz_done. "И точно" лучше тоже под проверку.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>9269 th "Всё-таки, она что-то знает. Зачем-то же она придумала и звонок родителей, и прочие мелочи?"</pre></div></div></div><p>Какой-такой звонок?</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>9529 "Наверное, я бы и не вспомнил об этом сейчас, если бы не обладающая доступом ко всей моей памяти интуиция, вытащившая за ушко на солнышко впечатления трёхлетней давности, фразу «песня-молитва» и то, как на несколько дней, пока я несколько сотен раз крутил эту вещь в плеере, мой мир почти стал цветным."</pre></div></div></div><p>Пятилетней давности.</p>
+<p>Проверка на танец идёт в такой последовательности:<br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 12em"><pre>9681 if alt_day5_mi_dj_cut:
+...
+9711 elif alt_day6_mi_dj_un_evil:
+...
+9736 elif alt_day6_mi_dj_sl_evil:
+...</pre></div></div></div><p>На фейл танца можно улететь двумя способами до проверки на Славю, и в таком случае Семён не узнаёт о травме физрука, которой Славя отмазывается от диджейства.<br/>Перед катапультой он внезапно об этом уже знает:<br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 7.5em"><pre>9976 if alt_day6_mi_dj_sl_evil:
+         sl "Да, мне известно — кто ты и что ты такое."
+         me "О как? Это тебе Саныч на ушко нашептал, пока ты его до медпункта тараканила? Или Виола поделилась?"</pre></div></div></div><p>Видимо, проверку на фейл танца из-за Слави надо переместить выше Унылки и пореза.<br/>В событиях после фейла(label alt_day6_mi_dj_dance2_fail) тоже не мешало бы переместить if alt_day6_mi_dj_sl_evil аналогичным образом.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 10.5em"><pre>9917 elif alt_day6_mi_dj_dv_evil:
+        "После того, как до меня дошла очередь, после того, как я застирал рубашку и худо-бедно оттёр шорты, времени до отбоя уже оставалось с полчаса."
+        "Как раз хватит на то, чтобы пойти и обсохнуть."
+        "Или расколотить голову о стенку."
+        "Вздохнув, я натянул влажную рубашку и направился куда глаза глядят."</pre></div></div></div><p>А вот к этим событиям ведёт не alt_day6_mi_dj_dv_evil, а alt_day6_mi_dj_un_evil.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>9987 sl "Но я и сама начала подмечать некоторую неправдоподобность нашего лагеря. Всё эти условия — триста километров до ближайшего населённого пункта, какие-то катакомбы под лагерем, старый корпус, который не снесли."</pre></div></div></div><p>Катакомб и старого лагеря в этом руте не было.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 7.5em"><pre>10062 "Самое главное — это то, что она есть, она жива и настоящая — даже если верить словам блондинки о том, что этот мир нереален."
+       "Значит, буду жить в нереальном мире — как ежедневно поступают миллиарды людей."
+       me "Время, чужие миры, искусственность?"</pre></div></div></div><p>Об этом Славя говорила только при alt_day6_mi_dj_sl_evil.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>10937 "Так что приехал я в лагерь только в том, что на мне, и уеду в том, что на мне — но ко всему прочему прибавится неизвестно откуда взявшийся мой рюкзак и — сто процентов! — огромная сумка Мику."</pre></div></div></div><p>И рюкзака в этом руте не было.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 6em"><pre>11843 "Колёсико переключения композиций от волкмена — видимо, всё-таки отвалилось."
+      "Сам волкмен — старый, потёртый."</pre></div></div></div><p>Если Семён и Намики попали в этот мир из одного цикла, то под alt_day6_mi_dj_walkman.</p></blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>64</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-02-24 23:45:28</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box spoiler-box"><div><strong>alt_route_mi_dj</strong></div><blockquote><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 6em"><pre>1959 us "Хорошо-хорошо, ещё можно Славю привлечь."
+     me "Её маман забрала."</pre></div></div></div><p>Семён об этом знает только при alt_day4_mi_dj_sl_repet.<br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 6em"><pre>2039 th "А как же маман?"
+     dreamgirl "Что ты как маленький? Славя ведёт, маман смотрит с задних скамеек и болеет за дочурку."</pre></div></div></div><p>Туда же.<br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>2525 "И да, для четырёхлетнего мальчика эта волшебная сказка была действительно захватывающим приключением — не то что для умудрённого опытом в меру циничного меня образца четверть века спустя."</pre></div></div></div><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>2532 "В голове опять крутятся события двадцатилетней давности, Невский проспект, и попытки поймать попутку от  метро до дома. А на часах десять вечера, и огромная тёплая ладонь принадлежит самому сильному существу на свете."</pre></div></div></div><p>Двадцатипятилетней, тогда уж.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 10.5em"><pre>2626 if not alt_day4_mi_dj_sl_repet:
+         "Мику задумалась ещё раз. Вообще, после её этой мигрени она как-то изменилась —  не тараторила, не бегала и не мельтешила перед глазами."
+         me "Скажи… А у тебя голова не болит?"
+     "Будто вспомнив о своём реноме, японка заметалась по помещению."
+     mi "Пожалуй, работающую аппаратуру не оставлю… Что? Голова?"</pre></div></div></div><p>Вопрос Семёна лучше вынуть из под проверки, а то дальше немного не стыкуется, да и сам вопрос вполне нейтрален и с попаданием под гуделку может быть не связан. А предложение про реноме японки спрятать под проверку, так как оно логически связано с предложением про мигрень.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 9em"><pre>3035 th "Вот как? А тебе мало было полосочек позавчера?"
+     dreamgirl "Мало? Да если хочешь знать, таких вещей вообще много быть не может!"
+     "Подсознание ещё что-то фыркало и ворчало, как огромный кот, устраивающийся на ночлег — оно что-то знало, о чём не догадывался я."
+     "Поэтому сочло свою работу на сегодня выполненной."</pre></div></div></div><p>Под alt_day2_muz_done.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 6em"><pre>3071 if not loki and not alt_day3_mi_dj:
+        "Наш первый поцелуй."</pre></div></div></div><p>Диджей зачем?</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>3126 "Может, не такой уж и бумажной метафорой были её слова о том, что она плачет, когда мне больно."</pre></div></div></div><p>Мику говорила об этом при if alt_day2_date == 4.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>3755 "И тем забавнее было проводить параллели того, что происходило на экране с тем, куда почти дожил я."</pre></div></div></div><p>Теперь уже не "почти".</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 6em"><pre>4023 scene bg ext_clubs_day
+     show mi smile pioneer</pre></div></div></div><p>Дождь кончился, на улице светло - не помешало бы и на дневные спрайты переключиться. </p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>4916 me "Не-а. {w}Я вообще ручку в руках не держал с тех пор, как сюда попал."</pre></div></div></div><p>Если только не помогал вожатой во 2 дне. Под not alt_day2_olga_help.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>5374 "Вспомнился вдруг вчерашний день, охота на хыщника и причины, по которым Мику осталась одна в домике."</pre></div></div></div><p>Под alt_day4_mi_dj_hedg.</p></blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>65</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-02-23 21:51:26</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box spoiler-box"><div><strong>alt_route_mi_dj</strong></div><blockquote><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>274 "И вот тут-то не поможет ни сценическое настоящее, ни прошлое, где тебя зовут «Отчаянная Мику»."</pre></div></div></div><p>"Отчаянная Мику" была при условии if alt_day2_date == 4 and not alt_day2_mi_hyst.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>685 "Над головами пионеров, их родителей, проверяющих, обслуживающего персонала и просто случайных людей пронзили напоённый солнцем полдень звуки музыки, которая будет вечной."</pre></div></div></div><p>Семён ещё не знает о родительском дне, только о проверяющих. Более того, он узнаёт о РД только в разговоре со Славей на складе, да и то при дополнительных расспросах(1339), но на том варианте обеда, куда Семён попадает мимо Слави(alt_day4_mi_dj_dinner), он тоже в курсе родительского дня:<br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>1413 th "И что ж это пионерам с родичами не гуляется?"</pre></div></div></div><p>Нужно какое-нибудь упоминание, можно добавить в сцену, где Славя объявление сделать просит(если рубка готова) и в разнос от ОД(если не готова).</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 6em"><pre>1443 me "Но раз мы с тобой наплескались у умывальников — значит, до пятницы я совершенно свободен."
+И далее.</pre></div></div></div><p>Поход к умывальникам был после уборки студии, но только в том случае, если ОД не послала Семёна за новой рубашкой к Славе, взамен испачканной при ловле ежа.<br/>Так что, под if (alt_day3_technoquest_st1 or alt_day3_technoquest_st2) and not alt_day4_mi_dj_hedg.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>2388 mi "Да! Я совершенно не умею врать Па… Я рассказала про ежа, про то, как ты помогал мне, про пляж…"</pre></div></div></div><p>Пляж экстендом под if alt_day2_date == 4.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 12em"><pre>2420 if alt_day2_date == 4:
+         mi "Послушай! На меня такая ностальгия накатила… А пошли на пляж!"
+     "Предложила Мику, прикончив пюре."
+     me "Туда, где у нас было первое…"
+     mi "Свидание!"
+     "Подхватила она."</pre></div></div></div><p>Под проверкой на alt_day2_date == 4 должны быть и нижние три строки. А в верхней только предложение про ностальгию.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 10.5em"><pre>2429 mi "А как же…"
+     "Она не договорила."
+     me "Давай так, если там всё ещё не всё слава богу, то идём на пляж."
+     if not alt_day4_mi_dj_sl_repet:
+         me "В противном случае — будем смотреть кино."</pre></div></div></div><p>Три строчки выше проверки тоже должны быть под if not alt_day4_mi_dj_sl_repet.</p></blockquote></div><p>Давно хотел спросить: так и задумано, что на 7ДЛ-Мику можно выйти с очень низким количеством ЛП?<br/></p><div class="quote-box spoiler-box"><div>Пруфпик</div><blockquote><p><img alt="http://s5.uploads.ru/t/92gWN.png" class="postimg" src="http://s5.uploads.ru/t/92gWN.png"/></p></blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>66</strong> <a href="viewforum.php@id=11.html">Мику</a> » <a href="viewtopic.php@id=5.html">Мику-7дл рут</a> » 2017-02-22 23:30:37</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 485</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Zet написал(а):</cite><blockquote><p>что еще нужно для счастья?</p></blockquote></div><p>Время на развитие дальнейших событий.<br/>Вон в "Подделке" тоже на первый взгляд показалось, что вот она, та самая. А потом сами знаете.<br/>Мало ли, во что могут развиться резко оборвавшиеся "Искорка" и "Не надоест".</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>67</strong> <a href="viewforum.php@id=11.html">Мику</a> » <a href="viewtopic.php@id=5.html">Мику-7дл рут</a> » 2017-02-22 21:54:11</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 485</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Dantiras написал(а):</cite><blockquote><p>Хотя бы встретились.</p></blockquote></div><div class="quote-box"><cite>Скрытый текст:</cite><blockquote><p>Для просмотра скрытого текста - войдите или зарегистрируйтесь.</p></blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>68</strong> <a href="viewforum.php@id=11.html">Мику</a> » <a href="viewtopic.php@id=5.html">Мику-7дл рут</a> » 2017-02-22 21:24:43</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 485</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Dantiras написал(а):</cite><blockquote><p>Тсс... Нейтрал же. Не портите читателю впечатление.</p></blockquote></div><p>Хотя, для меня и "Искорка" нифига не гуд, так что это могут быть личные особенности восприятия. Тот же "Экземпляр" совсем уж бэдом тоже не считаю, наоборот, он вполне ожидаемый и реалистичный. И действительно, "так честнее".</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>69</strong> <a href="viewforum.php@id=11.html">Мику</a> » <a href="viewtopic.php@id=5.html">Мику-7дл рут</a> » 2017-02-22 21:17:42</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 485</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Dantiras написал(а):</cite><blockquote><p>Хуже не будет (есть ещё "Чёртов процессор" аналогичный по бэдовости).</p></blockquote></div><p>А как же "Клуб"?  Как по мне, это даже больше бэд, чем "Процессор".</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>70</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-02-22 01:19:00</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Lansar_Scavana написал(а):</cite><blockquote><p>Я то и искорку еще не получил</p></blockquote></div><p>Я это упомянул к тому, что бонус или выход на третью ветку получается за любую из двух хороших концовок в основных ветках Мику-7ДЛ. Так что "Странных снов" достаточно.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>71</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-02-21 22:09:09</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Lansar_Scavana написал(а):</cite><blockquote><p>А подробнее, где бонусы раздобыть?</p></blockquote></div><div class="quote-box spoiler-box"><div>Свернутый текст</div><blockquote><p>Первый бонус даётся на пляже после турнира, если получена истинная концовка DJ рута Мику. Появляется новый выбор, за который дают +1 к human или princess.<br/>Второй бонус в самом 7ДЛ-руте Мику. Если получена любая из хороших концовок - "Искорка" или "Странные сны", то в 5 дне появится новый выбор, один вариант в котором ведёт на третью ветку, а другой даёт +1/+1.</p></blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>72</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-02-21 21:05:43</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box spoiler-box"><div>Немного о турнире</div><blockquote><p><strong>conf_res_cs</strong><br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 34.5em"><pre>1049 if herc or loki:
+        menu:
+            "А тебе не надо горячего шоколада?":
+                show us surp1 pioneer with dspr
+                us "Что?"
+                me "Я говорю, можешь делать как хочешь, но ты проиграла."
+                me "А карточный долг священен. Всё, брысь отсюда, я к победе иду."
+                "Она надулась, но сделала, как я сказал."
+                hide us
+                with flash_red
+                "Правда, попутно наступила мне на ногу — пускай."
+                "Я был благодушен и простил ей эту маленькую шалость."
+                jump alt_day2_semifinal
+            "Ладно. Как хочешь.":
+                $ lp_us += 1
+                pass
+    else:
+        "Я вздохнул."
+        me " Уговорила. Дам тебе ещё один шанс."
+...
+1115 label alt_day2_semifinal:</pre></div></div></div><p>Это нормально, что при согласии на реванш с Улей нас всё равно кидает на полуфинал, так как отсутствуют какие-либо упоминания реванша в коде? По идее, для Дрища и согласного неДрища там должно быть $ alt_day2_revanche = True и jump alt_day2_tournament_start, как в аналогичной ситуации с Леной(738-769).<br/>Кстати, если согласиться на реванш с Леной, то при повторной победе переигрывают и все остальные. При победе турнирная таблица и alt_day2_qf_analizer вызываются сразу после окончания партии, но до разговоров про возможные реванши. Если разбор турнирной таблицы(строки 680-730) перенести за послематчевую болтовню с соперником, то при реванше не будет реролла результатов у остальных, вернее, результат остальных до окончания разговора с текущим противником просто не будет выводиться. Только тогда надо будет все jump alt_day2_semifinal из послематчевых диалогов убрать, чтобы не пролетать мимо передвинутого разбора таблицы, и подправить строки 828 и 838 у Слави, чтобы она 2 раза из-за стола не уходила, у остальных вроде проблем из-за этого возникнуть не должно. Непонятно, зачем эти jump вообще там нужны, если label alt_day2_semifinal следует сразу за label alt_day2_participate_win, и на него и так автоматом переход идёт после разбора ситуации с текущим соперником.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 10.5em"><pre>738 if lp_un &gt;= 6:
+        menu:
+            "Матч-реванш":
+                $ karma += 5
+                $ alt_day2_revanche = True</pre></div></div></div><p>А тут в проверке не помешало бы and not alt_day2_revanche, чтобы нельзя было фармить лп Лены до бесконечности на многократных переигровках. У Ульянки подобная проверка на реванш есть(1011), правда нет самого реванша.<br/>          <br/><strong>alt_route_sl_cl</strong><br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 10.5em"><pre>14439 if (alt_day2_f1 == 4) and (alt_day2_round3 == 1):
+        th "Тот самый фотоаппарат, принадлежащий физруку!"
+        "Я вспомнил, как после победы в турнире, Мику потащила меня к нему, и в руках у Саныча был именно этот футляр."
+        "Японочка подмигнула мне и задрала нос."
+        th "А теперь, стало быть, он отошёл по наследству, после того, как медведя увезли в город."</pre></div></div></div><p>Эта проверка соответствует поражению в финале от Мику, а фотоаппарат Саныча мы видели только при победе. Победе соответствует вариант if (alt_day2_f1 == 4) and (alt_day2_round3 = 2), или можно использовать if alt_day2_mi_snap.<br/></p></blockquote></div><div class="quote-box spoiler-box"><div>И пара мелочей</div><blockquote><p><strong>alt_route_common</strong><br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>6628 "Я уселся на лавочку и ещё раз прокрутил в голове всё, что произошло со мной сегодня, от высадки из автобуса до засады у столовой."</pre></div></div></div><p>Высадка из автобуса актуальна только для обычного первого дня.<br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 6em"><pre>17096 th "Получается, что предлагая ей плечо и отвлечённо рассуждая о возможных отношениях, я неким образом признавался ей… в симпатии?"
+th "Любви? Человеку, которого впервые встретил утром?"</pre></div></div></div><p>Такое развитие событий на пляже соответствует условию not alt_day2_mi_hyst. А фраза "впервые встретил утром" справедлива только при alt_day_binder != 1, да и то с натяжкой.</p>
+<p><strong>conf_vars_cmm</strong><br/>Зачем $ alt_day_binder = 0 в alt_day1_vars? Чтобы всякие шибко любознательные не лазали куда не надо заменой 2 на 1 в начале коммона? Так ведь не поможет, и так обойдём. Тем более, что даже при использовании официальной "прыгалки" альтернативный первый день хоть и начинается, но в коде при этом прописывается 0, и все последующие события соответствуют обычному первому дню.</p></blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>73</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-02-21 00:47:56</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Lansar_Scavana написал(а):</cite><blockquote><p>Товарищи, верно ли я понимаю, что концовка "Искорка" пока Дрищу не доступна?</p></blockquote></div><p>С бонусом от тру-диждея или от хуман-гуда теперь должно всем на неё очков хватать. А первого раза никому на неё не выйти.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>74</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-02-21 00:15:16</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<p>Решил я потереть сохранения, вырубить читы и спокойно почитать 7ДЛ, не отвлекаясь на тестинг и ковыряние в коде. Не вышло.<br/></p><div class="quote-box spoiler-box"><div>После сдвига старта до сих пор нестыковки остались</div><blockquote><p><strong>alt_route_common</strong><br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 12em"><pre>738 "Всё началось восемь лет назад."
+    "Восемь лет, изменившие мир и одного глупенького мальчика."
+    window hide
+    scene op_back with dissolve
+    play sound_loop sfx_bus_interior_moving fadein 2
+    "Две тысячи восьмой, я, студент — гордый тем, что полностью создал себя — опоздал."</pre></div></div></div><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>976 "Если чему и научился за эти восемь лет — так это тому, что иногда даже две минуты могут круто повернуть судьбу человека."</pre></div></div></div><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>1016 "За восемь лет мир изменился. {w}Я изменился."</pre></div></div></div><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>829 "Семнадцать лет, чего вы хотели… {w}Перспективный мальчик."</pre></div></div></div><p>C новым стартовым возрастом Семёна события восьмилетней давности, происходящие в возрасте 17 лет, как-то не стыкуются.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 7.5em"><pre>16120 elif loki:
+        "Мне девятнадцать — хвастаться нечем: я идиот."
+        "В лёгких что-то надсадно булькает, когда я дышу, сутулясь."</pre></div></div></div><p>Тут идут события уже после получения травм, но это тоже больше 8 лет назад.</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 13.5em"><pre>16111 if herc:
+        "Мне  двадцать два… Белые питерские ночи, я сижу на подоконнике своей квартиры, выходящей окнами на бывшую церковь, из которой Советская Власть сделала бассейн."
+        "Над головой безграничное, бездонное небо."
+        "А впереди суд."
+        "Мои доводы о том, что я единственный кормилец в семье, что мать больная, что нельзя мне, никак нельзя, сочли недейственными."
+        "КМБ, приказ, Чечня."
+        "Я вернулся из ада - только для того, чтобы узнать о том, что мою мать определили в Степанова-Скворцова - с руки того самого соцыча, что должен был либо выхлопотать мне отсрочку, либо позаботиться о матери новобранца."</pre></div></div></div><p>Если Семёну 29 в конце 2016, то 22 ему исполнилось в июне 2009. Не поздновато для Чечни?</p>
+<p><strong>alt_route_zneutral</strong><br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>6566 th "В конце концов, мне двадцать восемь, а не семнадцать!"</pre></div></div></div><p>29.</p>
+<p><strong>alt_route_sl_cl</strong><br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>10413 voice "На двадцать пять лет от нашего. Да ещё и не совсем в нашей истории."</pre></div></div></div><p>27, хотя об этом уже вроде кто-то отписывался.</p>
+<p><strong>alt_route_un_7dl</strong><br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>10941 "За двадцать восемь лет я не научился абсолютно ничему, что могло бы быть действительно полезным, отвязанным от цивилизации."</pre></div></div></div><p>29.</p>
+<p><strong>alt_route_dv_7dl</strong><br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>13091 "В продолжение истории, что началась двадцать пять лет назад…"</pre></div></div></div><p>27.</p>
+<p><strong>text_mi_7dl</strong><br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>9548 "Здесь уже было несколько подростков — а я понял вдруг, что мне всё ещё двадцать восемь, и я неуместен здесь чуть более, чем «несколько»."</pre></div></div></div><p>29, но вроде бы тоже было.</p></blockquote></div><div class="quote-box spoiler-box"><div>И немного не по датам</div><blockquote><p><strong>alt_route_common</strong><br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>7517 th "Чувак, это называется стокгольмский синдром. И в обычной жизни ты сбежал бы от неё через полчаса знакомства."</pre></div></div></div><p>Может быть не th, а dreamgirl?</p>
+<div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 4.5em"><pre>14133 "Вся эта история дурацкая, с роялем и губной гармошкой. Она встала и отряхнулась, а мне стыдно стало. Будто это она меня, а не я её буквой «зю» под роялем застукал."</pre></div></div></div><p>Нет проверки на alt_day2_muz_done. Необходимые 5 очков для Мику-ивента на пляже можно набрать и без посещения музыкального клуба, правда, только через альтернативный первый день.</p></blockquote></div><div class="quote-box"><cite>Melirius написал(а):</cite><blockquote><p>А кстати, внутренний голос ГГ сначала и в Славя-руте приписывается девушке-Харону, а в Ольга-руте — внезапно хозяину тела. В принципе, конечно, история такое допускает — руты-то разные, но когерентность страдает.</p></blockquote></div><p>В руте Лены есть об этом:<br/><strong>alt_route_un_7dl</strong><br/></p><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 6em"><pre>10860 th "Это ты?"
+      dreamgirl "Не совсем… Но канал связи тот же."</pre></div></div></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>75</strong> <a href="viewforum.php@id=5.html">Флудильня</a> » <a href="viewtopic.php@id=27.html">Ваша любимая музыка</a> » 2017-02-19 00:27:34</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 305</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box spoiler-box"><div>Ещё немного жизнеутверждающего.</div><blockquote></blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>76</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-02-16 16:12:09</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Dantiras написал(а):</cite><blockquote><p>Меня ещё в Стиме просили проверить выход на РФ-гуды за Дрища в Славя-Классике.</p></blockquote></div><p>Безвольный Дрищ набирает 21 ЛП при наличии бонуса с турнира, волевой - 22, так что выйти можно, просто надо лучше стараться.<br/>У них в стиме схемы висят же, там ведь всё написано.</p>
+<p>Проверил на всякий случай. Оказалось, что там даже 23 с турниром набирается, если совсем хорошо стараться.<br/></p><div class="quote-box spoiler-box"><div>Свернутый текст</div><blockquote><p>Без турнира на старте четвёртого дня максимум 17 ЛП, с турниром - 18 ЛП.<br/>ЛП/воля.<br/>"Давай-ка, пока время есть, сбегаем посмотрим." 17/1<br/>"Ну, если ты настаиваешь…" 18/1<br/>"Договорились." 19/0<br/>"Спрятаться."<br/>"Шурик, если тебя здесь нет…" 19/1<br/>"Давай попробуем!"<br/>"Со мной всё в порядке." 19/2<br/>"Прикрыть Славю" 20/3<br/>"Надо прорываться наружу."  22/5<br/>"Я не хочу!" 23/6<br/>"Нужен только усилитель?"<br/>"А кто за концертом следить будет?"/"А можно?"<br/>"Как всё невовремя."</p></blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>77</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-02-15 20:31:23</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<p>А зачем персонажу иметь какие-то собственные мотивы для отравления щенка? Тут может быть задействована та же технология, что и при автопилоте Семёна от велосипеда до Ульянки. Заодно и не сознается, если что. К тому же, не обязательно это кто-то из главных персонажей, которые обычно на виду, проще сделать это руками того, на кого Семён и Славя не обращают особого внимания.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>78</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-02-06 10:49:32</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<p>Тут товарищи в стиме обнаружили, что в pls_mi_7dl в 6 строке проверка на alt_day4_mi_7dl_donor вместо alt_day3_mi_7dl_donor.<br/>А не, всё в порядке, проверка правильная. Это результат отсутствия там фикса с переменными четвёртого дня.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>79</strong> <a href="viewforum.php@id=9.html">Алиса</a> » <a href="viewtopic.php@id=9.html">Алиса-7дл рут</a> » 2017-02-04 11:43:14</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 174</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Dantiras написал(а):</cite><blockquote><p>О нет. Верх мастерства - получение танца с Ольгой в 6-й день.</p></blockquote></div><p>Не такая уж и редкая сцена. На неё довольно часто выходят те, кто хочет с Ольгой не совсем потанцевать, а потом удивляются, что дальше ничего не было.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>80</strong> <a href="viewforum.php@id=9.html">Алиса</a> » <a href="viewtopic.php@id=9.html">Алиса-7дл рут</a> » 2017-02-03 18:05:36</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 174</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>HideoGodzilla написал(а):</cite><blockquote><p>Люди вон облитым Дрищем научились её романсить, а у тебя целый Герк</p></blockquote></div><p>Верх мастерства - трезвенно-целомудренное прохождение за Дрища на гуд.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>81</strong> <a href="viewforum.php@id=5.html">Флудильня</a> » <a href="viewtopic.php@id=75.html">Бар "7 летних ночей" - 7</a> » 2017-02-03 18:02:04</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 999</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Dantiras написал(а):</cite><blockquote><p>Хуже изнасилования с последующим убийством? Ну ничего себе =)</p></blockquote></div><p>Статья та же, пункт другой. Короче, не надо так. Лена хотя бы относительно взрослая и постоять за себя умеет.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>82</strong> <a href="viewforum.php@id=5.html">Флудильня</a> » <a href="viewtopic.php@id=75.html">Бар "7 летних ночей" - 7</a> » 2017-02-03 17:58:36</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 999</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>22й написал(а):</cite><blockquote><p>Эй-эй. Я этого не говорил )</p></blockquote></div><p>Что-то закосячил при цитировании. Вас и товарища shers'а процитировать хотел, но одна из цитат как-то странно отвалилась, а вторая ушла не под то авторство.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>83</strong> <a href="viewforum.php@id=5.html">Флудильня</a> » <a href="viewtopic.php@id=75.html">Бар "7 летних ночей" - 7</a> » 2017-02-03 17:49:54</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 999</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Dantiras написал(а):</cite><blockquote><p>Если нетрудно, расскажите, что же случилось с "Каникулами".</p></blockquote></div><p>Выпилены из стима авторами, скорее всего. Туда им и дорога. Сам мод выделялся из среднестатистического стимовского шлака только объёмом. Содержимое было написано толпой людей в совершенно разных стилях и состыковано так, что философские простыни на весь экран соседствовали с предложениями  "я поел", "я поспал", "я погулял с %girlname%". Среди прочего, там была одна довольно неприятная сцена (как вишенка, только хуже), из-за которой, видимо, и удалили мод.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>84</strong> <a href="viewforum.php@id=5.html">Флудильня</a> » <a href="viewtopic.php@id=75.html">Бар "7 летних ночей" - 7</a> » 2017-02-03 16:46:10</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 999</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>22й написал(а):</cite><blockquote><p>А каково Ульянофагам?</p></blockquote></div><p>Да лучше уж никак, чем так, как в некоторых модах с ней. Правильно "Каникулы" выпилили.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>85</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-02-03 13:07:46</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<p><strong>conf_res_define</strong><br/>Косяк в названии был не с night/sunset/prolog версиями(249-251), которые используются в заставках, а только с обычной версией стенда(316), на котором стенгазета и объявление Виолы. Хотя, раз в вызове заставок тоже исправлено, значит так и надо, для единообразия. Но с заставочными проблем не было.</p>
+<p>И моё любимое:<br/>Пересечением множеств "not (persistent.un_7dl_good_ussr or persistent.un_7dl_good_rf)" и "not loki" являются Герк и Дрищ при прохождении без гуда. А проверку должны проходить все варианты, кроме Локи с гудами. Если вместо and будет or, то результат будет выводиться у всех персонажей при отсутствии гуда и у Дрища с Герком при наличии, что и требуется. Так и не понял, чем плохи предложенные мной дополнительные скобки.</p>
+<p>+ по Мику.<br/><strong>text_mi_7dl </strong><br/>После того как поменялись условия выхода на хуман-концовки, проверки на события в alt_day7_mi_7dl_departure_a2th перестали этим концовкам соответствовать.<br/>В pls_mi_7dl мы видим следующее: lp_mi &gt; 16 и alt_hpt &gt;= 9 выводят на гуд, lp_mi &gt; 16 с более низким alt_hpt - на нейтрал, недостаток lp_mi - на бэд. Но в тексте сначала идёт проверка на alt_hpt &gt; 6(строка 10408) - будет ли Семён удерживать Мику, а затем на lp_mi &gt; 15(строки 10422 и 10468)- насколько успешно. Видимо, проверки на события в автобусе нужно привязать к тем же переменным и их значениям, что и концовки: lp_mi &gt; 16 - держит или отпустил, alt_hpt &gt;= 9 - удержал(почти) или нет. Аналогично с музыкой в 10383-10388 - нужна структура проверки как в pls_mi_7dl на концовки, и планируемыми картинками в 10460-10464 - проверка на alt_hpt &gt;= 9.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>86</strong> <a href="viewforum.php@id=8.html">Ольга, Ульяна и руты Одиночек</a> » <a href="viewtopic.php@id=24.html">Юля</a> » 2017-02-03 12:09:57</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 461</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Dantiras написал(а):</cite><blockquote><p>Более того, я не встречал совсем чистых, древнейших версий 1.1 БЛ, где данный орикофикс отсутствует. Так что качать ничего не нужно.</p></blockquote></div><p>У меня как раз такая, но для работы 7ДЛ поверх неё пришлось ставить модпак сомнительного содержания, который весит больше самой игры. Если бы существовал чисто ресурс-пак, без всяких левых модов, было бы удобнее, но такого найти не удалось.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>87</strong> <a href="viewforum.php@id=8.html">Ольга, Ульяна и руты Одиночек</a> » <a href="viewtopic.php@id=24.html">Юля</a> » 2017-02-02 23:02:49</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 461</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Dantiras написал(а):</cite><blockquote><p>ванильного БЛ (everlasting_summer-1.1\game\images\1080\cg_new)</p></blockquote></div><p>Ванильного ли? Это же творчество Орики, которое в чистой 1.1 отсутствует и добавляется к ней модпаком. Почему вообще в 7ДЛ до сих пор используются ресурсы из него, разве не проще эти картинки в сам мод добавить с уникальными _7dl-нутыми названиями? Тогда для запуска не потребуется качать <del>модпак</del> кучу шлака, а достаточно будет 1.1 и селектора.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>88</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-02-02 22:46:53</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<p>В <strong>conf_res_define</strong>(316) картинка задана так:<br/>image bg <span style="font-style: italic">ext_stand_3_7dl </span>= get_image_7dl("bg/ext_stand3_7dl.jpg")<br/>Но вызывается в игре <span style="font-style: italic">ext_stand3_7dl</span>. <br/>В <strong>alt_route_sl_cl</strong>, строки 4207, 4218, 4239, 4270, 4286, 4346, 4500, 8233, 8239.<br/>В <strong>alt_route_mi_dj</strong> строка 9064.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>89</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-01-31 21:53:20</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<p>От френдзоны одни проблемы.<br/><strong>conf_vars_rt</strong><br/>В alt_day4_sl_cl_vars тоже не хватает $ alt_day4_fz_sh = 0.</p>
+<p>В alt_day4_un_fz_vars нужно добавить следующие переменные:</p>
+<p>$ alt_day4_sl_lf_solo = 0<br/>$ alt_day4_sl_tut_iz = False<br/>$ alt_day4_sl_un_rej = False<br/>Чтобы не было глюков при транзите на Славю.</p>
+<p>$ alt_day4_neu_mt_volley = False<br/>$ alt_day4_neu_mt_diary = False<br/>$ alt_day4_neu_us_snake = False<br/>$ alt_day4_neu_date = 0<br/>$ alt_day4_neu_mt_songs = False<br/>$ alt_day4_neu_mt_fire = False<br/>$ alt_day4_neu_mt_volonteer = False<br/>Чтобы не было глюков при транзите на ОД.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>90</strong> <a href="viewforum.php@id=3.html">Техподдержка</a> » <a href="viewtopic.php@id=44.html">Версия 1.2 и Стим</a> » 2017-01-31 16:34:48</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>Sitzileon</strong></li>
+<li class="pa-replies">Ответов: 124</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>sirparmezan написал(а):</cite><blockquote><p>т.е. остается только ждать?</p></blockquote></div><p>Можно в файле conf_vars_rt.rpy под строкой label alt_day4_neu_us_vars: добавить $ alt_day4_fz_sh = 0. Но после этого нужно будет загрузиться с сейва до начала 4 дня, чтобы оно корректно заработало.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="linksb">
+<div class="pagelink">Страница: <a class="prev" href="search.php@action=show_user_posts&amp;user_id=337&amp;p=2.html">«</a>  <a href="search.php@action=show_user_posts&amp;user_id=337.html">1</a> <a href="search.php@action=show_user_posts&amp;user_id=337&amp;p=2.html">2</a> <strong>3</strong> 4 5 6 <a href="search.php@action=show_user_posts&amp;user_id=337&amp;p=7.html">7</a>  »</div>
+</div>
+</div>
+
+<!-- pun_stats -->
+<!-- banner_mini_bottom -->
+<!-- banner_bottom -->
+
+<div class="section" id="pun-crumbs2">
+<p class="container crumbs"><strong>Вы здесь</strong> » <a href="index.html">7 дней лета</a> » Результаты поиска</p>
+</div>
+
+
+
+<!-- html_footer -->
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+<HTML><HEAD><META HTTP-EQUIV="Refresh" CONTENT="0; URL=../../../dic.academic.ru/404.html"><TITLE>302 File moved</TITLE></HEAD></HTML>

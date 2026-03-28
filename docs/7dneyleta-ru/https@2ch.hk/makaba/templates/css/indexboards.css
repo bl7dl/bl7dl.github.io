@@ -1,0 +1,41 @@
+.board-data {width:1000px;margin:0 auto;}
+.board-title {margin-bottom: 4px;}
+.board-speed {color: #707070;font-size: 0.9em;}
+.board-stats {margin-left: 15px;}
+.cloudboard {margin-top: 20px;}
+.cloudlink {text-decoration: none;}
+.cloudheader {padding: 5px;background: #FCFCFC none repeat scroll 0% 0%;border: 1px solid #ccc;}
+.cloudheader .cloudoption {font-size: 16px;margin: 0 5px;color: rgba(110, 110, 110, 1);}
+.cloudheader .cloudoption:hover {color: #000;}
+	.table {    display: table;    border-collapse: separate;    border-spacing: 2px;    border-color: grey;}
+		.tbody {    display: table-row-group;    vertical-align: middle;    border-color: inherit;}
+		.tr {display: table-row;    vertical-align: inherit;    border-color: inherit;}
+		.table .tbody .tr:nth-of-type( even ) {
+    background-color: #DDD;
+}
+		.td, .th {display: table-cell;    vertical-align: inherit;}
+		.th {font-weight:bold;}
+		.table {    margin: auto;}
+		.table .tbody .td {margin: 0; padding: 4px 15px 4px 4px;    padding-top: 4px;    padding-right: 15px;    padding-bottom: 4px;    padding-left: 4px;    text-align: left;}
+		.table .thead .th {   display:table-cell;  border: 1px solid #000333;    padding: 4px 15px 5px 5px;    background: #f60;    color: #000333;    text-align: left;    white-space: nowrap;}
+		.board-list-table {    display: table;    margin: 0 0 10px;    /* overflow: hidden; */   table-layout: fixed;     width: 100%; font-size:0.9em;}
+		.thead {    display: table-header-group;    vertical-align: middle;    border-color: inherit;}
+		
+		.board-list-table .board-title {width:136px;}
+		.board-list-table .board-name {width:auto;}
+		.board-list-table .board-speed {width: 55px;    padding: 4px;}
+		.board-list-table .board-ip {width: 90px;    padding: 4px;}
+		.board-list-table .board-desc {position: relative;    height: 15px;    width: auto;    padding: 0 15px 0 4px;}
+		.board-list-table .board-posts {width: 120px;    padding: 4px;}
+		.cloudboard { display: table-row-group;    vertical-align: middle;    border-color: inherit;} 
+		.madape { vertical-align: inherit;    border-color: inherit;}
+		
+		.board-list-table .board-cell {    position: static;    margin: 0;    padding: 0;    box-sizing: border-box;   /* white-space: nowrap;    overflow: hidden;*/    text-overflow: ellipsis; font-size:0.9em;}
+		.board-list-table .board-cell::after {	content: ' ';	clear: both;}
+		/*.board-list-table .board-desc .board-cell:hover {    position: absolute;    background: #EEE;    line-height: 23px;    top: 0;    bottom: 0;    width: 510px;}
+		.board-list-table  .tr:nth-of-type(2n) .board-desc .board-cell:hover {  background: #DDD; } */
+		
+		.board-thread{display: table-cell;}
+		
+
+		

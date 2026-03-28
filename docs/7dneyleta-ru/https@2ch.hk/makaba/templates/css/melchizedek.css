@@ -1,0 +1,128 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html, body {
+	background-color: #EEE;
+	color: #333;
+	font-family: Verdana,sans-serif!important;
+	font-size: 14px;
+}
+
+a:link {text-decoration: underline;}
+a {color: #FF6600;}
+a:hover {color: #0066FF;}
+
+.topic {
+	color: #004A99;
+}
+
+.header {
+	margin-bottom: 20px;
+	font-size: 30px;
+	color: #ff7000;
+	text-align: center;
+	clear: both;
+	overflow: hidden;
+	padding: 20px 0 15px 0;
+	width: 1000px;
+	margin: auto;
+	margin-bottom: 30px;
+}
+.header a {
+	text-decoration: none;
+}
+.header a:hover {
+	color:#F26722;
+}
+.logo {
+	background: url("../../../images/dvlogo.png") no-repeat scroll 0 0 transparent;
+	color: #F26722;
+	font-size: 46px;
+	font-weight: bold;
+	padding: 0 0 0 40px;
+}
+
+.box {
+	margin: auto;
+	border: 1px solid rgb(206,206,206);
+	background: #e6e6e6;
+	width: 1000px;
+}
+
+.box.thin {width: 600px;}
+
+.box-header {
+	border-bottom: 1px solid rgb(206,206,206);
+	text-align: center;
+	padding: 10px;
+	font-size: 1.4em;
+}
+
+.box-data {
+	padding: 10px;
+	overflow: auto;
+	text-align: left;
+}
+
+.box .captcha-box img {width: 280px; height: 70px;}
+
+footer {
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+footer .foot {
+	font-size: 12px;
+}
+
+hr.dotted {border: none;border-top: 1px dashed rgb(206,206,206);height: 0;}
+input[type="button"], input[type="submit"] {
+    padding: 2px 6px;
+    border: 1px solid #CACACA;
+    background: #EAEAEA;
+}
+input[type="text"],input[type="email"], input[type="password"], textarea {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #CACACA;
+    outline: medium none;
+    padding: 2px 4px;
+}
+
+/* body-stickers */
+.body-stickers {margin:40px;text-align: center;}
+.sticker-thumb {margin-bottom:5px;width:120px;}
+.body-stickers .sticker a {padding: 0 20px;}
+.body-stickers-addform {width: 380px;margin: 0 auto;text-align: left;}
+.body-stickers-addform-tip {font-size: 0.8em;}
+.body-stickers .sticker {
+	display: inline-block;
+	padding: 20px 0;
+	padding-bottom: 0;
+	vertical-align: top;
+	border: 1px solid #DDD;
+	margin: 0 24px 20px 0;
+	border-radius: 4px;
+	color: #333;
+}
+.body-stickers .sticker:hover {	border-color: #CCC;}
+.body-stickers .sticker-info {
+    background: rgba(0,0,0,.045);
+    padding: 10px;
+    border-top: 1px solid #DDD;
+	font-size: 0.9em;
+}
+.body-stickers .sticker-info form {
+	margin-top: 5px;
+}
+.body-stickers .added-sticker  {opacity: 0.5;}
+.sticker-header {margin-bottom:10px;}
+.error-body {
+	width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* end body-stickers */

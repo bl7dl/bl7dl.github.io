@@ -1,0 +1,94 @@
+function select_field (field)
+{
+	field.focus();
+	field.select();
+}
+
+function setPosition ($el) {
+	var newTop = $(document).scrollTop();
+	var rCorner = $(document).scrollLeft() + $(window).width() - ($.browser.opera ? 14 : 8);
+	var newLeft = Math.max(0, rCorner - $el.width());
+	$el.css({ top: newTop, left: newLeft });
+}
+
+function generateSummaryLinks (SLcontainer, nonewline)
+{
+	// ассоциативный массив 'id' => 'links', хранит имя группы и сами ссылки
+	var links_ary = [];
+	// флаг, что есть хоть какие-то ссылки
+	var links_ok  = false;
+       
+	// контейнер с picinfo дивами
+	$sl = $(SLcontainer);
+	// иницилизация
+	$sl.html('<h4 class="dCenter">Суммарные коды ссылок</h4><ul></ul>');
+
+	// обработка существующих ссылок
+	$('.picinfo').each(function(){
+		$(this).find('input').each(function(id){
+			var $inp = $(this);
+			// имя группы, например '# Превью - увеличение по клику:'
+			var id   = $inp.parent().find('span').html();
+			if (typeof links_ary[id] == 'undefined') {
+				links_ary[id] = [ $inp.val() ];
+			}
+			else {
+				links_ary[id].push($inp.val());
+			}
+			if (!links_ok) {
+				links_ok = true;
+			}
+		});
+	});
+	// проверка, что были обработаны ссылки
+	if (!links_ok) {
+		return false;
+	}
+	// комплектация в суммарные textarea
+	var i = 0;
+	for (id in links_ary) { 
+		switch(i)
+		{
+			case 0:  // ссылки
+			case 1:  // изображение в тэге [IMG]
+			case 3:  // <img src="">
+				delimiter = '\n';
+				break;
+			default: // превью
+				delimiter = ' ';
+				break;
+		}
+		var txt  = links_ary[id].join(delimiter);
+		var name = id;
+		$sl.find('ul').append('\
+				<li>' + name + '\
+				<textarea>' + txt + '</textarea><br />\
+				</li>');
+		i++;
+	}
+	// выделение текста при фокусе на textarea
+	$sl.find('textarea').bind('click', function(){ this.focus(); this.select(); });
+	$sl.show();
+	return true;
+}
+
+$(document).ready(function(){
+	// генерация суммарных тэгов
+	if ($('.picinfo').length > 1 && $('#summaryLinks').length > 0) {
+		generateSummaryLinks('#summaryLinks');
+	}
+	
+	// закругления
+	var areas = [ 'login-area', 'load-area', 'reg-area', 'begun-area' ];
+	$.each(areas, function(i, key){
+		$area = $('#' + key);
+		if ($area.length > 0) {
+			$area.corner();
+		}
+	});
+
+	// масштабирование
+	$('#orig-resize-helper').bind('change', function(){
+		$('#orig-resize').val($(this).val());
+	});
+});

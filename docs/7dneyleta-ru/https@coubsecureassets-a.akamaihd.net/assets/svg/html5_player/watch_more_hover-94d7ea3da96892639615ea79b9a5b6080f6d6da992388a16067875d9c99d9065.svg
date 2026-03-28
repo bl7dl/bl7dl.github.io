@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="127px" height="37px" viewBox="0 0 127 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>watch_more_hover</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="watch_more_hover" transform="translate(63.500000, 18.500000) scale(-1, 1) translate(-63.500000, -18.500000) translate(1.000000, 1.000000)">
+            <path d="M108,2.00791185 C116.329008,2.27186427 123,9.10688534 123,17.5 C123,25.8931147 116.329008,32.7281357 108,32.9920882 L108,33 L17.498421,33 C8.93887943,33 2,26.0622958 2,17.5 C2,8.93958638 8.93449847,2 17.498421,2 L108,2 L108,2.00791185 Z M104.585786,21.8994949 C103.804738,22.6805435 103.804738,23.9468735 104.585786,24.7279221 C105.366835,25.5089706 106.633165,25.5089706 107.414214,24.7279221 L113.071068,19.0710678 C113.852116,18.2900192 113.852116,17.0236893 113.071068,16.2426407 L107.414214,10.5857864 C106.633165,9.80473785 105.366835,9.80473785 104.585786,10.5857864 C103.804738,11.366835 103.804738,12.633165 104.585786,13.4142136 L108.828427,17.6568542 L104.585786,21.8994949 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <rect id="Combined-Shape-Copy" stroke="#0332FF" stroke-width="3" x="0.5" y="0.5" width="124" height="34" rx="17"></rect>
+        </g>
+    </g>
+</svg>

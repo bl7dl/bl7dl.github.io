@@ -1,0 +1,292 @@
+html {
+    background: url("../images/descbg.gif") repeat;
+    font-family: Verdana,sans-serif;
+}
+a:link, a:visited {
+    color: #FF7000;
+    text-decoration: underline;
+}
+.bline b {
+    color: #777777;
+    font-size: 12px;
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: none;
+}
+.header a:hover {color: #FF7000;}
+.header {
+    margin-bottom: 20px;
+	text-align: center;
+	clear: both;
+	margin: auto;
+}
+.header a.mainlogo {
+	text-decoration: none;
+}
+.mainpage #adminbar {
+	margin-bottom: 20px;
+}
+.mainpage .pager {
+	background-color: #FCFCFC;
+	border: none;
+}
+.mainlogo {
+	background: url("../images/dvlogo.png") no-repeat scroll 0 0 transparent;
+	color: #F26722;
+	font-size: 46px;
+	font-weight: bold;
+	padding: 0 0 0 40px;
+}
+.welcomefriend {display: block;font-size: 1.2em;line-height: 2em;color: #FF7000;}
+.pop-data {font-size: 0.9em;}
+.pop-thread {
+	border-bottom: 1px dashed rgb(206,206,206); 
+	margin-left: 0; 
+	clear: both;
+	overflow: hidden;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+.pop-stats {font-size: 0.8em;color: #8F8F8F;}
+.pop-title {word-break: break-all;}
+.boardname {
+	font-weight: bold;
+	color: #004A99;
+}
+.welcome {
+    color: #292929;
+    float: left;
+    font-size: 24px;
+    margin: 16px 0 0 30px;
+    white-space: nowrap;
+}
+.hdescription {
+    color: #292929;
+    font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    margin: 30px 0 !important;
+    padding: 20px !important;
+}
+.hdescription-stats{
+    color: #292929;
+    font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    padding: 20px !important;
+}
+.hboardlist .column {
+	float: left;
+	width: 20%;
+}
+.hboardlist .column .boardsubj{
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: rgba(90, 90, 90, 1);
+}
+.hboardlist .column .otherboards{
+	margin-top: 10px;
+	font-weight: bold;
+}
+.hnews .column50 {float: left;width: 49%;}
+.hnews .column50:first-child {margin-right:2%;}
+.hnews .fa-newspaper-o {margin-right: 4px;}
+.hnews .news-title {text-align:center;margin-bottom: 10px;font-size: 20px;}
+.hnews .news-posts-count {color: #999;font-size: 0.9em;}
+.himg {
+    float: right;
+    height: 265px;
+    margin: 33px 0 0;
+    overflow: hidden;
+    width: 150px;
+}
+.himg img {
+    width: 150px;
+}
+.content {
+    clear: both;
+    margin: 0 auto;
+    /*overflow: hidden;*/
+    width: 1000px; /*960px was*/
+}
+.left {
+    float: left;
+    overflow: hidden;
+}
+h3 {
+    color: #292929;
+    font-weight: normal;
+}
+#tabbed li {
+	display: inline-block;
+	background: #FCFCFC;
+	padding: 0 5px;
+	font-size: 14px;
+	border: 1px solid #D7D7D7;
+	border-bottom: none;
+	cursor: pointer;
+	line-height: 2em;
+}
+#tabbed li.ui-tabs-active {
+	margin-bottom: -3px;
+	padding-bottom: 3px;
+}
+#tabbed .ui-tabs-nav a, #tabbed ul li a {display: ineline-block;text-decoration: none; }
+#tabbed li.ui-tabs-active a {color: initial;}
+
+.postscontainer {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FCFCFC;
+    border-color: #D7D7D7;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0 0 20px;
+    overflow: hidden;
+    padding: 15px 15px 0;
+}
+.postscontainer .newsline {
+    border-bottom: 1px dotted #E0E0E0;
+    margin: 0 0 15px;
+    padding: 0 0 15px;
+    text-align: center;
+}
+.postscontainer .date {
+    color: #9B9B9B;
+    font-size: 11px;
+    margin: 0 0 3px;
+}
+.postscontainer .newstitle {
+    color: #292929;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 8px;
+}
+.postscontainer .newstitle a {
+    color: #292929;
+}
+.postscontainer .newsdescription {
+    color: #454545;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+}
+.postscontainer a:link, .postscontainer a:visited {
+    text-decoration: none;
+}
+.postscontainer a:hover {
+    text-decoration: underline;
+}
+.postscontainer .hpics {
+    border: 1px solid #EDEDED;
+    float: left;
+    height: 138px;
+    margin: 0 0 0 10px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 138px;
+}
+.postscontainer img {
+    display: block;
+    vertical-align: middle;
+}
+.hbanner {
+    margin: 28px 0 30px;
+    overflow: hidden;
+}
+.right {
+    float: right;
+    overflow: hidden;
+    width: 300px;
+}
+.right h3 {
+    margin: 0 0 12px;
+}
+.bline {
+    clear: both;
+    margin: 0 0 10px;
+    overflow: hidden;
+}
+.clear {
+    clear: both;
+    overflow: hidden;
+}
+.bline .btitle {
+    color: #454545;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    overflow: hidden;
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+.bline .togglediv {
+    border-top: 2px solid #D0D0D0;
+    margin: 0;
+    overflow: hidden;
+    padding: 15px 0 0;
+}
+.bline .btitle span {
+    display: block;
+    float: left;
+    white-space: nowrap;
+}
+.bline .btitle .btoggle {
+    background-image: url("../images/btoggle.gif");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    float: right;
+    height: 14px;
+    width: 14px;
+}
+.bline.inactive .btitle .btoggle {
+    background-position: 0 -14px;
+}
+.bline.inactive {
+    border-bottom: 1px dotted #E0E0E0;
+}
+.bline a:link, .bline a:visited {
+    color: #777777;
+    font-size: 12px;
+}
+.bline a:hover {
+    color: #FF7000;
+}
+.bline .blcolumn {
+    float: left;
+    margin-right: 44px;
+    overflow: hidden;
+    width: 140px;
+}
+.bline .brcolumn {
+    float: right;
+    line-height: 12px;
+    overflow: hidden;
+    width: 140px;
+}
+.brcolumn li, .blcolumn li {
+    display: block;
+}
+.togglediv .rseparator {
+    height: 30px;
+}
+footer {
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+footer .foot {
+	font-size: 12px;
+}
+.eighteen {
+    background-image: url("../images/18plus.gif");
+    background-position: 0 1px;
+    background-repeat: no-repeat;
+    height: 15px;
+    margin: -1px 0 0 5px;
+    width: 21px;
+}

@@ -1,0 +1,13 @@
+hr {border: none;border-top: 1px dashed rgb(206,206,206);height: 0;}
+.box ~ .box {
+	margin-top: 20px;
+}
+.notfound404 {font-size: 2em;}
+span.nowrap {display: inline-block;	margin: 5px 5px 2px 0;font-size: 12px !important;}
+.boardname {font-weight: bold;color: #004A99;}
+ol { counter-reset: item; list-style-type: none; }
+li {padding: 3px 0;}
+ol > li:before { content: counters(item, ".") ". "; counter-increment: item; font-weight: bold; }
+
+ol.abcd {  list-style-type: lower-alpha; }
+ol.abcd li:before {content: '';}

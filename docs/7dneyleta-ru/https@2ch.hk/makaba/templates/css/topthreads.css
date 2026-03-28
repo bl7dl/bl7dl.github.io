@@ -1,0 +1,34 @@
+.pop-data {
+	counter-reset: postcount;
+}
+
+.pop-thread {
+	margin-left: 15px;
+	position: relative;
+}
+
+/*div.pop-thread:before {
+	counter-increment: postcount;
+	content: counter(postcount) ".";
+	color: #5A7A05!important;
+	position: absolute;
+	left: -20px;
+	top: 0;
+}*/
+
+.thumb {
+	float: left;
+	margin-right: 20px;
+}
+
+.thumb img {
+	max-width: 70px;
+}
+
+.pop-stats {
+	font-size: 0.9em;
+	overflow: hidden;
+}
+.pop-title {
+	margin-bottom: 5px;
+}

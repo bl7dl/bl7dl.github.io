@@ -1,0 +1,836 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" lang="ru" xml:lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8"/>
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<title>Результаты поиска</title>
+
+
+
+
+
+
+
+<link href="../forumstatic.ru/style/Mybb_Patriot/Mybb_Patriot.css" rel="stylesheet" type="text/css"/>
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="../forumstatic.ru/style/style_fix.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="../forumstatic.ru/style/style_fix7.css" /><![endif]-->
+<link href="../forumstatic.ru/style/extra.41.css" rel="stylesheet" type="text/css"/>
+<link href="../forumstatic.ru/style/mobile.5.css" rel="stylesheet" type="text/css"/>
+<meta content="noindex, nofollow" name="robots"/><link href="archive.css" rel="stylesheet" type="text/css"/></head>
+<body class="archive-readonly">
+<!-- body-header -->
+<div id="pun_wrap">
+<div class="ru isguest gid3" id="pun">
+<div class="punbb" id="pun-searchposts">
+
+<div id="html-header">
+<img src="../forumfiles.ru/files/0016/da/f1/41051.jpg"/>
+</div>
+<div class="section" id="pun-title">
+<table cellspacing="0" id="title-logo-table">
+<tbody id="title-logo-tbody">
+<tr id="title-logo-tr">
+<td class="title-logo-tdl" id="title-logo-tdl">
+<h1 class="title-logo"><span>7 дней лета</span></h1>
+</td>
+<td class="title-logo-tdr" id="title-logo-tdr"><!-- banner_top --></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="pun-navlinks">
+<h2><span>Меню навигации</span></h2>
+<ul class="container">
+<li id="navindex"><a href="index.html"><span>Форум</span></a></li>
+<li id="navuserlist"><a href="userlist.php.html" rel="nofollow"><span>Участники</span></a></li>
+<li id="navrules"><a href="misc.php@action=rules.html" rel="nofollow"><span>Правила</span></a></li>
+
+
+
+</ul>
+</div>
+
+<!-- pun_announcement -->
+
+
+<div class="section" id="pun-crumbs1">
+<p class="container crumbs"><strong>Вы здесь</strong> » <a href="index.html">7 дней лета</a> » Результаты поиска</p>
+</div>
+
+<!-- banner_mini_top -->
+<div class="main multipage" id="pun-main">
+<h1><span>Результаты поиска</span></h1>
+<div class="linkst">
+<div class="pagelink">Страница: <a class="prev" href="search.php@action=show_user_posts&amp;user_id=352&amp;p=4.html">«</a>  <a href="search.php@action=show_user_posts&amp;user_id=352.html">1</a> <a href="search.php@action=show_user_posts&amp;user_id=352&amp;p=2.html">2</a> <a href="search.php@action=show_user_posts&amp;user_id=352&amp;p=3.html">3</a> <a href="search.php@action=show_user_posts&amp;user_id=352&amp;p=4.html">4</a> <strong>5</strong> 6 7 … <a href="search.php@action=show_user_posts&amp;user_id=352&amp;p=10.html">10</a>  »</div>
+</div>
+<div class="topic">
+<h2><span class="item1">Сообщения, соответствующие критериям поиска</span> <span class="item2">121 страница  из 277</span></h2>
+<div class="post">
+<h3><span><strong>121</strong> <a href="viewforum.php@id=4.html">Последние версии сценария</a> » <a href="viewtopic.php@id=76.html">7 дней лета, v.031e (Мику-7дл, эпилог)</a> » 2017-07-03 22:42:51</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 470</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box spoiler-box"><div>alt_route_sl_cl.rpy</div><blockquote><div class="code-box"><strong class="legend">Код:</strong><div class="blockcode"><div class="scrollbox" style="height: 35em"><pre>    menu:
+        "Славя, некогда выбирать.":
+            "Поторопил её я. Счёт и правда перешёл на минуты."
+            $ lp_sl += 1
+            $ alt_sp += 1
+            jump alt_day6_sl_regular_arc
+        "Не смей сдаваться!":
+            me "Если ты так раскиснешь сейчас — мы точно ничего не успеем!"
+            $ lp_sl += 2
+            $ alt_sp += 2
+        "Я обязательно вернусь за тобой.":
+            $ lp_sl = 0
+            "Меня всего перекосило от дутой фальши этой фразы."
+            "Тяжело врать любимому человеку."
+            "Особенно если собираешься бросить его."
+    if loki and lp_sl &lt; 18:
+    elif alt_sp &gt;= 6 and (persistent.sl_cl_good_rf or persistent.sl_cl_good_rf2 or persistent.sl_cl_good_ussr):
+        label alt_day6_sl_intellectual:
+            $ persistent.sprite_time = "prolog"
+            $ prolog_time()
+            play music uncertainity fadein 3
+            scene bg ext_square_day at zenterright
+            show ba em1 uniform with dissolve
+            ba "Вообще-то, если ехать быстро, то вполне успеете."
+            "Раздался над головой усталый бас, и я медленно поднял голову."</pre></div></div></div></blockquote></div><p>Если играем не за Локи и проходим по условиям на инт-ветку, то при выборе "Я обязательно вернусь за тобой." следует нелогичная реплика Саныча</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>122</strong> <a href="viewforum.php@id=6.html">Общее обсуждение мода</a> » <a href="viewtopic.php@id=2.html">СПИСОК КОНТЕНТА</a> » 2017-07-01 17:23:21</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 583</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<p>Тов. Автор, сейчас в карточном турнире после однократного его прохождения есть возможность пропустить его и перейти к результатам, однако в таком случае будет рандом с шансом 1/7 на искомый исход. Предложение: сделать после выбора "Победа/поражение в 1/n финале" еще один, где уже будет выбираться girl/boyname, с которым мы играли. Зачем нужно: чтобы люди перестали заниматься постоянным save/load'ом <del>и начали жить</del>. Раз уж есть возможность "нечестным" путем побеждать в турнире, то, кмк, выбор соперника тоже должен иметь место. Если вы согласитесь с предложением, то с нашей стороны предложим все необходимые изменения в коде.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>123</strong> <a href="viewforum.php@id=7.html">Славя</a> » <a href="viewtopic.php@id=12.html">Славя-классик рут</a> » 2017-06-23 16:17:52</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 543</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Dantiras написал(а):</cite><blockquote><p>Равно как и этого ответа тов. Автора я не наблюдаю.</p></blockquote></div><p>Отвечал тов. Автор на такой вопрос, только спрашивали с другого аккаунта Славя-классик рут</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>124</strong> <a href="viewforum.php@id=7.html">Славя</a> » <a href="viewtopic.php@id=12.html">Славя-классик рут</a> » 2017-06-21 09:00:21</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 543</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Mikufag1337 написал(а):</cite><blockquote><p>ничего полезного не нашел, просто темы форумов на 1000+ сообщений</p></blockquote></div><p>Специально для вас гайд, как найти информацию в интернете.<br/><span style="font-size: 8px">Для чистоты <del>эксперимента</del> гайда при поиске использовался режим "инкогнито"</span><br/></p><div class="quote-box spoiler-box"><div>Итак, начнем</div><blockquote><p>Самое сложное - сформулировать запрос. Но к счастью, он у нас уже есть.<br/>Смотрим первую ссылку: [7ДЛ] Прохождение всех рутов | 7 дней лета / 7дл | ВКонтакте<br/><img alt="http://s1.uploads.ru/t/ATPuz.png" class="postimg" src="../s1.uploads.ru/t/ATPuz.png"/><br/>То, что надо! Переходим по ссылке<br/>В шапке темы читаем: Тема с прохождениями и подсказками ПЕРЕЕХАЛА сюда: https://vk.com/page-128046483_52527656<br/><img alt="http://sh.uploads.ru/t/JCPF8.png" class="postimg" src="../sh.uploads.ru/t/JCPF8.png"/><br/>Похоже, нужно опять переходить по ссылке.<br/>Мы на верном пути! Осталось совсем немного!<br/><img alt="http://s0.uploads.ru/t/B19Ms.png" class="postimg" src="../s0.uploads.ru/t/B19Ms.png"/><br/>Yes, we did it! Было невероятно сложно, но мы справились.<br/><img alt="http://s9.uploads.ru/t/sxC0A.png" class="postimg" src="../s9.uploads.ru/t/sxC0A.png"/><br/>Благодарю за внимание.<br/></p></blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>125</strong> <a href="viewforum.php@id=5.html">Флудильня</a> » <a href="viewtopic.php@id=52.html">Поздравильная</a> » 2017-06-20 23:16:35</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 103</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<p><a href="click.php@http_3A_2F_2Fuploads.ru_2FOig4J.jpg.view.html" rel="nofollow" target="_blank"><img alt="http://sf.uploads.ru/t/Oig4J.jpg" class="postimg" src="../sf.uploads.ru/t/Oig4J.jpg"/></a></p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>126</strong> <a href="viewforum.php@id=7.html">Славя</a> » <a href="viewtopic.php@id=12.html">Славя-классик рут</a> » 2017-06-20 22:02:53</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 543</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Mikufag1337 написал(а):</cite><blockquote><p>а схемка есть какая-то?</p></blockquote></div><p>СХЕМЫ<br/>Невероятно, правда?<br/></p><div class="quote-box"><cite>Mikufag1337 написал(а):</cite><blockquote><p>и по поводу порриджа так никто не объяснил</p></blockquote></div><p>Вам же написали: читайте.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>127</strong> <a href="viewforum.php@id=5.html">Флудильня</a> » <a href="viewtopic.php@id=52.html">Поздравильная</a> » 2017-06-20 10:20:41</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 103</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<p>Поздравляю, тов. Автор! Успехов в творчестве, и пусть ваши желания никогда не будут идти вразрез с вашими возможностями.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>128</strong> <a href="viewforum.php@id=7.html">Славя</a> » <a href="viewtopic.php@id=12.html">Славя-классик рут</a> » 2017-06-19 10:44:24</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 543</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Dantiras написал(а):</cite><blockquote><p>Во-первых, в этом мире Семёна уже посещают технофлешбеки - свидетельство сопряжённого фантазма.</p></blockquote></div><p>А резве техносны происходят в Совёнкореальности? Я полагал, что события с самого первого дня происходят в фантазме Слави. Этот фантазм зациклен, а показывают нам, очевидно, события последнего цикла, логично предположить, что цикл начался не с наблюдаемого контакта с кашкой, а намного раньше, и техносны происходят не в Совёнкореальности, а в фантазме Слави.<br/></p><div class="quote-box"><cite>Dantiras написал(а):</cite><blockquote><p>Существует немало версий точек отсчёта, что же именно считать материнской реальностью:</p></blockquote></div><p>А почему в качестве кандидата не рассматривается собственно Совёнкореальность? У неё есть как минимум одна отличительная черта - в неё массово попадают ПСРы (в отличие от остальных известных рилмов).</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>129</strong> <a href="viewforum.php@id=6.html">Общее обсуждение мода</a> » <a href="viewtopic.php@id=2.html">СПИСОК КОНТЕНТА</a> » 2017-06-16 15:51:13</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 583</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<p>Тов. Автор, есть две просьбы/предложения:<br/>1. По возможности поддерживать реквест-лист в актуальном состоянии, чтобы избегать неловких ситуаций (например, арт с карьером уже готов, как и некоторые другие).<br/>2. Разделить арты на категории/отсортировать по важности и востребованности (т.е. какие нужны в первую очередь).</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>130</strong> <a href="viewforum.php@id=5.html">Флудильня</a> » <a href="viewtopic.php@id=75.html">Бар "7 летних ночей" - 7</a> » 2017-06-16 15:39:39</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 999</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>El Jorge написал(а):</cite><blockquote><p>Только в БЛ это далеко не на первом месте на мой взгляд. Вот в 7ДЛ да, больше упор на эроге. Насколько я понимаю конечно же.</p></blockquote></div><p><img alt="http://s00.yaplakal.com/pics/pics_original/0/5/8/6709850.jpg" class="postimg" src="http://s00.yaplakal.com/pics/pics_original/0/5/8/6709850.jpg"/><br/><span style="font-size: 8px">Простите, не удержался</span></p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>131</strong> <a href="viewforum.php@id=5.html">Флудильня</a> » <a href="viewtopic.php@id=35.html">Нам пишут (Избранные отзывы о 7дл)</a> » 2017-06-05 16:41:08</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 316</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><blockquote><p>Дико рыдал с концовки Мику. 10 рыдающих могил Мику из 10.</p></blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>132</strong> <a href="viewforum.php@id=5.html">Флудильня</a> » <a href="viewtopic.php@id=35.html">Нам пишут (Избранные отзывы о 7дл)</a> » 2017-05-26 05:56:19</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 316</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><blockquote><p>мне порой кажется, что проще получить степень доктора квантовой физики, чем разобраться во всех хитросплетениях прохождения 7дл</p></blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>133</strong> <a href="viewforum.php@id=8.html">Ольга, Ульяна и руты Одиночек</a> » <a href="viewtopic.php@id=17.html">Рут Ульяны</a> » 2017-05-21 13:53:16</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 94</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Romazeo написал(а):</cite><blockquote><p>Рут с Ульянкой есть, но в незаконченном состоянии, верно?</p></blockquote></div><p>В последнем релизе его нет вообще, а так готов на 50%.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>134</strong> <a href="viewforum.php@id=8.html">Ольга, Ульяна и руты Одиночек</a> » <a href="viewtopic.php@id=18.html">Рут Ольги</a> » 2017-05-14 11:07:43</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 373</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>npu3pak написал(а):</cite><blockquote><p>Лолшто? Найс пишите. Видать не у одного ГГ проблема с психикой. И вообще откуда у него плеер, смарт, одежда? Читал тут в треде, нашел лишь прозрачные намеки. Сюжет на ходу писали, не так ли? Короче, не зашло, не понравилось, сорре.</p></blockquote></div><p>Всегда удивляли такие альтернативно одаренные личности. Сначала читают альтернативным местом, а потом делают свои альтернативные выводы.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>135</strong> <a href="viewforum.php@id=3.html">Техподдержка</a> » <a href="viewtopic.php@id=21.html">Технические проблемы</a> » 2017-05-08 14:29:50</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 335</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Freedos написал(а):</cite><blockquote><p>Лог вылета</p></blockquote></div><p>О проблеме известно, она даже вылечена в патче, представленном в вк и на вики.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>136</strong> <a href="viewforum.php@id=6.html">Общее обсуждение мода</a> » <a href="viewtopic.php@id=2.html">СПИСОК КОНТЕНТА</a> » 2017-05-08 09:39:30</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 583</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>7dl-kun написал(а):</cite><blockquote><p>Что вообще за манера - по любому чиху устраивать референдум? Тем более, по вопросу, который точно не голосующим решать.</p></blockquote></div><p>Меню делается не для личного пользования. Его будут видеть такие же люди, которые голосовали в опросе. Так почему бы не узнать их мнение? Лишней эта информация не будет.<br/></p><div class="quote-box"><cite>7dl-kun написал(а):</cite><blockquote><p>Не стоит забывать о том, что вы планируете лицо, витрину мода - то, с чего начинается знакомство читателя с историей 7дл, шанса произвести первое впечатление уже не предоставится! И тут появляется такое...</p></blockquote></div><p>То, что вы видите - это лишь набросок, сделанный за 10 минут в ФШ. Я уверен, что его можно улучшить и сделать достойным главного меню мода. Вы в свою очередь предлагаете в качестве дизайна меню решение, которое понравилось 15% голосовавших. Это уже плохой знак. Стилистически оно мало подходит к ачивлисту и к меню выбора персонажа и так же требует значительной доработки, как и текстовый вариант.<br/></p><div class="quote-box"><cite>7dl-kun написал(а):</cite><blockquote><p>Каждая команда будет вызывать новый экран, потому, что из-за строчек там больше ничего не поместится?</p></blockquote></div><p>Это обычная практика для игровых меню, в приведенных выше примерах так почти везде реализовано.</p>
+<p>Нам нужно прийти к компромиссу, очевидно.<br/>Если у вас табу на текстовые меню, мы можем попробовать реализовать что-нибудь в стиле ачивлиста (это, разумеется, тоже <span style="font-style: italic">очень</span> черновой вариант).<br/></p><div class="quote-box spoiler-box"><div>Свернутый текст</div><blockquote><p><img alt="http://s4.uploads.ru/t/Alb9M.png" class="postimg" src="http://s4.uploads.ru/t/Alb9M.png"/></p>
+</blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>137</strong> <a href="viewforum.php@id=6.html">Общее обсуждение мода</a> » <a href="viewtopic.php@id=2.html">СПИСОК КОНТЕНТА</a> » 2017-05-07 18:00:18</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 583</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>7dl-kun написал(а):</cite><blockquote><p>4. Строчки меню никуда не годятся, пусть уж лучше будут кнопками, а не строчками текста.</p></blockquote></div><p>Вы категорически против первоначальной реализации? Большинство популярных зарубежных новелл и модов к БЛ имеют именно такой тип меню, кнопки же сложнее стилистически подобрать к фону, да и пространство используется менее эффективно из-за этого. Если делать опции меню в виде кнопок, то их нужно стилизовать (например, как в оригинальном БЛ или Булках), иначе они будут смотреться, как инородный элемент.<br/></p><div class="quote-box spoiler-box"><div>Примеры</div><blockquote><p><img alt="http://s0.uploads.ru/t/Ar7s6.png" class="postimg" src="http://s0.uploads.ru/t/Ar7s6.png"/><br/><img alt="http://s7.uploads.ru/t/KcJ97.png" class="postimg" src="http://s7.uploads.ru/t/KcJ97.png"/><br/><img alt="http://s0.uploads.ru/t/ROBqc.png" class="postimg" src="http://s0.uploads.ru/t/ROBqc.png"/><br/><img alt="http://s9.uploads.ru/t/ES5Jc.jpg" class="postimg" src="http://s9.uploads.ru/t/ES5Jc.jpg"/><br/><img alt="http://sf.uploads.ru/t/ZlDkq.png" class="postimg" src="http://sf.uploads.ru/t/ZlDkq.png"/><br/><img alt="http://sf.uploads.ru/t/ieBON.png" class="postimg" src="http://sf.uploads.ru/t/ieBON.png"/><br/><img alt="http://s6.uploads.ru/t/QwJER.png" class="postimg" src="http://s6.uploads.ru/t/QwJER.png"/><br/><img alt="http://sg.uploads.ru/t/eKEIa.png" class="postimg" src="http://sg.uploads.ru/t/eKEIa.png"/><br/><img alt="http://sa.uploads.ru/t/8DMBy.png" class="postimg" src="http://sa.uploads.ru/t/8DMBy.png"/><br/></p></blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>138</strong> <a href="viewforum.php@id=6.html">Общее обсуждение мода</a> » <a href="viewtopic.php@id=2.html">СПИСОК КОНТЕНТА</a> » 2017-05-07 17:54:39</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 583</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>7dl-kun написал(а):</cite><blockquote><p>1. "Начать игру" и "вернуться в меню" логичнее было бы разнести отдельными кнопками в низ окошка соответственно левую нижнюю и првую нижнюю стороны, а рядом с "начать" поставить радиоточку-галочку с "вкл.dlc", аналогично можно и под виджет со счётчиком лп и прочего.</p></blockquote></div><p>Что-то типа этого? Только фон уже этот не подойдет.<br/></p><div class="quote-box spoiler-box"><div>Свернутый текст</div><blockquote><p><img alt="http://sf.uploads.ru/t/QqEvm.png" class="postimg" src="http://sf.uploads.ru/t/QqEvm.png"/><br/></p></blockquote></div><div class="quote-box"><cite>7dl-kun написал(а):</cite><blockquote><p>2. Что именно понимать под "настройками"?</p></blockquote></div><p>Туда планировалось убрать вкл-выкл длц и виджет<br/></p><div class="quote-box"><cite>7dl-kun написал(а):</cite><blockquote><p>Есть ли насущная потребность в галерее-джукбоксе? И если есть, каким образом планируете её реализовывать? Может, лучше совместить это с достижениями, вызваемыми отдельной кнопкой, например "контект" или "медиа"?</p></blockquote></div><p>Только если в основной код после цг помещать запись в персистент и по ним проверять. Пожалуй, стоило назвать раздел "Медиа", изначально ведь запрашивали только функционал треклиста, цг можно будет добавить бонусом. Или не добавлять.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>139</strong> <a href="viewforum.php@id=6.html">Общее обсуждение мода</a> » <a href="viewtopic.php@id=2.html">СПИСОК КОНТЕНТА</a> » 2017-05-07 13:25:47</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 583</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<p>Хоть реквеста на меню нет, но его наличие решило бы сразу несколько проблем с юзабилити и привнесло бы пару полезных функций. Посему возникло у нас с тов. Громом желание реализовать в моде меню.<br/>Как уже высказывались товарищи сверху, меню должно содержать, кроме собственно запуска мода, следующие функции:<br/>1. Музыкальная комната, где можно было бы сразу же узнать оригнальное название трека, да и, собственно, отдельно от сценария её послушать.<br/>2. Нормальный переключатель on/off DLC, в который не приходилось бы каждый раз тыкать во время прохождения.<br/>3. Запуск ачивлиста<br/>4. Переключатель виджета<br/>5. Запуск прыгалки (для 1.1)<br/>...<br/>Но начнем с дизайна. Неплохо бы смотрелась, пмм, в качестве фоновой картинки вот эта<br/></p><div class="quote-box spoiler-box"><div>Свернутый текст</div><blockquote><p><img alt="http://s9.uploads.ru/t/mpvSr.jpg" class="postimg" src="http://s9.uploads.ru/t/mpvSr.jpg"/><br/></p></blockquote></div><p>Но она тут же используется дальше в меню выбора персонажа. Если не менять картинку в меню выбора, то ближайшей к ней альтернативой будут эти брызги на черном фоне<br/></p><div class="quote-box spoiler-box"><div>Свернутый текст</div><blockquote><p><img alt="http://sg.uploads.ru/t/Svgjn.png" class="postimg" src="http://sg.uploads.ru/t/Svgjn.png"/><br/></p></blockquote></div><p>Они бы хорошо вписались в текущий дизайн меню выбора, т.к. сейчас там используются последовательно красные и серые брызги, можно будет обыграть переход из основного меню в меню выбора.<br/>Накидал на коленке черновой вариант, как это могло бы выглядеть (при наведении мышки на "начать игру")<br/></p><div class="quote-box spoiler-box"><div>Свернутый текст</div><blockquote><p><img alt="http://sg.uploads.ru/t/oArpT.png" class="postimg" src="http://sg.uploads.ru/t/oArpT.png"/><br/></p></blockquote></div><p>Хотелось бы услышать критику по концепту, предложения по возможным функциональным и дизайнерским решениям. Ну и от любой помощи не откажемся.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>140</strong> <a href="viewforum.php@id=10.html">Лена</a> » <a href="viewtopic.php@id=16.html">Лена-7дл рут</a> » 2017-04-28 20:19:00</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 272</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>влад блэйс написал(а):</cite><blockquote><p>Простите, если не в ту тему написал...В 6 дне (Лена 7дл) после разговора со Славей при выборе варианта "Не знаю" или "Я готов рискнуть" на танцах получаю стабильный вылет. Кто-нибудь сталкивался с такой проблемой? (Steam версия 0.31e).</p></blockquote></div><p>Трейсбек в студию.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>141</strong> <a href="viewforum.php@id=5.html">Флудильня</a> » <a href="viewtopic.php@id=75.html">Бар "7 летних ночей" - 7</a> » 2017-04-26 06:16:43</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 999</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>PANZER_LEHR_DIV написал(а):</cite><blockquote><p>Странное у вас поведение , все время  кажется что кто то указывает попрекает , жестокие родители  или весеннее  обострение ?</p></blockquote></div><p>Быстро же товарищ слился, Домарощинер хоть подольше народ развлекал.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>142</strong> <a href="viewforum.php@id=6.html">Общее обсуждение мода</a> » <a href="viewtopic.php@id=2.html">СПИСОК КОНТЕНТА</a> » 2017-04-13 15:20:10</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 583</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>7dl-kun написал(а):</cite><blockquote><p>Виджет вряд ли удастся уместить в меню - фильтр всё же, требует перезапуска игры.</p></blockquote></div><p>В Саманте виджет переключается в меню. Но перезагрузка требуется, да.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>143</strong> <a href="viewforum.php@id=6.html">Общее обсуждение мода</a> » <a href="viewtopic.php@id=2.html">СПИСОК КОНТЕНТА</a> » 2017-04-13 14:31:44</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 583</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<p>Ачивлист, виджет и прыгалку (только в 1.1) тоже было бы неплохо уместить в меню. Сейчас всё находится в разных местах, что не очень удобно.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>144</strong> <a href="viewforum.php@id=7.html">Славя</a> » <a href="viewtopic.php@id=12.html">Славя-классик рут</a> » 2017-04-11 08:54:20</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 543</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Grand_Win написал(а):</cite><blockquote><p>Я бы зарегестрировался на форуме, если бы он сделал ведьмо-рут (я от этом, если вы не поняли) а так... Я тоже сюда кидаю скрины с ошибками БЕЗВОЗДМЕДНО, сделал бы обсуждение в стиме, или то же самое обсуждение в вк, но нет! МЫ ТАКИЕ УМНЫЕ И ПОШЛЕМ ВСЕХ *****, будем заставлять людей регестрироваться, ведь всем так нужно заходить на почту или отправлять смс на телефон (или как у вас там аккаунт верефицируется (если вообще верефицируется)) + если ему не нужна такая помощь, то и не надо. Пусть в одиночестве сидит и ищет ошибки в моде (также несостыковки в нем, хотя такое кол-во человек могло бы уже весь мод сделать правильным по орфографии), ну раз ему не надо... пусть уж не ленивые люди (как я) регестрируются на форум и помогают БЕЗВОЗМЕДНО. Все я устал писать такое кол-во буковок...</p></blockquote></div><p>Всё-таки соизволили зарегистрироваться?</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>145</strong> <a href="viewforum.php@id=5.html">Флудильня</a> » <a href="viewtopic.php@id=35.html">Нам пишут (Избранные отзывы о 7дл)</a> » 2017-04-11 08:46:08</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 316</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<p>Собираем сливки с ВК<br/></p><div class="quote-box spoiler-box"><div>Свернутый текст</div><blockquote><p><a href="click.php@http_3A_2F_2Fuploads.ru_2FFLWdp.png.view.html" rel="nofollow" target="_blank"><img alt="http://s1.uploads.ru/t/FLWdp.png" class="postimg" src="../s1.uploads.ru/t/FLWdp.png"/></a><br/></p></blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>146</strong> <a href="viewforum.php@id=5.html">Флудильня</a> » <a href="viewtopic.php@id=38.html">Вопросы 7DL-куну</a> » 2017-04-10 10:05:08</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 268</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>7dl-kun написал(а):</cite><blockquote><p>Не хочу забивать голову чепухой. Сейчас выгружу цг-шки единым архивом с категоризацией, как оно у меня, а вы там сами смотрите, как вам будет удобнее.<br/>Вот ссылка: <a href="http://yadi.sk/d/Xs4F4OKd3Gormu" rel="nofollow noopener" target="_blank">https://yadi.sk/d/Xs4F4OKd3Gormu</a></p></blockquote></div><p>Так даже лучше, спасибо большое.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>147</strong> <a href="viewforum.php@id=5.html">Флудильня</a> » <a href="viewtopic.php@id=38.html">Вопросы 7DL-куну</a> » 2017-04-10 09:02:10</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 268</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>7dl-kun написал(а):</cite><blockquote><p>Здесь вообще порядок другой.</p></blockquote></div><p>А, может, у вас был обратный порядок?<br/></p><div class="quote-box spoiler-box"><div>Свернутый текст</div><blockquote><p><a href="click.php@http_3A_2F_2Fuploads.ru_2FQfO2p.png.view.html" rel="nofollow" target="_blank"><img alt="http://s2.uploads.ru/t/QfO2p.png" class="postimg" src="../s2.uploads.ru/t/QfO2p.png"/></a><br/></p></blockquote></div>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>148</strong> <a href="viewforum.php@id=5.html">Флудильня</a> » <a href="viewtopic.php@id=38.html">Вопросы 7DL-куну</a> » 2017-04-09 16:26:29</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 268</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<p>Спасибо!</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>149</strong> <a href="viewforum.php@id=5.html">Флудильня</a> » <a href="viewtopic.php@id=38.html">Вопросы 7DL-куну</a> » 2017-04-09 15:28:19</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 268</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<p>Тов. Автор, просьба к вам есть.<br/>Мы с тов. Громом сейчас занимаемся группой ВК, посвященной 7дл, где стараемся структурировать имеющийся контент. Сейчас хотим разложить по полочкам CG из мода, чтобы не скидывать всё в одну кучу. Решили рассортировать по трём альбомам:<br/>- основной альбом (оригинальный контент);<br/>- неоригинальный контент (потыренные с интернета арты без редактирования; возможно (на ваше усмотрение), не следует сюда помещать арты, отлично подходящие под задумку, например, сцена с Алисой и качелями);<br/>- перерисовки (подредактированные арты с интернета вообще и БЛ/7дл; возможно, не следует сюда помещать арты, подвергшиеся значительной перерисовке, например, сцена с Леной и просмотром фильма).<br/>Мы в меру своих знаний и сил арты рассортировали, но есть большие сомнения в правильности, вы же как автор можете наиболее объективно их распределить. Просьба к вам указать нам на ошибки (в любом удобном формате) или представить свой вариант сортировки. Ссылку на альбомы с ВК прилагаю <a href="http://vk.com/badbrowser.php" rel="nofollow noopener" target="_blank">https://vk.com/albums-128046483</a><br/>Будем благодарны, если найдёте для этого время.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="post">
+<h3><span><strong>150</strong> <a href="viewforum.php@id=3.html">Техподдержка</a> » <a href="viewtopic.php@id=44.html">Версия 1.2 и Стим</a> » 2017-04-06 20:48:34</span></h3>
+<div class="container">
+<div class="post-author">
+<ul>
+<li class="pa-author"><span class="acchide">Оставил </span><strong>salotor</strong></li>
+<li class="pa-replies">Ответов: 124</li>
+</ul>
+</div>
+<div class="post-body">
+<div class="post-box">
+<div class="post-content">
+<div class="quote-box"><cite>Котеус написал(а):</cite><blockquote><p>Добрый день. Последний раз запускал 7ДЛ в январе, тут решил перепройти (новая конфига, все ставил с ноля в стиме) - и нашел в модулях "Достижения 7дл". То, что бОльшая часть достижений при попытке их просмотра вылетает - это результат старых прохождений или чисто стимовская проблема? (Я, в принципе, догадываюсь, но хотелось бы уточнить). Отдельно модуль не ставил, скачался с апдейтом стима.<br/>Нам остается лишь оплакивать потери<br/>И врать себе, что это лето навсегда.</p></blockquote></div><p>Нужно поставить хотфикс из треда "Все концовки 2.0" обсуждений стима.</p>
+</div>
+</div>
+
+</div>
+<div class="post-links">
+<ul>
+<li>Перейти к теме<span class="acchide"> 1</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="linksb">
+<div class="pagelink">Страница: <a class="prev" href="search.php@action=show_user_posts&amp;user_id=352&amp;p=4.html">«</a>  <a href="search.php@action=show_user_posts&amp;user_id=352.html">1</a> <a href="search.php@action=show_user_posts&amp;user_id=352&amp;p=2.html">2</a> <a href="search.php@action=show_user_posts&amp;user_id=352&amp;p=3.html">3</a> <a href="search.php@action=show_user_posts&amp;user_id=352&amp;p=4.html">4</a> <strong>5</strong> 6 7 … <a href="search.php@action=show_user_posts&amp;user_id=352&amp;p=10.html">10</a>  »</div>
+</div>
+</div>
+
+<!-- pun_stats -->
+<!-- banner_mini_bottom -->
+<!-- banner_bottom -->
+
+<div class="section" id="pun-crumbs2">
+<p class="container crumbs"><strong>Вы здесь</strong> » <a href="index.html">7 дней лета</a> » Результаты поиска</p>
+</div>
+
+
+
+<!-- html_footer -->
+</div>
+</div>
+</div>
+</body>
+</html>

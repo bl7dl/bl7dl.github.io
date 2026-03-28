@@ -1,0 +1,28 @@
+.header {
+	width: 960px;
+}
+.header a {
+	text-decoration: none;
+}
+.header a:hover {
+	color:#F26722;
+}
+
+.box {
+	min-width: 600px;
+	border: none;
+	background: transparent;
+}
+
+.box-header {
+	border: none;
+}
+.messages .box-header {
+	font-size: 1em;
+}
+.box-data {
+	text-align: center;
+}
+
+.notfound404 {font-size: 3em;}
+.message-title {font-size: 1.7em;line-height: 1.7em;}

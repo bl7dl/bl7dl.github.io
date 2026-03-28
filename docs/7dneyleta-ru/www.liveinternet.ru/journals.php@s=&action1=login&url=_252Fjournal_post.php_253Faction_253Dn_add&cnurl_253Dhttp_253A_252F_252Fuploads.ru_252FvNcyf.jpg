@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">	
+
+	<head profile="http://gmpg.org/xfn/11">		
+		<title>LiveInternet - Авторизация</title>
+		<link href="ReActive/systems/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="../i.li.ru/ReActive/js/global/lib/lici.js"></script>
+	</head>
+
+	<body>	
+	
+		<iframe src="cookie/check.html" width=1 height=1 marginwidth=0 marginheight=0 scrolling=no frameborder=0></iframe>
+		<script type="text/javascript"> if (typeof(curusername)=='undefined') curusername='';</script>
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write('<img src="//counter.yadro.ru/hit?r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
+';p'+escape(curusername)+';'+Math.random()+
+'" width=1 height=1 alt="" >')//--></script><!--/LiveInternet-->
+	
+	
+		<a class="b-logo" title="Перейти на сайт" href="default.htm">LiveInternet</a>		
+		<script type="text/javascript" src="../i.li.ru/ReActive/systems/javascripts/application.js"></script>	    
+		<div class='b-dialog'>
+			<div class='body'>				
+				<div class='body_i body_Login body_Login-Auth  body_Form'>
+				
+					<h1>Для входа введите логин и пароль</h1>			
+					<form class="form" action="https://www.liveinternet.ru/member.php?rndm=1524127637" method="post">
+					    <fieldset>
+					    	<label>Логин</label>
+					    	<input type="text" name="username" value=""/> 
+					    </fieldset>
+					    <fieldset>
+						    <label>Пароль</label>
+						    <input  type=password name="password" />
+						</fieldset>   
+					    <input type="hidden" name="url" value="/journal_post.php?action=n_add&amp;cnurl=http://uploads.ru/vNcyf.jpg" />
+					    <input type="hidden" name="url1" value="/journal_post.php?action=n_add&amp;cnurl=http://uploads.ru/vNcyf.jpg" />
+					    <input type="hidden" name="action" value="login" />						
+					    <input type="submit" value="Войти" /> 
+					    
+					<input type=hidden name=tok value=f960c455a2620281916440d97205d48a /></form>
+					
+					<noscript>
+						<p>
+							Настройки Вашего браузера (просмотрщика интернет) не позволяют запомнить Вас на сайте, требуется разрешить выполнение javascript.
+						</p>
+						<p>
+							<a href=../wiki.liveinternet.ru/ServisDnevnikovLiveInternet/NastrojjkaBrauzera@v=hew><font size=+1 color=red>Подробная инструкция по настройке</a>
+						</p>
+					</noscript>									
+					
+				</div>
+			</div>
+			<div class='buttons'>
+				<div class='buttons_i'>
+					<a href='journal_register.php'><b>Регистрация</b></a>
+					<a href='member.php@action=lostpw'>Напомнить пароль</a>
+					<a href='../wiki.liveinternet.ru/ServisDnevnikovLiveInternet/NastrojjkaBrauzera'>Не получается?</a>					
+				</div>
+			</div>
+		</div>		
+	</body>
+	
+</html>

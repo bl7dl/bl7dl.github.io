@@ -1,0 +1,108 @@
+.sk-chrome-fix {
+    background-color: #DDD;
+    border-radius: 2px;
+    padding: 1px;
+}
+
+.sk-queue-button {
+    cursor: pointer;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0 4px;
+    margin: 0 2px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    border: 1px solid transparent;
+}
+
+.sk-btn-danger {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.sk-btn-danger:hover {
+    background-color: #c9302c;
+    border-color: #ac2925;
+}
+
+.sk-btn-primary {
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+
+.sk-btn-primary:hover {
+    background-color: #3071a9;
+    border-color: #285e8e;
+}
+
+.sk-btn-success {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.sk-btn-success:hover {
+    background-color: #449d44;
+    border-color: #398439;
+}
+
+.sk-btn-disabled {
+    background-color: #adadad;
+    border-color: #8a8a8a;
+    color: 333;
+}
+
+.sk-btn-disabled:hover {
+    cursor: default;
+}
+
+.sk-toolbar {
+    background-color: #000;
+    border-radius: 5px;
+    bottom: 0;
+    padding: 4px;
+    position: fixed;
+    margin: 2px;
+}
+
+.sk-toolbar form {
+    color: #01a3b2;
+}
+
+.sk-toolbar input {
+    height: 20px;
+    width: 80px;
+}
+
+.sk-toolbar .logout {
+    color: #01a3b2;
+    background-color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sk-toolbar .logout:hover {
+    color: #f24747;
+}
+
+.sk-toolbar .log {
+    background-color: #000;
+    border-radius: 4px;
+    bottom: 30px;
+    display: none;
+    height: 250px;
+    left: 0;
+    margin: 2px;
+    padding: 4px;
+    position: fixed;
+    width: 400px;
+    overflow-x: auto;
+}
+
+.sk-toolbar .log .success {
+    color: #ccc;
+}
+
+.sk-toolbar .log .error {
+    color: #d9534f;
+}

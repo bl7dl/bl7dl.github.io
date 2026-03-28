@@ -1,0 +1,322 @@
+﻿  html, body{
+    background-image: url('../../../images/makakalma.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #455A64;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    color: #E6E6FA;
+  }
+  
+  .de-cfg-head:lang(de){
+    background-color: #455A64;
+  }
+  .de-qarea-hanging > #de-pform{
+    border: 0px;
+  }
+  
+  button{
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+
+  
+/*Картинки*/
+  img{
+    border-radius: 5px;
+  }
+/**/
+
+/*Меню настроек*/
+  .qr{
+    background: #607D8B none repeat scroll 0% 0%;
+    border: 0px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+ 
+  .qr .qr-header{
+    background: #455A64 none repeat scroll 0% 0%;
+    color: #E6E6FA;
+    border: 0px;
+    padding: 5px;
+  }
+  select {
+    background: #455A64 none repeat scroll 0% 0%;
+    border: 0px solid #455A64;
+    color:#E6E6FA;
+    padding: 5px;
+    border-radius: 5px;
+  }
+/**/
+
+.mainpage #adminbar, #adminbar{
+  margin-bottom: 40px;
+  border: 1px;
+}
+
+/*Содержимое блока "Популярные треды"*/
+  .pop-thread{
+    background: #607D8B none repeat scroll 0% 0%;
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: left;
+  }
+  .pop-stats{
+    color: #E6E6FA;
+    text-align: left;
+  }
+  .boardname{
+    color: #FFF;
+  }
+/**/
+
+/*Верхнее меню со ссылками*/
+  .rmenu{
+    text-align: center;
+    padding: 5px;
+  }
+/**/
+
+/*Верхний бар*/
+  #adminbar ul.menu{
+    padding: 5px;
+    background: transparent none repeat scroll 0% 0%;
+  }
+/**/
+  
+/*Ссылки*/
+  a, a:link, a:visited{
+    color: #E6E6FA;
+    text-decoration: none;
+  }
+  .header a:hover, a:hover, .postscontainer a:hover{
+    color: #FFF;
+    text-decoration: none;
+  }
+  .a-link-emulator{
+    color: #E6E6FA;
+  }
+  .a-link-emulator:hover{
+    color: #FFF;
+  }
+  .reply-label{
+    color: #E6E6FA;
+  }
+  .reply-label:hover{
+    color: #FFF;
+  }
+  .logo{
+    color: #FFF;
+  }
+/**/
+  
+  .postscontainer{
+    background: #455A64 none repeat scroll 0% 0%;
+    border: 0px solid #191970;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .reply,.reply.hiclass{
+    background: #607D8B none repeat scroll 0% 0%;
+    border: 0px solid #191970;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .mess-post{
+    color: #FFF;
+  }
+  .post .post-title{
+    color: #FFF;
+  }
+  
+  .hboardlist .column .boardsubj, .hdescription{
+    color: #E6E6FA;
+  }
+  
+  .welcomefriend{
+    color: #E6E6FA;
+  }
+  
+  /*Гринтекст*/
+  .unkfunc{
+    color: #4CAF50;
+  }
+  
+  #tabbed li{
+    background: #607D8B none repeat scroll 0% 0%;
+    border: 0px solid #191970;
+    border-bottom: 0px;
+  }
+  #tabbed li.ui-tabs-active a{
+    color: #E6E6FA;
+  }
+  
+  .mselect{
+    background: #455A64 none repeat scroll 0% 0%;
+    border: 0px solid #191970;
+    color: #E6E6FA;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .dropd-board-btn{
+    background: #455A64 none repeat scroll 0% 0%;
+    border: 0px solid #191970;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  hr{
+    border-width: 0px;
+  }
+  
+  span.spoiler, span.spoiler a{
+    color: transparent;
+    background: transparent none repeat scroll 0% 0%;
+    text-shadow: 5px 5px 5px #4F000F, 0px 1px 4px #111, 1px -1px 5px #191970;
+    transition: all 0.5s ease 0s;
+    
+  }
+  span.spoiler:hover{
+    color: #E6E6FA;
+    text-shadow: 0px 0px 0px #191970, 0px 0px 0px #111, 0px 0px 0px #191970;
+  }
+  
+  .dropd-board-list ul{
+    background: transparent none repeat scroll 0% 0%;
+    border: 0px solid #191970;
+    width: 300px;
+    right: 0px;
+    left: 0px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .dropd-board-list{
+    background: #455A64 none repeat scroll 0% 0%;
+    border: 0px solid #191970;
+    width: 300px;
+    right: 0px;
+    left: 0px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .dropd-board-list a, .dropd-board-list a:hover{
+    background: transparent none repeat scroll 0% 0%;
+    border: 2px transparent;
+    color: #FFF;
+    width: 200px;
+    right: 0px;
+    left: 0px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .boardstats{
+    background: #455A64 none repeat scroll 0% 0%;
+    border: 0px solid #191970;
+    border-bottom: 0px;
+    right: -100000px;
+  }
+  
+  .thread{
+    background: transparent none repeat scroll 0% 0%;
+    padding: 5px;
+  }
+/*Вид тредов в каталоге*/  
+  .thread_wrap{
+    background: #607D8B none repeat scroll 0% 0%;
+    border-bottom: 0px;
+    border: 0px solid #455A64;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  .thread_wrap .comment {
+    background: #607D8B none repeat scroll 0% 0%;
+    padding: 5px;
+    
+  }
+  
+  .thread_wrap.expandble:hover .thread{
+    background: #455A64 none repeat scroll 0% 0%;
+    padding: 10px;
+    border: 0px solid #455A64;
+    border-radius: 5px;
+  }
+  
+  .thread_wrap::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: 0px;
+    left: 0px;
+    background: none repeat scroll 0 0 #455A64 !important;
+  }
+/**/  
+  .oppost-wrapper{
+    background: #455A64 none repeat scroll 0% 0%;
+    border: 0px solid #191970;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+/*Переключатель стилей*/
+  .style-switcher{
+    background: #455A64 none repeat scroll 0% 0%;
+    border: 0px solid #191970;
+    color: #E6E6FA;
+    padding: 5px;
+    border-radius: 5px;
+  }
+/**/
+  
+/*Страницы*/
+  .pager{
+    background: #607D8B none repeat scroll 0% 0%;
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px;
+  }
+/**/
+  
+  /*Mobile Version*/
+  .menu{
+    background: #607D8B none repeat scroll 0% 0%;
+    border: 0px;
+    position: relative;
+  }
+  .button-mob{
+    background: #607D8B none repeat scroll 0% 0%;
+    border: 0px;
+    color: #E6E6FA;
+  }
+  .post .post-details{
+    background: #455A64 none repeat scroll 0% 0%;
+    border: 0px;
+  }
+  .oppost{
+    background: #607D8B none repeat scroll 0% 0%;
+  }
+  .oppost-options-mob{
+    background: #607D8B none repeat scroll 0% 0%;
+    border: 0px;
+  }
+  input[type="text"], textarea{
+    background-color: #455A64;
+    color: #FFF;
+    border: 0px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  #postform td #submit,.qr-reply input.qsubmit{
+    background: #607D8B none repeat scroll 0% 0%;
+    border: 0px;
+    color: #E6E6FA;
+	padding: 4px 6px;
+  }
+  

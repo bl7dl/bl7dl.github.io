@@ -1,0 +1,73 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}html{background:#f5f5f5 url(../images/bg.png) repeat 0 0;font:13px Arial;color:#555}html a{color:#2868d7;text-decoration:underline}html a:visited{color:#2868d7}html a:focus{color:#2868d7}html a:hover{color:#2868d7}html a:active{color:#2868d7}html a:hover{text-decoration:none}html body{width:814px;margin:0 auto;margin-top:70px}.b-logo{display:block;width:230px;height:55px;background:url(../images/b-logo/bg.png) no-repeat 0 50%;text-indent:-777em}.b-auth{padding-top:18px;width:230px;height:58px;background:url(../images/b-auth/bg.png) repeat-x 0 0}.b-auth i{display:block;margin-top:7px}.b-auth .exit{display:block;margin-top:7px;float:right;font-size:12px;color:#adadad}.b-auth .exit:visited{color:#adadad}.b-auth .exit:focus{color:#adadad}.b-auth .exit:hover{color:#adadad}.b-auth .exit:active{color:#adadad}.b-auth .userpic{display:block;float:left;width:25px;height:25px;margin-right:9px;text-indent:-777em}.b-dialog{position:relative;width:690px;height:314px;font-size:14px;background:url(../images/b-dialog/bg.png) no-repeat 0 0;margin:0 auto}.b-dialog .body{width:484px;padding-top:86px;margin:0 auto}.b-dialog .body .body_i{padding-left:84px}.b-dialog .body h1{margin-bottom:30px;font-family:Georgia;font-size:24px;color:#000}.b-dialog .body p{line-height:19px}.b-dialog .body_OpenID .body_i{background:url(../images/b-dialog/body/openid.png) no-repeat 0 0}.b-dialog .buttons{position:absolute;top:220px;left:29px;width:632px;height:64px;border-top:#ddd 1px solid}.b-dialog .buttons .buttons_i{width:484px;margin:0 auto;padding-top:18px}.b-dialog .buttons a {margin-right:5px;}
+
+.b-dialog .body_Login {
+	margin-top: -20px;	
+	background:url(../images/b-dialog/body/login.png) no-repeat 0 0
+	}
+	.b-dialog .body_Login p {
+		margin-bottom: 15px;
+		}
+.b-dialog .body_Login-Auth {
+	margin-top: 0;
+	height: 100px;
+	}
+		
+.b-dialog .body_Form {
+	font-size: 13px;
+	margin-bottom: 7px;
+	}
+
+.b-dialog .form {
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+	}
+	.b-dialog .form fieldset {
+		float: left;	
+		margin-right: 10px;
+		color: #000;
+		}
+		.b-dialog .form fieldset input {
+			width: 100px;	
+			padding: 5px;
+			border: 1px solid #CCC;
+			}
+			
+.b-dialog .body_Redirect {
+	font-size: 12px;	
+	padding-left: 48px;
+	margin-top: -10px;
+	background:url(../images/b-dialog/body/redirect.png) no-repeat 0 0
+	}
+	.b-dialog .body_Redirect p {
+		margin-bottom: 7px;	
+		}
+	.b-dialog .body_Redirect b {
+		color: black;
+		font-weight: bold;	
+		}
+	.b-dialog .body_Redirect a.success {
+		display: block;
+		float: left;
+		padding: 7px;
+		color: #FFF;
+		font-weight: bold;
+		border: #52a552 1px solid;	
+		background: #60c160;
+		background-image: -ms-linear-gradient(top, #61C261 0%, #52A452 100%);
+		background-image: -moz-linear-gradient(top, #61C261 0%, #52A452 100%);
+		background-image: -o-linear-gradient(top, #61C261 0%, #52A452 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #61C261), color-stop(1, #52A452));
+		background-image: -webkit-linear-gradient(top, #61C261 0%, #52A452 100%);
+		background-image: linear-gradient(to bottom, #61C261 0%, #52A452 100%);
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;		
+		text-decoration: none;
+		}
+	.b-dialog .body_Redirect a.error {
+		display: block;
+		float: left;
+		margin: 7px 0 0 15px;
+		color: #a43b37;		
+		}

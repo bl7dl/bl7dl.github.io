@@ -1,0 +1,1 @@
+({"geo": "DE", "country-alpha-3": "DEU", "city": "Frankfurt", "remoteIp": "185.143.230.235", "forwarded-for": "", "geoip_area_code": "0", "geoip_city_continent_code": "EU", "geoip_dma_code": "0", "geoip_latitude": "50.1167", "geoip_longitude": "8.6833", "geoip_region": "05", "geoip_postal_code": "09060"});

@@ -1,0 +1,299 @@
+/* CS1 Background and text colours
+-------------------------------------------------------------*/
+
+html, body {
+        background: url(../../img/Mybb_Patriot/bg.gif) #fff repeat-x;
+}
+
+#pun-title TABLE {
+       background: url(../../img/Mybb_Patriot/bg.gif) #fff repeat-x;
+}
+
+#pun-title h1 {
+        background: url(../../img/Mybb_Patriot/logo.gif) no-repeat;
+}
+
+#pun {
+        background: url(../../img/Mybb_Patriot/bg.gif) #fff repeat-x;
+        border-color: #66b0ff;
+        color: #333;
+}
+
+/* CS1.1 */
+.punbb .main .container, .punbb .section .container,
+.punbb .section .formal .container,
+.punbb .formal fieldset,
+#viewprofile li strong, #viewprofile li div,
+#setmods dd,
+.punbb .post-body,
+.post-box,
+.punbb .post-links,
+.punbb-admin #pun-admain .adcontainer,
+.punbb .info-box, .punbb #pun-main .info-box .legend {
+  background-color: #B3D8FF;
+  color: #333;
+  }
+
+#pun-status .container  {
+  background: url(../../img/Mybb_Patriot/alt1.gif) top;
+}
+
+.crumbs  {
+ background: url(../../img/Mybb_Patriot/alt1.gif) bottom;
+}
+
+#pun-announcement .container{
+  background: url(../../img/Mybb_Patriot/alt1.gif) #fff repeat-x;
+  color: #333;
+}
+
+#pun-ulinks .container {
+  background: url(../../img/Mybb_Patriot/ulinks.gif) #fff repeat-x;
+  color: #333;
+}
+
+/* CS1.2 */
+.punbb .post .container,
+.punbb .post h3 {
+  background-color: #a8d2ff;
+  color: #333;
+}
+
+.punbb .post h3 span {
+  background-color: #a8d2ff;
+  color: #333;
+}
+
+.punbb td.tc3  {
+  background-color: #b3d8ff;
+  color: #333;
+  }
+
+.punbb td.tcr, .punbb td.tc2 {
+  background-color: #A8D2FF;
+  color: #333;
+  }
+
+/* CS1.3 */
+#pun-stats h2, .punbb .main h1, .punbb .main h2, #pun-debug h2, .punbb-admin #pun-admain h2 {
+  background: url(../../img/Mybb_Patriot/h2.gif) #66b0ff no-repeat left;
+  color: #fff;
+  text-align: center;
+  }
+
+/* CS1.4 */
+.punbb .modmenu .container {
+  background-color: #a8d2ff;
+  color: #333;
+  }
+
+/* CS1.5 */
+.punbb legend span, #viewprofile h2 span, #profilenav h2 span, .punbb-admin #pun-admain legend span {
+  background-color: #b3d8ff;
+  color: #333;
+  }
+
+.punbb .post h3 strong {
+  font-size: 0.9em;
+  color: #333;
+}
+
+/* CS1.7 */
+.punbb .quote-box, .punbb .code-box {
+  background-color: #E5F2FF;
+  color: #333
+  }
+
+.punbb textarea, .punbb select, .punbb input {
+  background-color: #E5F2FF;
+  color: #333
+}
+
+/* CS1.8 */
+#pun-navlinks .container {
+  background: transparent;
+  color: #333;
+  }
+
+.offline li.pa-online strong {
+  font-weight: normal;
+  }
+
+.punbb th {
+  color: #fff;
+  background: url(../../img/Mybb_Patriot/sub.gif) #89c2ff ;
+}
+
+/* CS2 Border colours
+-------------------------------------------------------------*/
+
+#pun-title, #pun-navlinks {
+  border-color: #3999FF;
+}
+
+/* CS2.1 */
+.punbb .container, .punbb .post-body, .post h3 {
+  border-color: #f1f5f9
+  }
+
+/* CS2.2 */
+.punbb .section, .punbb .forum, .punbb .formal, .punbb .modmenu, .punbb .info,
+.punbb .category, .punbb .post {
+  border-color: #fff;
+  }
+
+/* CS2.3 */
+#pun-stats h2, .punbb .main h1, .punbb .main h2, #pun-debug h2, .punbb-admin #pun-admain h2 {
+  border-color: #d9d9d9;
+  }
+
+/* CS2.4 */
+.punbb td, .punbb fieldset, #viewprofile ul, #profilenav ul, .punbb .post .post-body,
+.punbb .post h3 span, .post-links ul, .post-links, .usertable table {
+  border-color: #fff;
+  }
+
+/* CS2.5 */
+.punbb th {
+  border-color: #a7b5bd;
+  }
+
+/* CS2.6 */
+.punbb .quote-box, .punbb .code-box {
+  border-color: #66b0ff;
+  }
+
+#pun-announcement h2 span, li#onlinelist, #pun-help .formal .info-box h3.legend span {
+  border-color: #E5E5E5
+  }
+
+#pun-ulinks li {
+  border-color: #A6D1FF;
+}
+
+#pun-ulinks li a {
+  border-color: #BFDEFF;
+}
+
+ #pun-announcement h2, li#onlinelist div, #pun-help .formal .info-box h3.legend {
+  border-color: #fff
+  }
+
+.punbb .divider {
+  border-color: #E5E5E5 #fff #BFDEFF #E5E5E5;
+  }
+
+.punbb .formal fieldset .post-box, .punbb .info-box {
+  border: 1px solid #a7b5bd;
+  }
+
+li.pa-online {
+  border-left-color: #66b0ff;
+  }
+
+
+/* CS3 Links
+-------------------------------------------------------------*/
+
+/* CS3.1 */
+.punbb a, .punbb a:link, .punbb a:visited,
+.punbb-admin #pun-admain a, .punbb-admin #pun-admain a:link, .punbb-admin #punbb-admain a:visited {
+  color: #005EC3;
+   text-decoration: none;
+  }
+
+.punbb li.isactive a, .punbb li.isactive a:link, .punbb li.isactive a:visited {
+  color: #005EC3;
+   text-decoration: none;
+  }
+
+/* CS3.2 */
+.punbb a:hover, .punbb a:focus, .punbb a:active,  .punbb-admin #pun-admain .nodefault,
+.punbb-admin #punbb-admain a:hover, .punbb-admin #punbb-admain a:focus, .punbb-admin #punbb-admain a:active {
+  color: #3999ff;
+   text-decoration: underline;
+  }
+
+/* CS3.3 */
+#pun-navlinks a {
+  color: #3999ff;
+  text-decoration: underline;
+  }
+
+/* CS3.4 */
+#pun-navlinks a:hover, #pun-navlinks a:focus, #pun-navlinks a:active {
+  color: #0f6fd6;
+  text-decoration: none
+  }
+
+#pun-pagelinks a:active, #pun-pagelinks a:focus {
+  background-color: #333;
+  color: #333;
+  }
+
+.post h3 span a:link, .post h3 span a:visited {
+  font-weight: normal;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+/* CS4 Post status icons
+ -------------------------------------------------------------*/
+
+div.icon {
+        background: url(../../img/Mybb_Patriot/old.gif) no-repeat;
+}
+
+tr.inew div.icon {
+        background: url(../../img/Mybb_Patriot/new.gif) no-repeat;
+}
+
+tr.iclosed div.icon {
+        background: url(../../img/Mybb_Patriot/lock.gif) no-repeat;
+}
+
+tr.iredirect div.icon {
+        background: url(../../img/Mybb_Patriot/link.gif) no-repeat;
+
+}
+
+tr.isticky div.icon {
+        background: url(../../img/Mybb_Patriot/sticky.gif) no-repeat;
+}
+
+.punbb .main h1 span, .punbb .main h2 span, #pun-stats h2 span {
+        background: transparent url(../../img/Mybb_Patriot/arrow.gif) no-repeat 0% 4px;
+        padding-left: 16px;
+}
+
+#profilenav h2 span, #viewprofile h2 span {background-image: none}
+
+td.tcr a{
+        background: transparent url(../../img/Mybb_Patriot/post.gif) no-repeat 0% 2px;
+        padding-left: 14px;
+}
+
+#pun-stats ul.container {
+        background: transparent url(../../img/Mybb_Patriot/stats.gif) no-repeat -10px 11px;
+        padding-left: 74px;
+}
+
+#pun-stats div.statscon {
+        background: #b3d8ff;
+}
+
+#pun-crumbs2 .container, #pun-about .container{
+        background: #b3d8ff;
+        color: #333;
+}
+
+
+#pun-main div.catleft, #pun-main div.catright {
+        display: none;
+}
+
+/* CS5 »конки меню навигации
+ -------------------------------------------------------------*/
+#pun-navlinks li {
+background: transparent url(../../img/Mybb_Patriot/icon_mini.gif) no-repeat 0% 0%;
+}

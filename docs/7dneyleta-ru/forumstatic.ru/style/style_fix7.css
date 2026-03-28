@@ -1,0 +1,49 @@
+/****************************************************************/
+/* FIXES FOR IE7 */
+/****************************************************************/
+
+/* Anchor tab navigation and focus/active fixes 
+-------------------------------------------------------------*/
+
+#pun, #pun-main, #pun-navlinks, #pun-ulinks, #pun-stats, #pun-announcement {
+  min-height: 1px
+  }
+
+/* Viewtopic (Posts) 
+-------------------------------------------------------------*/
+
+.punbb .post .adfs-box, .punbb .post .post-author {
+  position: relative;
+  }
+  
+.punbb .post .container, .punbb .post .parsed {
+  min-height: 1px
+  } 
+  
+.punbb .post .container {
+  margin-top: 0
+  }  
+
+
+/* General "Has Layout" fixes including float shrinkwrapping 
+-------------------------------------------------------------*/
+  
+.punbb ul, .punbb dl, .punbb li, .punbb dd, .punbb dt, .punbb .linksb, 
+.punbb .fs-box, .punbb .fs-box p, .punbb .formal .container {
+  min-height: 1px;
+  }
+
+  
+/* Makes fieldsets display consistently 
+-------------------------------------------------------------*/
+
+.punbb .formal fieldset legend {
+  margin: 0 0 0 -11px;
+  }
+
+.punbb .formal fieldset legend span {
+  margin: 0 0 0 0;
+  }
+  
+  
+

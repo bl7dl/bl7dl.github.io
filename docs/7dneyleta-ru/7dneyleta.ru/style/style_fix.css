@@ -1,0 +1,60 @@
+/****************************************************************/
+/* FIXES FOR IE5 & IE6 */
+/****************************************************************/
+
+/* Anchor tab navigation and focus/active fixes 
+-------------------------------------------------------------*/
+
+.ietabfix:active {
+  color: #333;
+  height: 1px;
+  }
+  
+#pun, #pun-main, #pun-navlinks, #pun-ulinks, #pun-stats, #pun-announcement {
+  height: 1px
+  }
+
+
+/* Viewtopic (Posts) 
+-------------------------------------------------------------*/
+
+.punbb .post .container, .punbb .post .post-box {
+  height: 1px
+  }
+  
+.punbb .post .container {
+  margin-top: 0
+  }
+  
+.punbb .post .post-body, .punbb .post .post-author {
+  position: relative;
+  }
+  
+.punbb .post .post-box {
+  padding-left: 0.7em;
+  }
+
+.punbb dl.post-sig {
+  height: auto
+  }
+
+/* General "Has Layout" fixes including float shrinkwrapping 
+-------------------------------------------------------------*/
+
+.punbb ul, .punbb dl, .punbb li, .punbb dd, .punbb dt, .punbb .linksb, 
+.punbb .fs-box, .punbb .fs-box p, .punbb .formal .container {
+  height: 1px;
+  }
+
+/* Makes fieldsets display consistently 
+-------------------------------------------------------------*/
+
+.punbb .formal fieldset legend {
+  margin: 0 0 0 -11px;
+  }
+
+.punbb .formal fieldset legend span {
+  margin: 0 0 0 0;
+  }
+
+

@@ -1,0 +1,1 @@
+<HTML><HEAD><META HTTP-EQUIV="Refresh" CONTENT="0; URL=../stats-g-doubleclick-net/dc.js"><TITLE>302 File moved</TITLE></HEAD></HTML>

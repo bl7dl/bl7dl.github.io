@@ -1,0 +1,18 @@
+div.lx_amn_inlvid .ico { background: url(../../../../is.luxup.ru/images/i/video26/0.png) left top no-repeat; background-size: auto 100%; width: 7%; height: 8%; position: absolute; right: 2%; bottom: 14%; z-index: 9;}
+div.lx_amn_inlvid .ico span { background: url(../../../../is.luxup.ru/images/i/video26/1.png) left -100px no-repeat; background-size: auto 100%; position: absolute; right: 0px; top: 0px; width: 100%; height: 100%;}
+
+div.lx_amn_inlvid .ico.sound_on {background: url(../../../../is.luxup.ru/images/i/video26/0.png) left -100px no-repeat; background-size: auto 100%;}
+div.lx_amn_inlvid .ico.sound_on span { background: url(../../../../is.luxup.ru/images/i/video26/1.png) left 0px no-repeat; background-size: auto 100%;}
+
+div.lx_amn_inlvid .dsc { font-size: 16px; width: 400px; margin: 0 auto; padding-top: 30px; padding-bottom: 30px;}
+
+div.lx_amn_inlvid .dsc span {background: url(../../../../is.luxup.ru/images/i/video26/l.png) 20px 20px no-repeat; background-size: 100px auto; float: right; border-left: 1px solid #B90003; text-align: left; width: 120px; height: 60px; padding-left: 20px;}
+div.lx_amn_inlvid .dsc span a { background: none; font-size: 9px !important; line-height: 9px !important; color: #B90003 !important; padding-top: 0px !important; text-align: left!important; display: block; height: 60px!important; float: none!important; margin-right: 0px!important;}
+
+div.lx_amn_inlvid .dsc a {font-size: 16px!important; color: #B90003 !important; line-height: 20px !important; padding-top: 18px !important; display: inline-block; text-align: left !important; text-decoration: underline !important; display: block!important; margin-right: 120px!important; text-align: center!important; }
+
+div.lx_amn_inlvid .cls { color: #fff; padding: 5px; padding-top: 3px; padding-bottom: 2px; position: absolute; right: 0px; top: 0px; text-transform: uppercase; text-decoration: none !important; z-index: 5;}
+div.lx_amn_inlvid .adv {color: #fff; padding: 5px; padding-top: 3px; padding-bottom: 2px; position: absolute; left: 0px; top: 0px; text-transform: uppercase; text-decoration: none !important;}
+div.lx_amn_inlvid .adv_txt { color: #fff; padding: 5px; padding-top: 3px; padding-bottom: 2px; position: absolute;  text-decoration: none !important; position: absolute; bottom: 0px; left: 0px; right: 0px;}
+div.lx_amn_inlvid .txt_lnk { position: relative; z-index: 1; color: #fff;}
+div.lx_amn_inlvid .bg_lnk { position: absolute; background: #000; opacity:0.6;-moz-opacity:0.6; filter:alpha(opacity=60); left: 0px; top: 0px; right: 0px; bottom: 0px;}

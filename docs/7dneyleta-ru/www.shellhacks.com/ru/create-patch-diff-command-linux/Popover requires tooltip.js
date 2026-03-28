@@ -1,0 +1,1 @@
+<HTML><HEAD><META HTTP-EQUIV="Refresh" CONTENT="0; URL=../../create-patch-diff-command-linux/Popover requires tooltip.js"><TITLE>302 File moved</TITLE></HEAD></HTML>

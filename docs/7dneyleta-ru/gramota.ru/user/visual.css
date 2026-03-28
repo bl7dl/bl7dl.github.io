@@ -1,0 +1,297 @@
+/* visual editor */
+
+ul, ol {margin-top: 1em;}
+li {
+	margin-top: 1em;
+}
+ol {margin-left: 2em;}
+ol li {padding-left: 0.5em;}
+ul li {
+	padding-left: 2em;
+	list-style: none;
+	background: url(../img/design/list-green-mid.gif) no-repeat 0.53em 0.6em;
+}
+
+ul li li {background: url(../img/design/list-green-sm.gif) no-repeat 0.8em 0.6em;}
+
+ul.slist li {
+	padding-left: 1.5em;
+	background: url(../img/design/list-green-sm.gif) no-repeat 0em 0.6em;
+}
+
+h1, h2, h3, h4, h5, h6, p, table, blockquote {margin: 1em 0 1em 0;}
+p, table {margin-bottom: 0;}
+blockquote {margin-left: 2em;}
+
+li table {margin-top:0;}
+
+h1, h2, 
+h2 a:link,
+h2 a:visited,
+h2 a:hover,
+h2 a:active
+{color: #137C48;}
+
+h1 a {text-decoration: none;}
+
+h1 {
+	name: Заголовок главный;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+h2 {
+	name: Заголовок 2;
+	font-size: 1em;
+}
+h3 {
+	font-size: 1em;
+	text-align: center;
+}
+
+h4 {
+	font-size: 1em;
+}
+h5 {
+	font-size: 1em;
+}
+h6 {
+	font-size: 1em;
+}
+
+hr {
+	border: 0;
+	border-bottom: 1px solid #125F35;
+	margin: 0 0 1em 0;
+	height: 1em;
+	*height: 1px;
+}
+* html hr {height: 1px;margin: 0 0 0.5em 0;}
+
+a:link, a:visited, a:hover, a:active {color: #000;text-decoration: underline;}
+
+.em1
+{
+	name: Выделить (зеленый);
+	color: #137C48;
+	font-weight: bold;
+}
+a:link .em1, a:visited .em1, a:hover .em1, a:active .em1,
+.em1 a:link, .em1 a:visited, .em1 a:hover, .em1 a:active {color: #137C48;text-decoration: underline;}
+
+.em2
+{
+	name: Выделить (жёлтый);
+	color: #FF9900;
+	font-weight: bold;
+}
+
+.em4
+{
+	name: Выделить (зеленый 2);
+	color: #28B464;
+	font-weight: bold;
+}
+a:link .em4, a:visited .em4, a:hover .em4, a:active .em4,
+.em4 a:link, .em4 a:visited, .em4 a:hover, .em4 a:active {color: #28B464;text-decoration: underline;}
+
+.em3
+{
+	color: #DC143C;
+}
+
+.accent
+{
+	name: Ударение;
+	color: #DC143C;
+}
+
+.footnote
+{
+	name: Сноска;
+	font-size: 80%;
+	vertical-align: super;
+}
+
+.ddash {
+	name: Подчеркивание двойной чертой;
+	padding: 0px 0px 5px 0px; background-image:url(../img/gramota/d_l.gif); background-repeat:repeat-x;
+}
+.dash {
+	name: Подчеркивание пунктиром;
+	padding: 0px 0px 5px 0px; background-image:url(../img/gramota/dash.gif); background-repeat:repeat-x;
+}
+.dotdash {
+	name: Подчеркивание точкой-тире;
+	padding: 0px 0px 5px 0px; background-image:url(../img/gramota/dotdash.gif); background-repeat:repeat-x;
+}
+.wave {
+	name: Подчеркивание волной;
+	padding: 0px 0px 5px 0px; background-image:url(../img/gramota/wave.gif); background-repeat:repeat-x;
+}
+
+/* Таблицы */
+table.aplite_noborders td
+{
+	padding : 0.4em;
+}
+
+table.page-cont
+{
+	name : Таблица в контенте;
+	border-top : solid 1px #137C48;
+	border-left : solid 1px #137C48;
+}
+table.page-cont td
+{
+	padding : 0.4em;
+	border-bottom : solid 1px #137C48;
+	border-right : solid 1px #137C48;
+}
+
+table.frame
+{
+	name : Таблица с рамкой;
+	border-top : solid 1px #137C48;
+	border-left : solid 1px #137C48;
+	border-bottom : solid 1px #137C48;
+	border-right : solid 1px #137C48;
+}
+table.frame td
+{
+	padding : 0.4em;
+}
+table.frame td.header
+{
+	name: Заголовок;
+	background-color: #137C48;
+	color: #fff;
+	font-weight: bold;
+}
+
+table.frame2
+{
+	name : Таблица с рамкой (менее важная);
+	border-top : solid 1px #28B464;
+	border-left : solid 1px #28B464;
+	border-bottom : solid 1px #28B464;
+	border-right : solid 1px #28B464;
+}
+table.frame2 td
+{
+	padding : 0.4em;
+}
+table.frame2 td.header
+{
+	name: Заголовок;
+	background-color: #28B464;
+	color: #fff;
+	font-weight: bold;
+}
+
+table.frame3
+{
+	name : Таблица с рамкой (еще менее важная);
+	border-top : solid 1px #86CE90;
+	border-left : solid 1px #86CE90;
+	border-bottom : solid 1px #86CE90;
+	border-right : solid 1px #86CE90;
+}
+table.frame3 td
+{
+	padding : 0.4em;
+}
+table.frame3 td.header
+{
+	name: Заголовок;
+	background-color: #86CE90;
+	color: #000;
+	font-weight: bold;
+}
+
+table.buro
+{
+	name : Номер вопроса;
+}
+table.buro td
+{
+	padding : 0;
+	background-image: url(../img/design/bg-llgreen.gif);
+}
+table.buro td.lt,
+table.buro td.lb,
+table.buro td.rt,
+table.buro td.rb {
+	height: 6px;
+	width: 6px;
+}
+table.buro td.lt
+{
+	name: Левый верхний угол;
+	background-image: url(../img/design/corner-llgreen-leftop.gif);
+}
+table.buro td.lb
+{
+	name: Левый нижний угол;
+	background-image: url(../img/design/corner-llgreen-lefbot.gif);
+}
+table.buro td.rt
+{
+	name: Правый верхний угол;
+	background-image: url(../img/design/corner-llgreen-rigtop.gif);
+}
+table.buro td.rb
+{
+	name: Правый нижний угол;
+	background-image: url(../img/design/corner-llgreen-rigbot.gif);
+}
+
+/* Формы */
+textarea {
+	font: 68.8% Tahoma, sans-serif;/* 1em=11px */
+}
+input.text, .text-err, textarea {
+	font-size: 109%; /* 75% of 16px (12px), body 68.8% (11px) */
+	line-height: 1.4em;
+	padding: 1px;
+}
+input.text, textarea {
+	border: 1px solid #000;
+}
+input.text, input.text-err {height: 1.75em;}
+* html input.text, * html input.text-err {height: 1.8em;}
+*input.text, *input.text-err {height: 1.37em;vertical-align:middle;}
+input.button {
+	background-color: #28B464;
+	height: 1.8em;
+}
+*input.text, input.button[class], x:-moz-any-link {vertical-align: -0.15em;}
+input.lyellow {background-color: #FEE16D;}
+input.green {background-color: #137C48;color: #fff;}
+input.lgreen {background-color: #28B464;color: #fff;}
+
+input, select, textarea {background-color: #fff;}
+
+form.aplite_form input {
+	width: 200px;
+	border: 1px solid #000;
+}
+
+/*textarea {scrollbar-base-color: #BFF8C9;}/*#FEE16D;}*/
+.lllgreen * {scrollbar-base-color: #BFF8C9;}
+
+input.checkbox {
+	width: auto;
+	background-color: transparent;
+	vertical-align:middle;
+}
+* html input.checkbox {height:1.3em;}
+
+form.aplite_form input.button {width: auto;}
+
+label.block
+{
+	width: 150px;
+	text-align: right;
+	padding-right:10px;
+	float:left;
+}

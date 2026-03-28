@@ -202,16 +202,6 @@ body.archive-readonly #wrap {
 #page-body {
   min-width: 0;
 }
-.archive-banner {
-  background: #f7edec;
-  border: 1px solid #ebcfca;
-  color: #5d463f;
-  font-size: 12px;
-  line-height: 1.5;
-  margin: 8px 0 12px;
-  padding: 10px 12px;
-}
-.archive-banner strong { color: #7b2d26; }
 #page-body img,
 #logo img,
 .postbody img,
@@ -249,6 +239,15 @@ fieldset.polls img {
 .archive-inline-note {
   color: #7b4036;
   font-style: italic;
+}
+a.archive-disabled-member-link,
+a.archive-disabled-member-link:link,
+a.archive-disabled-member-link:visited,
+a.archive-disabled-member-link:hover,
+a.archive-disabled-member-link:active {
+  color: inherit;
+  cursor: default;
+  text-decoration: none;
 }
 dl.spoiler dt,
 dl.codebox.spoiler dt {
@@ -293,7 +292,7 @@ LANDING_PAGE = """\
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Архив форума 7 дней лета</title>
+  <title>\u0410\u0440\u0445\u0438\u0432 \u0444\u043e\u0440\u0443\u043c\u0430 7 \u0434\u043d\u0435\u0439 \u043b\u0435\u0442\u0430</title>
   <style>
     body {
       background: #f7edec;
@@ -341,11 +340,11 @@ LANDING_PAGE = """\
 <body>
   <main>
     <div class="card">
-      <h1>Архив форума «7 дней лета»</h1>
-      <p>Публикационная копия подготовлена в режиме read-only для GitHub Pages. Исходный дамп не изменён.</p>
-      <p>Интерактивные функции форума отключены: ответы, ЛС, поиск, подписки, формы и текущая сессия удалены. Локально скачанные изображения в сообщениях сохранены, внешние видео заменены ссылками.</p>
-      <p><a class="button" href="__FORUM_HREF__">Открыть архив форума</a></p>
-      <p class="muted">Архив предназначен для прямого доступа по ссылке и помечен как <code>noindex</code>.</p>
+      <h1>\u0410\u0440\u0445\u0438\u0432 \u0444\u043e\u0440\u0443\u043c\u0430 \u00ab7 \u0434\u043d\u0435\u0439 \u043b\u0435\u0442\u0430\u00bb</h1>
+      <p>\u041f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u043e\u043d\u043d\u0430\u044f \u043a\u043e\u043f\u0438\u044f \u043f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u043b\u0435\u043d\u0430 \u0432 \u0440\u0435\u0436\u0438\u043c\u0435 read-only \u0434\u043b\u044f GitHub Pages. \u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u0434\u0430\u043c\u043f \u043d\u0435 \u0438\u0437\u043c\u0435\u043d\u0451\u043d.</p>
+      <p>\u0418\u043d\u0442\u0435\u0440\u0430\u043a\u0442\u0438\u0432\u043d\u044b\u0435 \u0444\u0443\u043d\u043a\u0446\u0438\u0438 \u0444\u043e\u0440\u0443\u043c\u0430 \u043e\u0442\u043a\u043b\u044e\u0447\u0435\u043d\u044b: \u043e\u0442\u0432\u0435\u0442\u044b, \u041b\u0421, \u043f\u043e\u0438\u0441\u043a, \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u0438, \u0444\u043e\u0440\u043c\u044b \u0438 \u0442\u0435\u043a\u0443\u0449\u0430\u044f \u0441\u0435\u0441\u0441\u0438\u044f \u0443\u0434\u0430\u043b\u0435\u043d\u044b. \u041b\u043e\u043a\u0430\u043b\u044c\u043d\u043e \u0441\u043a\u0430\u0447\u0430\u043d\u043d\u044b\u0435 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u044f \u0432 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f\u0445 \u0441\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u044b, \u0432\u043d\u0435\u0448\u043d\u0438\u0435 \u0432\u0438\u0434\u0435\u043e \u0437\u0430\u043c\u0435\u043d\u0435\u043d\u044b \u0441\u0441\u044b\u043b\u043a\u0430\u043c\u0438.</p>
+      <p><a class="button" href="__FORUM_HREF__">\u041e\u0442\u043a\u0440\u044b\u0442\u044c \u0430\u0440\u0445\u0438\u0432 \u0444\u043e\u0440\u0443\u043c\u0430</a></p>
+      <p class="muted">\u0410\u0440\u0445\u0438\u0432 \u043f\u0440\u0435\u0434\u043d\u0430\u0437\u043d\u0430\u0447\u0435\u043d \u0434\u043b\u044f \u043f\u0440\u044f\u043c\u043e\u0433\u043e \u0434\u043e\u0441\u0442\u0443\u043f\u0430 \u043f\u043e \u0441\u0441\u044b\u043b\u043a\u0435 \u0438 \u043f\u043e\u043c\u0435\u0447\u0435\u043d \u043a\u0430\u043a <code>noindex</code>.</p>
     </div>
   </main>
 </body>
@@ -369,7 +368,7 @@ MULTI_ARCHIVE_LANDING_PAGE = """\
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>?????? ?7 ???? ?????</title>
+  <title>\u0410\u0440\u0445\u0438\u0432 \u0444\u043e\u0440\u0443\u043c\u043e\u0432 \u00ab7 \u0434\u043d\u0435\u0439 \u043b\u0435\u0442\u0430\u00bb</title>
   <style>
     :root {
       color-scheme: light;
@@ -450,33 +449,28 @@ MULTI_ARCHIVE_LANDING_PAGE = """\
 <body>
   <main>
     <div class="card">
-      <h1>?????? ?7 ???? ?????</h1>
-      <p>?? ???? ???????? ???????????? ??? ??????????? read-only ????? ??????. ??? ??????? ?? ????????? ?????? ? ???????????? ??? GitHub Pages ??? ????????????? ??????? ??????.</p>
+      <h1>\u0410\u0440\u0445\u0438\u0432 \u0444\u043e\u0440\u0443\u043c\u043e\u0432 \u00ab7 \u0434\u043d\u0435\u0439 \u043b\u0435\u0442\u0430\u00bb</h1>
+      <p>\u041d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435 \u0441\u043e\u0431\u0440\u0430\u043d\u044b \u0434\u0432\u0435 read-only \u043a\u043e\u043f\u0438\u0438 \u0444\u043e\u0440\u0443\u043c\u043e\u0432.</p>
       <div class="grid">
         <section class="site-card">
           <h2>bl7dl.2x2forum.ru</h2>
-          <p>???????? ????? ????????? ?????? ?? ?????? ??????. ??????? ????? ?? ??? ???????? ????????? ??????.</p>
-          <p><a class="site-button" href="__PRIMARY_HREF__">??????? ?????</a></p>
+          <p>\u0410\u0440\u0445\u0438\u0432 \u0441\u0442\u0430\u0440\u043e\u0433\u043e \u0444\u043e\u0440\u0443\u043c\u0430 \u043f\u043e \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u00ab7 \u0434\u043d\u0435\u0439 \u043b\u0435\u0442\u0430\u00bb.</p>
+          <p><a class="site-button" href="__PRIMARY_HREF__">\u041e\u0442\u043a\u0440\u044b\u0442\u044c \u0430\u0440\u0445\u0438\u0432</a></p>
         </section>
         <section class="site-card">
           <h2>7dneyleta.ru</h2>
-          <p>???????????? ????? ?????????? ???????????? ????? ?? ?????? ??????, ?????????????? ? ??????????? ??????? ??? ?????????? ? ???????? ???????.</p>
-          <p><a class="site-button alt" href="__SECONDARY_HREF__">??????? ?????</a></p>
+          <p>\u0410\u0440\u0445\u0438\u0432 \u043d\u043e\u0432\u043e\u0433\u043e \u0444\u043e\u0440\u0443\u043c\u0430 \u043f\u043e \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u00ab7 \u0434\u043d\u0435\u0439 \u043b\u0435\u0442\u0430\u00bb.</p>
+          <p><a class="site-button alt" href="__SECONDARY_HREF__">\u041e\u0442\u043a\u0440\u044b\u0442\u044c \u0430\u0440\u0445\u0438\u0432</a></p>
         </section>
       </div>
-      <p class="muted">??? ?????????? ???????? ??? <code>noindex, nofollow</code> ? ????????????? ??? ??????? ??????? ?? ??????.</p>
+
     </div>
   </main>
 </body>
 </html>
 """
 
-BANNER_HTML = """\
-<div class="archive-banner">
-  <strong>\u0410\u0440\u0445\u0438\u0432 read-only.</strong>
-  \u041e\u0442\u0432\u0435\u0442\u044b, \u041b\u0421, \u043f\u043e\u0438\u0441\u043a, \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u0438 \u0438 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u043a\u043b\u044e\u0447\u0435\u043d\u044b.
-</div>
-"""
+
 
 MEDIA_VIEWER_HTML = """\
 <!doctype html>
@@ -573,10 +567,10 @@ REPORT_REDACTION_SNIPPETS = tuple(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Build a read-only GitHub Pages archive from offline forum dumps.")
-    parser.add_argument("--src", required=True, help="Primary source dump root, e.g. 7dl_site")
+    parser.add_argument("--src", help="Primary source dump root, e.g. 7dl_site")
     parser.add_argument("--out", required=True, help="Output directory, e.g. docs")
     parser.add_argument("--forum-dir", required=True, help="Primary forum directory inside source root")
-    parser.add_argument("--report", required=True, help="Path to JSON build report")
+    parser.add_argument("--report", help="Path to JSON build report")
     parser.add_argument("--primary-prefix", default="bl7dl-2x2forum-ru", help="Output subdirectory for the primary archive")
     parser.add_argument("--secondary-src", default="7dneyleta_site", help="Secondary source dump root")
     parser.add_argument("--secondary-prefix", default="7dneyleta-ru", help="Output subdirectory for the secondary archive")
@@ -590,9 +584,20 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Shortcut local iteration mode: implies --incremental and skips the forbidden-pattern scan.",
     )
+    parser.add_argument(
+        "--only",
+        choices=("all", "root-landing"),
+        default="all",
+        help="Limit the run to one output area. 'root-landing' rewrites only docs/index.html and docs/.nojekyll.",
+    )
     parser.add_argument("--disable-secondary", action="store_true", help="Skip building the secondary archive")
-    return parser.parse_args()
-
+    args = parser.parse_args()
+    if args.only != "root-landing":
+        if not args.src:
+            parser.error("--src is required unless --only root-landing is used")
+        if not args.report:
+            parser.error("--report is required unless --only root-landing is used")
+    return args
 
 def is_kept_forum_page(name: str) -> bool:
     if "_25(" in name or "_2525(" in name:
@@ -610,6 +615,14 @@ def should_publish_primary_forum_page(path: Path) -> bool:
     if not is_access_denied_capture(path):
         return True
     return is_primary_member_page(path.name)
+
+
+def collect_access_denied_primary_member_pages(src_forum_dir: Path) -> set[str]:
+    pages: set[str] = set()
+    for child in src_forum_dir.iterdir():
+        if child.is_file() and is_primary_member_page(child.name) and is_access_denied_capture(child):
+            pages.add(child.name)
+    return pages
 
 
 def is_access_denied_capture(path: Path) -> bool:
@@ -972,6 +985,31 @@ def maybe_rewrite_anchor_to_media_viewer(
 def source_target_from_relative(current_src_file: Path, url_path: str) -> Path:
     pure = PurePosixPath(url_path)
     return current_src_file.parent.joinpath(*pure.parts).resolve(strict=False)
+
+
+def is_access_denied_primary_member_link(
+    url: str,
+    *,
+    current_src_file: Path,
+    src_root: Path,
+    access_denied_member_pages: set[str],
+) -> bool:
+    if not access_denied_member_pages:
+        return False
+
+    parsed = urlsplit(url)
+    if parsed.scheme or parsed.netloc or not parsed.path or parsed.path.startswith("/"):
+        return False
+
+    source_target = source_target_from_relative(current_src_file, parsed.path)
+    try:
+        source_target.relative_to(src_root)
+    except ValueError:
+        return False
+
+    if source_target.parent != current_src_file.parent:
+        return False
+    return source_target.name in access_denied_member_pages
 
 
 
@@ -1380,15 +1418,6 @@ def normalize_archive_state(soup: BeautifulSoup, counters: Counter[str]) -> None
             image["title"] = "Сообщения"
 
 
-def inject_archive_banner(soup: BeautifulSoup) -> None:
-    marker = soup.select_one("#page-body, #pun-main, #brd-main") or soup.body
-    if marker is None:
-        return
-    banner = BeautifulSoup(BANNER_HTML, "lxml").body.find()
-    if banner is not None:
-        marker.insert(0, banner)
-
-
 def cleanup_empty_tags(soup: BeautifulSoup) -> None:
     removable = ["li", "ul", "p", "span", "dd", "div"]
     for _ in range(4):
@@ -1397,9 +1426,7 @@ def cleanup_empty_tags(soup: BeautifulSoup) -> None:
             if tag.get("id") in {"wrap", "page-body", "page-header", "main", "main-content"}:
                 continue
             classes = set(tag.get("class") or [])
-            if tag.name == "div" and tag.get("class") == ["archive-banner"]:
-                continue
-            if classes & {"clear", "clearfix", "right-box", "corners-top", "corners-bottom"}:
+            if classes & {"clear", "clearfix", "right-box", "corners-top", "corners-bottom", "icon", "intd"}:
                 continue
             parent_classes = set(tag.parent.get("class") or []) if tag.parent else set()
             if parent_classes & {"corners-top", "corners-bottom"}:
@@ -1572,7 +1599,17 @@ def replace_missing_media(tag: Tag, external_url: str | None, counters: Counter[
     counters["missing_media"] += 1
 
 
-def rewrite_attributes(soup: BeautifulSoup, current_src_file: Path, current_dst_file: Path, src_root: Path, out_root: Path, counters: Counter[str], html_cache: dict[Path, bool], image_aliases: dict[Path, Path]) -> None:
+def rewrite_attributes(
+    soup: BeautifulSoup,
+    current_src_file: Path,
+    current_dst_file: Path,
+    src_root: Path,
+    out_root: Path,
+    counters: Counter[str],
+    html_cache: dict[Path, bool],
+    image_aliases: dict[Path, Path],
+    access_denied_member_pages: set[str],
+) -> None:
     for tag in soup.find_all(True):
         if not isinstance(getattr(tag, "attrs", None), dict):
             continue
@@ -1626,6 +1663,21 @@ def rewrite_attributes(soup: BeautifulSoup, current_src_file: Path, current_dst_
                 continue
 
             original = tag[attribute]
+            if (
+                tag.name == "a"
+                and attribute == "href"
+                and is_access_denied_primary_member_link(
+                    original,
+                    current_src_file=current_src_file,
+                    src_root=src_root,
+                    access_denied_member_pages=access_denied_member_pages,
+                )
+            ):
+                del tag.attrs["href"]
+                tag["class"] = list(dict.fromkeys([*(tag.get("class") or []), "archive-disabled-member-link"]))
+                counters["member_links_disabled"] += 1
+                continue
+
             rewritten = rewrite_url(
                 original,
                 current_src_file=current_src_file,
@@ -1673,6 +1725,7 @@ def sanitize_page(
     counters: Counter[str],
     html_cache: dict[Path, bool],
     image_aliases: dict[Path, Path],
+    access_denied_member_pages: set[str],
 ) -> None:
     soup = BeautifulSoup(src_file.read_text(encoding="utf-8", errors="replace"), "lxml")
     html = soup.html
@@ -1693,8 +1746,17 @@ def sanitize_page(
     remove_by_text_patterns(soup, counters)
     remove_readonly_capability_blocks(soup, counters)
     normalize_archive_state(soup, counters)
-    inject_archive_banner(soup)
-    rewrite_attributes(soup, src_file, dst_file, src_root, out_root, counters, html_cache, image_aliases)
+    rewrite_attributes(
+        soup,
+        src_file,
+        dst_file,
+        src_root,
+        out_root,
+        counters,
+        html_cache,
+        image_aliases,
+        access_denied_member_pages,
+    )
     cleanup_empty_tags(soup)
 
     document = str(soup)
@@ -1812,6 +1874,7 @@ def build_archive(
         reused_key="forum_assets_reused",
     )
 
+    access_denied_member_pages = collect_access_denied_primary_member_pages(src_forum_dir)
     kept_pages = []
     skipped_pages = []
     for child in sorted(src_forum_dir.iterdir(), key=lambda path: path.name):
@@ -1842,14 +1905,13 @@ def build_archive(
                 counters=counters,
                 html_cache=html_cache,
                 image_aliases=image_aliases,
+                access_denied_member_pages=access_denied_member_pages,
             )
         else:
             skipped_pages.append(relative_name)
             counters["pages_skipped"] += 1
 
     write_text(out_root / ".nojekyll", "")
-    landing_page = render_landing_page(f"{forum_dir_name}/index.html", trim_local_media_sentence=True)
-    write_text(out_root / "index.html", landing_page)
 
     forbidden_scan = maybe_scan_forbidden_patterns(out_root, options)
     safe_skipped_pages_sample = [name for name in skipped_pages if is_report_safe_text(name)][:150]
@@ -1870,6 +1932,7 @@ def build_archive(
             "scripts_removed": counters["scripts_removed"],
             "forms_removed": counters["forms_removed"],
             "blocked_links_removed": counters["blocked_links_removed"],
+            "member_links_disabled": counters["member_links_disabled"],
             "contact_links_removed": counters["contact_links_removed"],
             "state_icons_normalized": counters["state_icons_normalized"],
             "online_classes_removed": counters["online_classes_removed"],
@@ -2294,7 +2357,6 @@ def sanitize_secondary_page(
         remove_secondary_forum_live_fragments(soup, counters)
 
     strip_secondary_blocked_links(soup, counters)
-    inject_archive_banner(soup)
     rewrite_secondary_attributes(
         soup,
         src_file,
@@ -2394,24 +2456,90 @@ def render_landing_page(forum_href: str, trim_local_media_sentence: bool = False
     return landing
 
 
-def write_secondary_archive_landing_page(out_root: Path) -> None:
-    write_text(out_root / "index.html", render_landing_page("7dneyleta.ru/index.html"))
 
-
-def write_multi_archive_landing_page(out_root: Path, primary_prefix: str, secondary_prefix: str) -> None:
-    landing = MULTI_ARCHIVE_LANDING_PAGE.replace("__PRIMARY_HREF__", f"{primary_prefix}/index.html")
-    landing = landing.replace("__SECONDARY_HREF__", f"{secondary_prefix}/index.html")
+def write_multi_archive_landing_page(out_root: Path, primary_prefix: str, primary_forum_dir: str, secondary_prefix: str) -> None:
+    landing = MULTI_ARCHIVE_LANDING_PAGE.replace("__PRIMARY_HREF__", f"{primary_prefix}/{primary_forum_dir}/index.html")
+    landing = landing.replace("__SECONDARY_HREF__", f"{secondary_prefix}/7dneyleta.ru/index.html")
     write_text(out_root / "index.html", landing)
+
+
+
+def has_existing_secondary_archive_output(out_root: Path, secondary_prefix: str) -> bool:
+    return (out_root / secondary_prefix / "7dneyleta.ru" / "index.html").is_file()
+
+
+
+def should_render_multi_archive_landing_page(
+    out_root: Path,
+    secondary_src: str,
+    secondary_prefix: str,
+    disable_secondary: bool,
+) -> bool:
+    if disable_secondary:
+        return False
+    secondary_src_root = Path(secondary_src).resolve()
+    return secondary_src_root.is_dir() or has_existing_secondary_archive_output(out_root, secondary_prefix)
+
+
+
+def write_root_outputs(
+    out_root: Path,
+    primary_prefix: str,
+    primary_forum_dir: str,
+    secondary_prefix: str,
+    include_secondary: bool,
+) -> None:
+    write_text(out_root / ".nojekyll", "")
+    if include_secondary:
+        write_multi_archive_landing_page(out_root, primary_prefix, primary_forum_dir, secondary_prefix)
+    else:
+        write_text(out_root / "index.html", render_landing_page(f"{primary_prefix}/{primary_forum_dir}/index.html", trim_local_media_sentence=True))
 
 
 
 def main() -> None:
     args = parse_args()
+    out_root = Path(args.out).resolve()
+
+    if args.only == "root-landing":
+        include_secondary = should_render_multi_archive_landing_page(
+            out_root,
+            args.secondary_src,
+            args.secondary_prefix,
+            args.disable_secondary,
+        )
+        out_root.mkdir(parents=True, exist_ok=True)
+        write_root_outputs(
+            out_root,
+            args.primary_prefix,
+            args.forum_dir,
+            args.secondary_prefix,
+            include_secondary=include_secondary,
+        )
+        print(
+            json.dumps(
+                {
+                    "partial_build": "root-landing",
+                    "output_root": path_to_posix(out_root),
+                    "landing_variant": "multi-archive" if include_secondary else "single-archive",
+                    "written_files": [
+                        path_to_posix(out_root / "index.html"),
+                        path_to_posix(out_root / ".nojekyll"),
+                    ],
+                    "report_updated": False,
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return
+
     options = BuildOptions.from_args(args)
     src_root = Path(args.src).resolve()
     out_root = Path(args.out).resolve()
     report_path = Path(args.report).resolve()
     primary_out_root = out_root / args.primary_prefix
+    secondary_src_root = Path(args.secondary_src).resolve()
 
     if path_exists(out_root) and not options.incremental:
         shutil.rmtree(out_root)
@@ -2420,25 +2548,23 @@ def main() -> None:
     report = build_archive(src_root, primary_out_root, args.forum_dir, report_path, options)
     secondary_report = None
 
-    if not args.disable_secondary:
-        secondary_src_root = Path(args.secondary_src).resolve()
-        if secondary_src_root.is_dir():
-            secondary_out_root = out_root / args.secondary_prefix
-            secondary_report = build_secondary_archive(secondary_src_root, secondary_out_root, options)
-            write_secondary_archive_landing_page(secondary_out_root)
-            report["secondary_archive"] = secondary_report
+    if not args.disable_secondary and secondary_src_root.is_dir():
+        secondary_out_root = out_root / args.secondary_prefix
+        secondary_report = build_secondary_archive(secondary_src_root, secondary_out_root, options)
+        report["secondary_archive"] = secondary_report
 
-    write_text(out_root / ".nojekyll", "")
     write_text(report_path, json.dumps(report, ensure_ascii=False, indent=2))
-    if secondary_report is not None:
-        write_multi_archive_landing_page(out_root, args.primary_prefix, args.secondary_prefix)
-    else:
-        write_text(out_root / "index.html", render_landing_page(f"{args.primary_prefix}/index.html"))
+    write_root_outputs(
+        out_root,
+        args.primary_prefix,
+        args.forum_dir,
+        args.secondary_prefix,
+        include_secondary=secondary_report is not None,
+    )
 
     print(json.dumps(report["summary"], ensure_ascii=False, indent=2))
     if secondary_report is not None:
         print(json.dumps({"secondary_archive": secondary_report["summary"]}, ensure_ascii=False, indent=2))
-
 
 if __name__ == "__main__":
     main()
