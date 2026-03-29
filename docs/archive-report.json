@@ -14,6 +14,13 @@
     "image_aliases_reused": 50,
     "forbidden_scan_skipped": true
   },
+  "search_index": {
+    "enabled": true,
+    "documents": 25325,
+    "term_buckets": 64,
+    "doc_shards": 26,
+    "output_dir": "G:/Программы/7dl-archive/docs/bl7dl-2x2forum-ru/bl7dl.2x2forum.ru/search"
+  },
   "summary": {
     "kept_pages": 1153,
     "skipped_pages": 441,
@@ -1355,6 +1362,13 @@
       "image_aliases_written": 0,
       "image_aliases_reused": 866,
       "forbidden_scan_skipped": true
+    },
+    "search_index": {
+      "enabled": true,
+      "documents": 11717,
+      "term_buckets": 64,
+      "doc_shards": 12,
+      "output_dir": "G:/Программы/7dl-archive/docs/7dneyleta-ru/7dneyleta.ru/search"
     },
     "summary": {
       "kept_pages": 1310,

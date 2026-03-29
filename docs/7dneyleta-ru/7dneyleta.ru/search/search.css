@@ -1,0 +1,127 @@
+html, body {
+  min-height: 100%;
+}
+body.archive-search-page {
+  background: #f6efe8;
+  color: #4c3832;
+  margin: 0;
+}
+.archive-search-shell {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 960px;
+  min-height: 100vh;
+  padding: 32px 18px 56px;
+}
+.archive-search-header {
+  margin-bottom: 20px;
+}
+.archive-search-header h1 {
+  color: #7b2d26;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.1;
+  margin: 0 0 8px;
+}
+.archive-search-breadcrumb,
+.archive-search-subtitle,
+.archive-search-hint,
+.archive-search-meta,
+.archive-search-snippet,
+.archive-search-empty {
+  margin: 0;
+}
+.archive-search-subtitle,
+.archive-search-hint,
+.archive-search-meta,
+.archive-search-empty {
+  color: #6f5a52;
+}
+.archive-search-form {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(130, 98, 83, 0.18);
+  box-shadow: 0 18px 40px rgba(76, 56, 50, 0.08);
+  margin-bottom: 20px;
+  padding: 18px;
+}
+.archive-search-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.archive-search-row {
+  display: flex;
+  gap: 10px;
+}
+.archive-search-row input {
+  border: 1px solid #c9b2a8;
+  flex: 1 1 auto;
+  font: inherit;
+  min-width: 0;
+  padding: 11px 12px;
+}
+.archive-search-row button,
+.archive-search-more-wrap button {
+  background: #7b2d26;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  padding: 11px 16px;
+}
+.archive-search-row button:hover,
+.archive-search-more-wrap button:hover {
+  filter: brightness(1.05);
+}
+.archive-search-hint {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.archive-search-status {
+  margin-bottom: 14px;
+  min-height: 1.5em;
+}
+.archive-search-results {
+  display: grid;
+  gap: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.archive-search-result {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(130, 98, 83, 0.16);
+  box-shadow: 0 12px 28px rgba(76, 56, 50, 0.06);
+  padding: 16px 18px;
+}
+.archive-search-result h2 {
+  font-size: 20px;
+  line-height: 1.25;
+  margin: 0 0 8px;
+}
+.archive-search-result h2 a {
+  color: #7b2d26;
+  text-decoration: none;
+}
+.archive-search-result h2 a:hover {
+  text-decoration: underline;
+}
+.archive-search-meta {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.archive-search-snippet {
+  line-height: 1.6;
+}
+.archive-search-more-wrap {
+  margin-top: 18px;
+  text-align: center;
+}
+@media (max-width: 640px) {
+  .archive-search-row {
+    flex-direction: column;
+  }
+  .archive-search-row button,
+  .archive-search-row input {
+    width: 100%;
+  }
+}
