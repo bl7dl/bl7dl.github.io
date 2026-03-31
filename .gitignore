@@ -4,3 +4,4 @@
 !tools/**
 !docs/
 !docs/**
+__pycache__/
