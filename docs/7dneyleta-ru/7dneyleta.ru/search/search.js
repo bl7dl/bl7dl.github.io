@@ -1,328 +1,180 @@
-(function () {
+﻿(() => {
   const RESULTS_PER_PAGE = 50;
-  const form = document.getElementById("archive-search-form");
-  const input = document.getElementById("archive-search-query");
-  const statusNode = document.getElementById("archive-search-status");
-  const resultsNode = document.getElementById("archive-search-results");
-  const moreWrap = document.getElementById("archive-search-more-wrap");
-  const moreButton = document.getElementById("archive-search-more");
 
-  let manifestPromise = null;
-  const termsCache = new Map();
-  const docsCache = new Map();
-  const scriptCache = new Map();
-  const inlinePayloads = window.__archiveSearchData || (window.__archiveSearchData = Object.create(null));
-  const useScriptLoader = window.location.protocol === "file:";
-  let currentResults = [];
-  let renderedCount = 0;
+  function createResultItem(documentRecord) {
+    const item = document.createElement("li");
+    item.className = "archive-search-result";
 
-  function normalizeText(value) {
-    return (value || "")
-      .normalize("NFKC")
-      .toLowerCase()
-      .replace(/ё/g, "е")
-      .replace(/[^0-9a-zа-я]+/gi, " ")
-      .replace(/\s+/g, " ")
-      .trim();
+    const title = document.createElement("h2");
+    title.className = "archive-search-result-title";
+    const link = document.createElement("a");
+    link.href = documentRecord.url;
+    link.textContent = documentRecord.topic_title || documentRecord.url;
+    title.appendChild(link);
+
+    const meta = document.createElement("p");
+    meta.className = "archive-search-result-meta";
+    const metaParts = [];
+    if (documentRecord.author) {
+      metaParts.push(`Автор: ${documentRecord.author}`);
+    }
+    if (documentRecord.posted_at) {
+      metaParts.push(documentRecord.posted_at);
+    }
+    if (documentRecord.forum_title) {
+      metaParts.push(`Раздел: ${documentRecord.forum_title}`);
+    }
+    meta.textContent = metaParts.join(" | ");
+
+    const excerpt = document.createElement("p");
+    excerpt.className = "archive-search-result-excerpt";
+    excerpt.textContent = documentRecord.excerpt || "";
+
+    item.appendChild(title);
+    if (meta.textContent) {
+      item.appendChild(meta);
+    }
+    if (excerpt.textContent) {
+      item.appendChild(excerpt);
+    }
+    return item;
   }
 
-  function tokenize(value) {
-    const normalized = normalizeText(value);
-    if (!normalized) {
-      return [];
-    }
-    const tokens = normalized.split(" ").filter((token) => token.length >= 2);
-    return [...new Set(tokens)];
-  }
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("archive-search-form");
+    const queryInput = document.getElementById("archive-search-query");
+    const status = document.getElementById("archive-search-status");
+    const results = document.getElementById("archive-search-results");
+    const moreWrap = document.getElementById("archive-search-more-wrap");
+    const moreButton = document.getElementById("archive-search-more");
 
-  function escapeHtml(value) {
-    return (value || "")
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;");
-  }
-
-  function searchBucket(token, bucketCount) {
-    let hash = 2166136261;
-    for (let index = 0; index < token.length; index += 1) {
-      hash ^= token.charCodeAt(index);
-      hash = Math.imul(hash, 16777619) >>> 0;
-    }
-    return hash % bucketCount;
-  }
-
-  function setStatus(message) {
-    statusNode.textContent = message;
-  }
-
-  function clearResults() {
-    currentResults = [];
-    renderedCount = 0;
-    resultsNode.innerHTML = "";
-    moreWrap.classList.add("archive-hidden");
-  }
-
-  function renderMore() {
-    const nextSlice = currentResults.slice(renderedCount, renderedCount + RESULTS_PER_PAGE);
-    for (const doc of nextSlice) {
-      const item = document.createElement("li");
-      item.className = "archive-search-result";
-      item.innerHTML = [
-        "<h2><a href=\"" + escapeHtml(doc.url) + "\">" + escapeHtml(doc.topic_title || "Сообщение") + "</a></h2>",
-        "<p class=\"archive-search-meta\">" + escapeHtml(doc.author || "Неизвестный автор"),
-        doc.forum_title ? " • " + escapeHtml(doc.forum_title) : "",
-        doc.posted_at ? " • " + escapeHtml(doc.posted_at) : "",
-        "</p>",
-        doc.excerpt ? "<p class=\"archive-search-snippet\">" + escapeHtml(doc.excerpt) + "</p>" : "",
-      ].join("");
-      resultsNode.appendChild(item);
-    }
-    renderedCount += nextSlice.length;
-    if (renderedCount >= currentResults.length) {
-      moreWrap.classList.add("archive-hidden");
-    } else {
-      moreWrap.classList.remove("archive-hidden");
-    }
-  }
-
-  function loadJsonWithFetch(filename) {
-    return fetch(filename).then((response) => {
-      if (!response.ok) {
-        throw new Error("РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ " + filename);
-      }
-      return response.json();
-    });
-  }
-
-  function loadJsonWithScript(filename) {
-    if (Object.prototype.hasOwnProperty.call(inlinePayloads, filename)) {
-      return Promise.resolve(inlinePayloads[filename]);
-    }
-    if (!scriptCache.has(filename)) {
-      const scriptName = filename.replace(/\.json$/, ".data.js");
-      const promise = new Promise((resolve, reject) => {
-        const script = document.createElement("script");
-        script.src = scriptName;
-        script.onload = function () {
-          if (Object.prototype.hasOwnProperty.call(inlinePayloads, filename)) {
-            resolve(inlinePayloads[filename]);
-            return;
-          }
-          reject(new Error("РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ " + filename));
-        };
-        script.onerror = function () {
-          reject(new Error("РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ " + scriptName));
-        };
-        document.head.appendChild(script);
-      });
-      scriptCache.set(filename, promise);
-    }
-    return scriptCache.get(filename);
-  }
-
-  function loadJson(filename) {
-    return useScriptLoader ? loadJsonWithScript(filename) : loadJsonWithFetch(filename);
-  }
-
-  async function loadManifest() {
-    if (!manifestPromise && useScriptLoader) {
-      manifestPromise = loadJson("manifest.json");
-      return manifestPromise;
-    }
-    if (!manifestPromise) {
-      manifestPromise = fetch("manifest.json").then((response) => {
-        if (!response.ok) {
-          throw new Error("Не удалось загрузить manifest.json");
-        }
-        return response.json();
-      });
-    }
-    return manifestPromise;
-  }
-
-  async function loadTermsBucket(bucketNumber) {
-    const key = String(bucketNumber).padStart(2, "0");
-    if (!termsCache.has(key) && useScriptLoader) {
-      const filename = "terms-" + key + ".json";
-      const promise = loadJson(filename);
-      termsCache.set(key, promise);
-      return termsCache.get(key);
-    }
-    if (!termsCache.has(key)) {
-      const filename = "terms-" + key + ".json";
-      const promise = fetch(filename).then((response) => {
-        if (!response.ok) {
-          throw new Error("Не удалось загрузить " + filename);
-        }
-        return response.json();
-      });
-      termsCache.set(key, promise);
-    }
-    return termsCache.get(key);
-  }
-
-  async function loadDocShard(shardNumber) {
-    const key = String(shardNumber).padStart(3, "0");
-    if (!docsCache.has(key) && useScriptLoader) {
-      const filename = "docs-" + key + ".json";
-      const promise = loadJson(filename);
-      docsCache.set(key, promise);
-      return docsCache.get(key);
-    }
-    if (!docsCache.has(key)) {
-      const filename = "docs-" + key + ".json";
-      const promise = fetch(filename).then((response) => {
-        if (!response.ok) {
-          throw new Error("Не удалось загрузить " + filename);
-        }
-        return response.json();
-      });
-      docsCache.set(key, promise);
-    }
-    return docsCache.get(key);
-  }
-
-  function exactSubstringRank(doc, normalizedQuery) {
-    if (!normalizedQuery) {
-      return 0;
-    }
-    let score = 0;
-    if (normalizeText(doc.topic_title).includes(normalizedQuery)) {
-      score += 4;
-    }
-    if (normalizeText(doc.author).includes(normalizedQuery)) {
-      score += 3;
-    }
-    if (normalizeText(doc.excerpt).includes(normalizedQuery)) {
-      score += 2;
-    }
-    return score;
-  }
-
-  async function runSearch(rawQuery) {
-    const tokens = tokenize(rawQuery);
-    const normalizedQuery = normalizeText(rawQuery);
-    clearResults();
-
-    if (tokens.length === 0) {
-      setStatus("Введите хотя бы один токен длиной от 2 символов.");
-      resultsNode.innerHTML = '<li class="archive-search-empty">Поиск по пустому запросу не выполняется.</li>';
+    if (!(form instanceof HTMLFormElement) || !(queryInput instanceof HTMLInputElement) || !(status instanceof HTMLElement) || !(results instanceof HTMLElement) || !(moreWrap instanceof HTMLElement) || !(moreButton instanceof HTMLButtonElement)) {
       return;
     }
 
-    setStatus("Загрузка индекса…");
-    const manifest = await loadManifest();
-    const postingLists = [];
+    const worker = new Worker("search-worker.js");
+    let renderedCount = 0;
+    let totalCount = 0;
+    let ready = false;
+    let initialQuerySubmitted = false;
 
-    for (const token of tokens) {
-      const bucketNumber = searchBucket(token, manifest.term_buckets);
-      const bucket = await loadTermsBucket(bucketNumber);
-      const posting = bucket[token];
-      if (!Array.isArray(posting) || posting.length === 0) {
-        setStatus("Ничего не найдено.");
-        resultsNode.innerHTML = '<li class="archive-search-empty">Подходящих сообщений не найдено.</li>';
+    function setStatus(message, state = "idle") {
+      status.textContent = message;
+      status.dataset.state = state;
+    }
+
+    function resetResults() {
+      results.innerHTML = "";
+      renderedCount = 0;
+      totalCount = 0;
+      moreWrap.classList.add("archive-hidden");
+      moreButton.disabled = false;
+    }
+
+    function syncQueryToLocation(value) {
+      const url = new URL(window.location.href);
+      if (value) {
+        url.searchParams.set("q", value);
+      } else {
+        url.searchParams.delete("q");
+      }
+      history.replaceState(null, "", url.toString());
+    }
+
+    function describeProgress(tookMs) {
+      if (!totalCount) {
+        return "Ничего не найдено.";
+      }
+      const rangeEnd = Math.min(renderedCount, totalCount);
+      const suffix = Number.isFinite(tookMs) ? ` Запрос выполнен за ${tookMs.toFixed(1)} мс.` : "";
+      return `Найдено ${totalCount} результатов. Показаны 1-${rangeEnd}.${suffix}`;
+    }
+
+    function renderBatch(items, mode, tookMs) {
+      if (mode === "search") {
+        results.innerHTML = "";
+      }
+      const fragment = document.createDocumentFragment();
+      for (const item of items) {
+        fragment.appendChild(createResultItem(item));
+      }
+      results.appendChild(fragment);
+      renderedCount += items.length;
+      moreWrap.classList.toggle("archive-hidden", renderedCount >= totalCount);
+      moreButton.disabled = false;
+      setStatus(describeProgress(tookMs));
+    }
+
+    function runSearch() {
+      const query = queryInput.value.trim();
+      syncQueryToLocation(query);
+      resetResults();
+      if (!query) {
+        setStatus("Введите поисковый запрос.");
         return;
       }
-      postingLists.push(posting);
+      setStatus("Ищу…", "busy");
+      worker.postMessage({ type: "search", query, limit: RESULTS_PER_PAGE });
     }
 
-    postingLists.sort((left, right) => left.length - right.length);
-    let intersection = postingLists[0].slice();
-    for (let index = 1; index < postingLists.length; index += 1) {
-      const allowed = new Set(postingLists[index]);
-      intersection = intersection.filter((docId) => allowed.has(docId));
-      if (intersection.length === 0) {
-        break;
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!ready) {
+        setStatus("Поиск ещё инициализируется…", "busy");
+        return;
       }
-    }
-
-    if (intersection.length === 0) {
-      setStatus("Ничего не найдено.");
-      resultsNode.innerHTML = '<li class="archive-search-empty">Подходящих сообщений не найдено.</li>';
-      return;
-    }
-
-    const docsById = new Map();
-    const shardNumbers = [...new Set(intersection.map((docId) => Math.floor(docId / manifest.doc_shard_size)))];
-    const shardPayloads = await Promise.all(shardNumbers.map((shardNumber) => loadDocShard(shardNumber)));
-    for (const payload of shardPayloads) {
-      for (const doc of payload) {
-        docsById.set(doc.doc_id, doc);
-      }
-    }
-
-    const results = [];
-    for (const docId of intersection) {
-      const doc = docsById.get(docId);
-      if (!doc) {
-        continue;
-      }
-      results.push({
-        ...doc,
-        _matchedTokens: tokens.length,
-        _exactRank: exactSubstringRank(doc, normalizedQuery),
-      });
-    }
-
-    results.sort((left, right) => {
-      if (right._matchedTokens !== left._matchedTokens) {
-        return right._matchedTokens - left._matchedTokens;
-      }
-      if (right._exactRank !== left._exactRank) {
-        return right._exactRank - left._exactRank;
-      }
-      return String(right.sort_key || "").localeCompare(String(left.sort_key || ""));
+      runSearch();
     });
 
-    const dedupedResults = [];
-    const seenUrls = new Set();
-    for (const result of results) {
-      if (seenUrls.has(result.url)) {
-        continue;
+    moreButton.addEventListener("click", () => {
+      if (renderedCount >= totalCount) {
+        return;
       }
-      seenUrls.add(result.url);
-      dedupedResults.push(result);
-    }
-
-    currentResults = dedupedResults;
-    setStatus("Найдено сообщений: " + dedupedResults.length + ".");
-    renderMore();
-  }
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    const query = input.value || "";
-    const params = new URLSearchParams(window.location.search);
-    if (query.trim()) {
-      params.set("q", query);
-    } else {
-      params.delete("q");
-    }
-    const nextUrl = params.toString() ? "?".concat(params.toString()) : window.location.pathname;
-    window.history.replaceState({}, "", nextUrl);
-    runSearch(query).catch(function (error) {
-      console.error(error);
-      clearResults();
-      setStatus("Поиск временно недоступен.");
-      resultsNode.innerHTML = '<li class="archive-search-empty">Не удалось загрузить поисковой индекс.</li>';
+      moreButton.disabled = true;
+      setStatus(`Загружаю результаты ${renderedCount + 1}-${Math.min(renderedCount + RESULTS_PER_PAGE, totalCount)}…`, "busy");
+      worker.postMessage({ type: "page", offset: renderedCount, limit: RESULTS_PER_PAGE });
     });
+
+    worker.addEventListener("message", (event) => {
+      const payload = event.data || {};
+      if (payload.type === "ready") {
+        ready = true;
+        const initialQuery = new URLSearchParams(window.location.search).get("q") || "";
+        if (initialQuery) {
+          queryInput.value = initialQuery;
+          if (!initialQuerySubmitted) {
+            initialQuerySubmitted = true;
+            runSearch();
+          }
+        } else {
+          setStatus("Введите поисковый запрос.");
+        }
+        return;
+      }
+
+      if (payload.type === "results") {
+        totalCount = payload.total || 0;
+        if (!totalCount) {
+          resetResults();
+          setStatus(payload.message || "Ничего не найдено.");
+          return;
+        }
+        renderBatch(Array.isArray(payload.items) ? payload.items : [], payload.mode, payload.took_ms);
+        return;
+      }
+
+      if (payload.type === "error") {
+        moreWrap.classList.add("archive-hidden");
+        moreButton.disabled = false;
+        setStatus(payload.message || "Не удалось выполнить поиск.", "error");
+      }
+    });
+
+    worker.addEventListener("error", () => {
+      setStatus("Ошибка в search-worker.js.", "error");
+    });
+
+    setStatus("Инициализирую поиск…", "busy");
+    worker.postMessage({ type: "init" });
   });
-
-  moreButton.addEventListener("click", function () {
-    renderMore();
-  });
-
-  const initialQuery = new URLSearchParams(window.location.search).get("q") || "";
-  input.value = initialQuery;
-  if (initialQuery.trim()) {
-    runSearch(initialQuery).catch(function (error) {
-      console.error(error);
-      clearResults();
-      setStatus("Поиск временно недоступен.");
-      resultsNode.innerHTML = '<li class="archive-search-empty">Не удалось загрузить поисковой индекс.</li>';
-    });
-  } else {
-    setStatus("Введите запрос, чтобы начать поиск.");
-  }
 })();

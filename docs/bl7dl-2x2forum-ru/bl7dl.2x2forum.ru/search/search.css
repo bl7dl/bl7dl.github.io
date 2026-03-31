@@ -1,185 +1,181 @@
-html,
-body {
-  min-height: 100%;
+﻿body.archive-search-page {
+  background: #f4f6f9;
 }
 
-body.archive-search-page {
-  background-color: #fff;
-  color: #826253;
+.archive-search-shell {
+  box-sizing: border-box;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
 }
 
-body.archive-search-page #main-content {
-  padding-bottom: 8px;
+.archive-search-header {
+  margin-bottom: 20px;
 }
 
-.archive-search-panel,
-.archive-search-results-board {
-  margin-bottom: 12px;
+.archive-search-breadcrumb {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
 }
 
-.archive-search-panel .archive-search-subtitle,
-.archive-search-panel .archive-search-hint,
-.archive-search-status,
-.archive-search-meta,
-.archive-search-empty {
-  font-size: 1.1em;
-  line-height: 1.5em;
+.archive-search-header h1 {
+  margin: 0;
 }
 
 .archive-search-subtitle {
-  margin: 0 0 1em;
+  margin: 8px 0 0;
+  color: #536171;
 }
 
 .archive-search-form {
-  margin: 0;
+  margin-bottom: 20px;
+  padding: 18px 20px;
+  background: #ffffff;
+  border: 1px solid #d9e1ea;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(18, 34, 56, 0.08);
 }
 
-.archive-search-fields {
-  margin-bottom: 0.75em;
-}
-
-.archive-search-fields dt {
-  width: 9em;
-}
-
-.archive-search-fields dd {
-  margin-left: 9.5em;
+.archive-search-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .archive-search-row {
-  align-items: center;
   display: flex;
-  gap: 8px;
+  gap: 12px;
+  align-items: stretch;
 }
 
-.archive-search-input {
-  box-sizing: border-box;
+.archive-search-row input {
   flex: 1 1 auto;
   min-width: 0;
-  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #bfc9d6;
+  border-radius: 8px;
+  font: inherit;
 }
 
-.archive-search-row .button1 {
-  flex: 0 0 auto;
-  white-space: nowrap;
+.archive-search-row input:focus {
+  outline: 2px solid #4f7dd9;
+  outline-offset: 1px;
+  border-color: #4f7dd9;
+}
+
+.archive-search-row button,
+.archive-search-more-wrap button {
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #2f5fb3;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.archive-search-row button:hover,
+.archive-search-more-wrap button:hover {
+  background: #274f95;
+}
+
+.archive-search-row button:disabled,
+.archive-search-more-wrap button:disabled {
+  opacity: 0.65;
+  cursor: default;
 }
 
 .archive-search-hint {
-  color: #6f5a52;
-  margin: 0;
+  margin: 12px 0 0;
+  color: #536171;
+}
+
+.archive-search-help {
+  margin-top: 12px;
+}
+
+.archive-search-help-list {
+  margin: 10px 0 0;
+  padding-left: 20px;
+}
+
+.archive-search-help-list li + li {
+  margin-top: 6px;
 }
 
 .archive-search-status {
-  background: #f7edec;
-  border-bottom: 1px solid #fff;
-  border-top: 1px solid #fff;
-  margin: 0;
-  min-height: 1.5em;
-  padding: 8px 12px;
+  min-height: 24px;
+  margin-bottom: 18px;
+  color: #243244;
+}
+
+.archive-search-status[data-state="error"] {
+  color: #9b1d1d;
+}
+
+.archive-search-status[data-state="busy"] {
+  color: #2f5fb3;
 }
 
 .archive-search-results {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-.archive-search-result,
-.archive-search-empty {
-  background: #f7edec;
-  border-bottom: 1px solid #fff;
-  border-top: 1px solid #fff;
-  margin: 0;
-  padding: 12px 16px 12px 46px;
-  position: relative;
+.archive-search-result {
+  margin: 0 0 16px;
+  padding: 18px 20px;
+  background: #ffffff;
+  border: 1px solid #d9e1ea;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(18, 34, 56, 0.06);
 }
 
-.archive-search-result:nth-child(even),
-.archive-search-empty:nth-child(even) {
-  background: #f2e3e1;
+.archive-search-result-title {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
 }
 
-.archive-search-result::before,
-.archive-search-empty::before {
-  background: url(../../https@illiweb.com/fa/punbb/status.png) no-repeat 50% 50%;
-  content: "";
-  height: 20px;
-  left: 14px;
-  position: absolute;
-  top: 13px;
-  width: 20px;
-}
-
-.archive-search-empty::before {
-  background-image: url(../../https@illiweb.com/fa/prosilver_red/icon_faq.gif);
-}
-
-.archive-search-result h2 {
-  font-size: 1.1em;
-  margin: 0 0 6px;
-}
-
-.archive-search-result h2 a {
-  color: #21214f;
+.archive-search-result-title a {
   text-decoration: none;
 }
 
-.archive-search-result h2 a:hover {
-  color: #d31141;
+.archive-search-result-title a:hover {
   text-decoration: underline;
 }
 
-.archive-search-meta {
-  color: #6f5a52;
-  margin: 0 0 8px;
+.archive-search-result-meta {
+  margin: 0 0 10px;
+  color: #536171;
+  font-size: 0.95rem;
 }
 
-.archive-search-snippet {
-  background: #fff;
-  border: 1px solid #fff;
-  line-height: 1.55em;
+.archive-search-result-excerpt {
   margin: 0;
-  padding: 8px 10px;
+  line-height: 1.5;
 }
 
 .archive-search-more-wrap {
-  margin: 0;
-  padding: 14px 0 12px;
-  text-align: center;
+  margin: 20px 0 0;
 }
 
-.archive-search-more-wrap .button2 {
-  min-width: 12em;
-}
-
-.archive-search-bottom {
-  min-height: 2.5em;
+.archive-hidden {
+  display: none;
 }
 
 @media (max-width: 720px) {
-  .archive-search-fields dt,
-  .archive-search-fields dd {
-    float: none;
-    margin-left: 0;
-    width: auto;
+  .archive-search-shell {
+    padding: 20px 14px 36px;
   }
 
   .archive-search-row {
-    align-items: stretch;
     flex-direction: column;
   }
 
-  .archive-search-row .button1 {
-    align-self: flex-start;
-  }
-
-  .archive-search-result,
-  .archive-search-empty {
-    padding-left: 16px;
-  }
-
-  .archive-search-result::before,
-  .archive-search-empty::before {
-    display: none;
+  .archive-search-row button,
+  .archive-search-more-wrap button {
+    width: 100%;
   }
 }

@@ -1,215 +1,173 @@
-html,
-body {
-  min-height: 100%;
+﻿body.archive-search-page {
+  background: #f4f6f9;
 }
 
-body.archive-search-page {
-  margin: 0;
+.archive-search-shell {
+  box-sizing: border-box;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
 }
 
-#pun-archivesearch {
-  float: none;
+.archive-search-header {
+  margin-bottom: 20px;
 }
 
-#pun-archivesearch #pun-main {
-  margin-bottom: 28px;
+.archive-search-breadcrumb {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
 }
 
-#pun-archivesearch #html-header img {
-  display: block;
-  width: 100%;
-}
-
-.archive-search-intro .container,
-.archive-search-output .container {
-  padding: 16px 18px;
-}
-
-.archive-search-subtitle,
-.archive-search-hint,
-.archive-search-meta,
-.archive-search-snippet,
-.archive-search-empty {
+.archive-search-header h1 {
   margin: 0;
 }
 
 .archive-search-subtitle {
-  color: #1f4f82;
-  font-size: 1.15em;
-  line-height: 1.55;
-  margin-bottom: 14px;
+  margin: 8px 0 0;
+  color: #536171;
 }
 
 .archive-search-form {
-  background: rgba(255, 255, 255, 0.34);
-  border: 1px solid rgba(255, 255, 255, 0.85);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
-  padding: 14px;
+  margin-bottom: 20px;
+  padding: 18px 20px;
+  background: #ffffff;
+  border: 1px solid #d9e1ea;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(18, 34, 56, 0.08);
 }
 
 .archive-search-label {
-  color: #0f4f95;
   display: block;
-  font-size: 1.05em;
-  font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .archive-search-row {
   display: flex;
   gap: 12px;
+  align-items: stretch;
 }
 
 .archive-search-row input {
-  border: 1px solid #7ebcff;
-  box-sizing: border-box;
-  color: #1e3959;
   flex: 1 1 auto;
-  font: inherit;
   min-width: 0;
-  padding: 11px 12px;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  padding: 12px 14px;
+  border: 1px solid #bfc9d6;
+  border-radius: 8px;
+  font: inherit;
 }
 
 .archive-search-row input:focus {
-  border-color: #2f87d9;
-  box-shadow: 0 0 0 3px rgba(102, 176, 255, 0.24);
-  outline: none;
+  outline: 2px solid #4f7dd9;
+  outline-offset: 1px;
+  border-color: #4f7dd9;
 }
 
 .archive-search-row button,
 .archive-search-more-wrap button {
-  background: linear-gradient(180deg, #7cc0ff 0%, #3999ff 100%);
-  border: 1px solid #2f84d3;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
-  color: #fff;
-  cursor: pointer;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #2f5fb3;
+  color: #ffffff;
   font: inherit;
-  font-weight: bold;
-  padding: 11px 18px;
-  text-shadow: 0 1px 0 rgba(34, 87, 141, 0.5);
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .archive-search-row button:hover,
 .archive-search-more-wrap button:hover {
-  background: linear-gradient(180deg, #8bc8ff 0%, #49a4ff 100%);
+  background: #274f95;
 }
 
-.archive-search-row button:focus-visible,
-.archive-search-more-wrap button:focus-visible {
-  outline: 2px solid #0f6fd6;
-  outline-offset: 2px;
+.archive-search-row button:disabled,
+.archive-search-more-wrap button:disabled {
+  opacity: 0.65;
+  cursor: default;
 }
 
 .archive-search-hint {
-  color: #315a86;
-  font-size: 0.98em;
-  line-height: 1.5;
-  margin-top: 10px;
+  margin: 12px 0 0;
+  color: #536171;
+}
+
+.archive-search-help {
+  margin-top: 12px;
+}
+
+.archive-search-help-list {
+  margin: 10px 0 0;
+  padding-left: 20px;
+}
+
+.archive-search-help-list li + li {
+  margin-top: 6px;
 }
 
 .archive-search-status {
-  background: rgba(255, 255, 255, 0.28);
-  border: 1px dashed #7ebcff;
-  color: #1d4a77;
-  margin: 0 0 14px;
-  min-height: 1.5em;
-  padding: 9px 12px;
+  min-height: 24px;
+  margin-bottom: 18px;
+  color: #243244;
+}
+
+.archive-search-status[data-state="error"] {
+  color: #9b1d1d;
+}
+
+.archive-search-status[data-state="busy"] {
+  color: #2f5fb3;
 }
 
 .archive-search-results {
-  display: grid;
-  gap: 12px;
-  list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.archive-search-result,
-.archive-search-empty {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.52) 0%, rgba(229, 242, 255, 0.68) 100%);
-  border: 1px solid #fff;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
-  overflow: hidden;
-  position: relative;
+  list-style: none;
 }
 
 .archive-search-result {
-  padding: 15px 17px 15px 22px;
+  margin: 0 0 16px;
+  padding: 18px 20px;
+  background: #ffffff;
+  border: 1px solid #d9e1ea;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(18, 34, 56, 0.06);
 }
 
-.archive-search-result > * {
-  position: relative;
-  z-index: 1;
-}
-
-.archive-search-result::before {
-  background: linear-gradient(180deg, #89c2ff 0%, #3999ff 100%);
-  content: "";
-  inset: 0 auto 0 0;
-  position: absolute;
-  width: 6px;
-  z-index: 0;
-}
-
-.archive-search-result h2 {
-  font-size: 1.55em;
-  line-height: 1.25;
+.archive-search-result-title {
   margin: 0 0 8px;
+  font-size: 1.1rem;
 }
 
-.archive-search-result h2 a {
-  color: #005ec3;
+.archive-search-result-title a {
   text-decoration: none;
 }
 
-.archive-search-result h2 a:hover,
-.archive-search-result h2 a:focus {
-  color: #3999ff;
+.archive-search-result-title a:hover {
   text-decoration: underline;
 }
 
-.archive-search-meta {
-  color: #315a86;
-  font-size: 0.98em;
-  line-height: 1.45;
-  margin-bottom: 9px;
-  padding-left: 12px;
-  padding-right: 12px;
+.archive-search-result-meta {
+  margin: 0 0 10px;
+  color: #536171;
+  font-size: 0.95rem;
 }
 
-.archive-search-snippet {
-  background: rgba(255, 255, 255, 0.36);
-  border: 1px solid rgba(255, 255, 255, 0.82);
-  color: #233a55;
-  line-height: 1.65;
-  padding: 10px 12px;
-}
-
-.archive-search-empty {
-  color: #315a86;
-  padding: 14px 16px;
+.archive-search-result-excerpt {
+  margin: 0;
+  line-height: 1.5;
 }
 
 .archive-search-more-wrap {
-  margin-top: 18px;
-  text-align: center;
+  margin: 20px 0 0;
 }
 
-@media (max-width: 700px) {
-  #pun {
-    padding-left: 10px;
-    padding-right: 10px;
-    width: auto;
-  }
+.archive-hidden {
+  display: none;
+}
 
-  .archive-search-intro .container,
-  .archive-search-output .container {
-    padding: 14px;
-  }
-
-  .archive-search-form {
-    padding: 12px;
+@media (max-width: 720px) {
+  .archive-search-shell {
+    padding: 20px 14px 36px;
   }
 
   .archive-search-row {
@@ -217,15 +175,7 @@ body.archive-search-page {
   }
 
   .archive-search-row button,
-  .archive-search-row input {
+  .archive-search-more-wrap button {
     width: 100%;
-  }
-
-  .archive-search-result {
-    padding-left: 18px;
-  }
-
-  .archive-search-result h2 {
-    font-size: 1.35em;
   }
 }

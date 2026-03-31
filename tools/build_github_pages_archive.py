@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 from __future__ import annotations
 
 import argparse
@@ -105,22 +105,22 @@ BLOCKED_HREF_SNIPPETS = (
 )
 
 TEXT_PATTERNS_TO_REMOVE = (
-    "Вы последний раз заходили",
-    "Текущее время",
-    "Кто сейчас на форуме",
-    "Быстрый ответ",
-    "Активные темы дня",
-    "Самые активные за сегодняшний день",
-    "Самые активные пользователи форума",
-    "Удалить cookies форума",
+    "Р’С‹ РїРѕСЃР»РµРґРЅРёР№ СЂР°Р· Р·Р°С…РѕРґРёР»Рё",
+    "РўРµРєСѓС‰РµРµ РІСЂРµРјСЏ",
+    "РљС‚Рѕ СЃРµР№С‡Р°СЃ РЅР° С„РѕСЂСѓРјРµ",
+    "Р‘С‹СЃС‚СЂС‹Р№ РѕС‚РІРµС‚",
+    "РђРєС‚РёРІРЅС‹Рµ С‚РµРјС‹ РґРЅСЏ",
+    "РЎР°РјС‹Рµ Р°РєС‚РёРІРЅС‹Рµ Р·Р° СЃРµРіРѕРґРЅСЏС€РЅРёР№ РґРµРЅСЊ",
+    "РЎР°РјС‹Рµ Р°РєС‚РёРІРЅС‹Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»Рё С„РѕСЂСѓРјР°",
+    "РЈРґР°Р»РёС‚СЊ cookies С„РѕСЂСѓРјР°",
 )
 
 SESSION_LINE_PHRASES = (
-    "Вы последний раз заходили",
-    "Текущее время",
-    "Сейчас этот форум просматривают:",
-    "Зарегистрированные пользователи:",
-    "Сейчас посетителей на форуме:",
+    "Р’С‹ РїРѕСЃР»РµРґРЅРёР№ СЂР°Р· Р·Р°С…РѕРґРёР»Рё",
+    "РўРµРєСѓС‰РµРµ РІСЂРµРјСЏ",
+    "РЎРµР№С‡Р°СЃ СЌС‚РѕС‚ С„РѕСЂСѓРј РїСЂРѕСЃРјР°С‚СЂРёРІР°СЋС‚:",
+    "Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»Рё:",
+    "РЎРµР№С‡Р°СЃ РїРѕСЃРµС‚РёС‚РµР»РµР№ РЅР° С„РѕСЂСѓРјРµ:",
 )
 
 IMAGE_EXTENSIONS = {
@@ -519,7 +519,7 @@ MEDIA_VIEWER_HTML = """\
   <main>
     <figure>
       <img alt="__ALT__" src="__SRC__"/>
-      <figcaption><a href="__SRC__">Открыть исходный файл</a></figcaption>
+      <figcaption><a href="__SRC__">РћС‚РєСЂС‹С‚СЊ РёСЃС…РѕРґРЅС‹Р№ С„Р°Р№Р»</a></figcaption>
     </figure>
   </main>
 </body>
@@ -541,7 +541,7 @@ SEARCH_PAGE_TEMPLATE = """\
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Поиск по архиву — __SITE_TITLE__</title>
+  <title>РџРѕРёСЃРє РїРѕ Р°СЂС…РёРІСѓ вЂ” __SITE_TITLE__</title>
   <link rel="stylesheet" href="../archive.css" type="text/css">
   <link rel="stylesheet" href="search.css" type="text/css">
   <script defer src="search.js"></script>
@@ -549,22 +549,22 @@ SEARCH_PAGE_TEMPLATE = """\
 <body class="archive-readonly archive-search-page">
   <main class="archive-search-shell">
     <div class="archive-search-header">
-      <p class="archive-search-breadcrumb"><a href="../index.html">Вернуться к архиву</a></p>
-      <h1>Поиск по архиву</h1>
+      <p class="archive-search-breadcrumb"><a href="../index.html">Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє Р°СЂС…РёРІСѓ</a></p>
+      <h1>РџРѕРёСЃРє РїРѕ Р°СЂС…РёРІСѓ</h1>
       <p class="archive-search-subtitle">__SITE_TITLE__</p>
     </div>
     <form class="archive-search-form" id="archive-search-form">
-      <label class="archive-search-label" for="archive-search-query">Запрос</label>
+      <label class="archive-search-label" for="archive-search-query">Р—Р°РїСЂРѕСЃ</label>
       <div class="archive-search-row">
-        <input id="archive-search-query" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="Введите слово или несколько слов">
-        <button type="submit">Искать</button>
+        <input id="archive-search-query" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="Р’РІРµРґРёС‚Рµ СЃР»РѕРІРѕ РёР»Рё РЅРµСЃРєРѕР»СЊРєРѕ СЃР»РѕРІ">
+        <button type="submit">РСЃРєР°С‚СЊ</button>
       </div>
-      <p class="archive-search-hint">Поиск работает по сообщениям, названиям тем и именам авторов. Морфология не используется; “е” и “ё” считаются одинаковыми.</p>
+      <p class="archive-search-hint">РџРѕРёСЃРє СЂР°Р±РѕС‚Р°РµС‚ РїРѕ СЃРѕРѕР±С‰РµРЅРёСЏРј, РЅР°Р·РІР°РЅРёСЏРј С‚РµРј Рё РёРјРµРЅР°Рј Р°РІС‚РѕСЂРѕРІ. РњРѕСЂС„РѕР»РѕРіРёСЏ РЅРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ; вЂњРµвЂќ Рё вЂњС‘вЂќ СЃС‡РёС‚Р°СЋС‚СЃСЏ РѕРґРёРЅР°РєРѕРІС‹РјРё.</p>
     </form>
     <section class="archive-search-status" id="archive-search-status" aria-live="polite"></section>
     <ol class="archive-search-results" id="archive-search-results"></ol>
     <p class="archive-search-more-wrap archive-hidden" id="archive-search-more-wrap">
-      <button id="archive-search-more" type="button">Показать ещё</button>
+      <button id="archive-search-more" type="button">РџРѕРєР°Р·Р°С‚СЊ РµС‰С‘</button>
     </p>
   </main>
 </body>
@@ -724,8 +724,8 @@ SEARCH_JS = """\
     return (value || "")
       .normalize("NFKC")
       .toLowerCase()
-      .replace(/ё/g, "е")
-      .replace(/[^0-9a-zа-я]+/gi, " ")
+      .replace(/С‘/g, "Рµ")
+      .replace(/[^0-9a-zР°-СЏ]+/gi, " ")
       .replace(/\\s+/g, " ")
       .trim();
   }
@@ -773,10 +773,10 @@ SEARCH_JS = """\
       const item = document.createElement("li");
       item.className = "archive-search-result";
       item.innerHTML = [
-        "<h2><a href=\\"" + escapeHtml(doc.url) + "\\">" + escapeHtml(doc.topic_title || "Сообщение") + "</a></h2>",
-        "<p class=\\"archive-search-meta\\">" + escapeHtml(doc.author || "Неизвестный автор"),
-        doc.forum_title ? " • " + escapeHtml(doc.forum_title) : "",
-        doc.posted_at ? " • " + escapeHtml(doc.posted_at) : "",
+        "<h2><a href=\\"" + escapeHtml(doc.url) + "\\">" + escapeHtml(doc.topic_title || "РЎРѕРѕР±С‰РµРЅРёРµ") + "</a></h2>",
+        "<p class=\\"archive-search-meta\\">" + escapeHtml(doc.author || "РќРµРёР·РІРµСЃС‚РЅС‹Р№ Р°РІС‚РѕСЂ"),
+        doc.forum_title ? " вЂў " + escapeHtml(doc.forum_title) : "",
+        doc.posted_at ? " вЂў " + escapeHtml(doc.posted_at) : "",
         "</p>",
         doc.excerpt ? "<p class=\\"archive-search-snippet\\">" + escapeHtml(doc.excerpt) + "</p>" : "",
       ].join("");
@@ -793,7 +793,7 @@ SEARCH_JS = """\
   function loadJsonWithFetch(filename) {
     return fetch(filename).then((response) => {
       if (!response.ok) {
-        throw new Error("РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ " + filename);
+        throw new Error("Р СњР Вµ РЎС“Р Т‘Р В°Р В»Р С•РЎРѓРЎРЉ Р В·Р В°Р С–РЎР‚РЎС“Р В·Р С‘РЎвЂљРЎРЉ " + filename);
       }
       return response.json();
     });
@@ -813,10 +813,10 @@ SEARCH_JS = """\
             resolve(inlinePayloads[filename]);
             return;
           }
-          reject(new Error("РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ " + filename));
+          reject(new Error("Р СњР Вµ РЎС“Р Т‘Р В°Р В»Р С•РЎРѓРЎРЉ Р В·Р В°Р С–РЎР‚РЎС“Р В·Р С‘РЎвЂљРЎРЉ " + filename));
         };
         script.onerror = function () {
-          reject(new Error("РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ " + scriptName));
+          reject(new Error("Р СњР Вµ РЎС“Р Т‘Р В°Р В»Р С•РЎРѓРЎРЉ Р В·Р В°Р С–РЎР‚РЎС“Р В·Р С‘РЎвЂљРЎРЉ " + scriptName));
         };
         document.head.appendChild(script);
       });
@@ -837,7 +837,7 @@ SEARCH_JS = """\
     if (!manifestPromise) {
       manifestPromise = fetch("manifest.json").then((response) => {
         if (!response.ok) {
-          throw new Error("Не удалось загрузить manifest.json");
+          throw new Error("РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ manifest.json");
         }
         return response.json();
       });
@@ -857,7 +857,7 @@ SEARCH_JS = """\
       const filename = "terms-" + key + ".json";
       const promise = fetch(filename).then((response) => {
         if (!response.ok) {
-          throw new Error("Не удалось загрузить " + filename);
+          throw new Error("РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ " + filename);
         }
         return response.json();
       });
@@ -878,7 +878,7 @@ SEARCH_JS = """\
       const filename = "docs-" + key + ".json";
       const promise = fetch(filename).then((response) => {
         if (!response.ok) {
-          throw new Error("Не удалось загрузить " + filename);
+          throw new Error("РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ " + filename);
         }
         return response.json();
       });
@@ -910,12 +910,12 @@ SEARCH_JS = """\
     clearResults();
 
     if (tokens.length === 0) {
-      setStatus("Введите хотя бы один токен длиной от 2 символов.");
-      resultsNode.innerHTML = '<li class="archive-search-empty">Поиск по пустому запросу не выполняется.</li>';
+      setStatus("Р’РІРµРґРёС‚Рµ С…РѕС‚СЏ Р±С‹ РѕРґРёРЅ С‚РѕРєРµРЅ РґР»РёРЅРѕР№ РѕС‚ 2 СЃРёРјРІРѕР»РѕРІ.");
+      resultsNode.innerHTML = '<li class="archive-search-empty">РџРѕРёСЃРє РїРѕ РїСѓСЃС‚РѕРјСѓ Р·Р°РїСЂРѕСЃСѓ РЅРµ РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ.</li>';
       return;
     }
 
-    setStatus("Загрузка индекса…");
+    setStatus("Р—Р°РіСЂСѓР·РєР° РёРЅРґРµРєСЃР°вЂ¦");
     const manifest = await loadManifest();
     const postingLists = [];
 
@@ -924,8 +924,8 @@ SEARCH_JS = """\
       const bucket = await loadTermsBucket(bucketNumber);
       const posting = bucket[token];
       if (!Array.isArray(posting) || posting.length === 0) {
-        setStatus("Ничего не найдено.");
-        resultsNode.innerHTML = '<li class="archive-search-empty">Подходящих сообщений не найдено.</li>';
+        setStatus("РќРёС‡РµРіРѕ РЅРµ РЅР°Р№РґРµРЅРѕ.");
+        resultsNode.innerHTML = '<li class="archive-search-empty">РџРѕРґС…РѕРґСЏС‰РёС… СЃРѕРѕР±С‰РµРЅРёР№ РЅРµ РЅР°Р№РґРµРЅРѕ.</li>';
         return;
       }
       postingLists.push(posting);
@@ -942,8 +942,8 @@ SEARCH_JS = """\
     }
 
     if (intersection.length === 0) {
-      setStatus("Ничего не найдено.");
-      resultsNode.innerHTML = '<li class="archive-search-empty">Подходящих сообщений не найдено.</li>';
+      setStatus("РќРёС‡РµРіРѕ РЅРµ РЅР°Р№РґРµРЅРѕ.");
+      resultsNode.innerHTML = '<li class="archive-search-empty">РџРѕРґС…РѕРґСЏС‰РёС… СЃРѕРѕР±С‰РµРЅРёР№ РЅРµ РЅР°Р№РґРµРЅРѕ.</li>';
       return;
     }
 
@@ -990,7 +990,7 @@ SEARCH_JS = """\
     }
 
     currentResults = dedupedResults;
-    setStatus("Найдено сообщений: " + dedupedResults.length + ".");
+    setStatus("РќР°Р№РґРµРЅРѕ СЃРѕРѕР±С‰РµРЅРёР№: " + dedupedResults.length + ".");
     renderMore();
   }
 
@@ -1008,8 +1008,8 @@ SEARCH_JS = """\
     runSearch(query).catch(function (error) {
       console.error(error);
       clearResults();
-      setStatus("Поиск временно недоступен.");
-      resultsNode.innerHTML = '<li class="archive-search-empty">Не удалось загрузить поисковой индекс.</li>';
+      setStatus("РџРѕРёСЃРє РІСЂРµРјРµРЅРЅРѕ РЅРµРґРѕСЃС‚СѓРїРµРЅ.");
+      resultsNode.innerHTML = '<li class="archive-search-empty">РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ РїРѕРёСЃРєРѕРІРѕР№ РёРЅРґРµРєСЃ.</li>';
     });
   });
 
@@ -1023,19 +1023,19 @@ SEARCH_JS = """\
     runSearch(initialQuery).catch(function (error) {
       console.error(error);
       clearResults();
-      setStatus("Поиск временно недоступен.");
-      resultsNode.innerHTML = '<li class="archive-search-empty">Не удалось загрузить поисковой индекс.</li>';
+      setStatus("РџРѕРёСЃРє РІСЂРµРјРµРЅРЅРѕ РЅРµРґРѕСЃС‚СѓРїРµРЅ.");
+      resultsNode.innerHTML = '<li class="archive-search-empty">РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ РїРѕРёСЃРєРѕРІРѕР№ РёРЅРґРµРєСЃ.</li>';
     });
   } else {
-    setStatus("Введите запрос, чтобы начать поиск.");
+    setStatus("Р’РІРµРґРёС‚Рµ Р·Р°РїСЂРѕСЃ, С‡С‚РѕР±С‹ РЅР°С‡Р°С‚СЊ РїРѕРёСЃРє.");
   }
 })();
 """
 
 ACCESS_DENIED_MARKERS = (
-    "<title>Ошибка</title>",
-    '<h1 class="page-title">Ошибка</h1>',
-    "У вас нет доступа к этой странице",
+    "<title>РћС€РёР±РєР°</title>",
+    '<h1 class="page-title">РћС€РёР±РєР°</h1>',
+    "РЈ РІР°СЃ РЅРµС‚ РґРѕСЃС‚СѓРїР° Рє СЌС‚РѕР№ СЃС‚СЂР°РЅРёС†Рµ",
 )
 
 
@@ -1049,7 +1049,7 @@ FORBIDDEN_SCAN_PATTERNS = {
     "profile_email": "profile@mode=email",
     "pm_post": "privmsg@mode=post",
     "post_form": 'action="/post"',
-    "last_visit": "Вы последний раз заходили",
+    "last_visit": "Р’С‹ РїРѕСЃР»РµРґРЅРёР№ СЂР°Р· Р·Р°С…РѕРґРёР»Рё",
     "toolbar_init": "Toolbar.init",
 }
 
@@ -1613,12 +1613,12 @@ def remove_by_text_patterns(soup: BeautifulSoup, counters: Counter[str]) -> None
 
 
 def remove_readonly_capability_blocks(soup: BeautifulSoup, counters: Counter[str]) -> None:
-    access_label = "Права доступа к этому форуму"
-    capability_prefix = "Вы можете"
+    access_label = "РџСЂР°РІР° РґРѕСЃС‚СѓРїР° Рє СЌС‚РѕРјСѓ С„РѕСЂСѓРјСѓ"
+    capability_prefix = "Р’С‹ РјРѕР¶РµС‚Рµ"
 
     for info_block in list(soup.select("#info_open")):
         info_text = info_block.get_text(" ", strip=True)
-        if "Права доступа" in info_text or capability_prefix in info_text:
+        if "РџСЂР°РІР° РґРѕСЃС‚СѓРїР°" in info_text or capability_prefix in info_text:
             info_block.decompose()
             counters["readonly_capability_blocks_removed"] += 1
 
@@ -1847,7 +1847,7 @@ def remove_blocked_links(soup: BeautifulSoup, counters: Counter[str]) -> None:
 
 
 def remove_quick_reply_fragments(soup: BeautifulSoup, counters: Counter[str]) -> None:
-    quick_reply_label = "Быстрый ответ"
+    quick_reply_label = "Р‘С‹СЃС‚СЂС‹Р№ РѕС‚РІРµС‚"
 
     def trim_after(node: Tag) -> None:
         current = node
@@ -1925,11 +1925,11 @@ def normalize_archive_state(soup: BeautifulSoup, counters: Counter[str]) -> None
             counters["state_icons_normalized"] += 1
 
         alt = image.get("alt")
-        if alt == "Новые сообщения":
-            image["alt"] = "Сообщения"
+        if alt == "РќРѕРІС‹Рµ СЃРѕРѕР±С‰РµРЅРёСЏ":
+            image["alt"] = "РЎРѕРѕР±С‰РµРЅРёСЏ"
         title = image.get("title")
-        if title == "Новые сообщения":
-            image["title"] = "Сообщения"
+        if title == "РќРѕРІС‹Рµ СЃРѕРѕР±С‰РµРЅРёСЏ":
+            image["title"] = "РЎРѕРѕР±С‰РµРЅРёСЏ"
 
 
 def cleanup_empty_tags(soup: BeautifulSoup) -> None:
@@ -2079,7 +2079,7 @@ def rewrite_url(
 def replace_embed_with_note(tag: Tag, url: str, counters: Counter[str]) -> None:
     note = BeautifulSoup("", "lxml").new_tag("p")
     note["class"] = "archive-embed-note"
-    note.string = "Внешний embed: "
+    note.string = "Р’РЅРµС€РЅРёР№ embed: "
     link = BeautifulSoup("", "lxml").new_tag("a", href=url)
     link["target"] = "_blank"
     link["rel"] = "nofollow noopener"
@@ -2482,8 +2482,8 @@ def collapse_inline_whitespace(value: str) -> str:
 
 
 def normalize_search_text(value: str) -> str:
-    normalized = value.casefold().replace("ё", "е")
-    normalized = re.sub(r"[^0-9a-zа-я]+", " ", normalized)
+    normalized = value.casefold().replace("С‘", "Рµ")
+    normalized = re.sub(r"[^0-9a-zР°-СЏ]+", " ", normalized)
     return re.sub(r"\s+", " ", normalized).strip()
 
 
@@ -2502,7 +2502,7 @@ def truncate_search_excerpt(value: str, limit: int = SEARCH_EXCERPT_LENGTH) -> s
         shortened = shortened[:split_at]
     else:
         shortened = shortened[:limit]
-    return shortened.rstrip(" ,.;:-") + "…"
+    return shortened.rstrip(" ,.;:-") + "вЂ¦"
 
 
 def search_term_bucket(token: str, bucket_count: int = SEARCH_TERM_BUCKETS) -> int:
@@ -2556,27 +2556,27 @@ def search_content_text(container: Tag | None) -> tuple[str, str]:
 
 
 def primary_post_sort_key(author_line: str) -> str:
-    match = re.search(r"(\d{1,2})\s+([А-Яа-яЁё]+)\s+(\d{4})\s*-\s*(\d{1,2}):(\d{2})", author_line)
+    match = re.search(r"(\d{1,2})\s+([Рђ-РЇР°-СЏРЃС‘]+)\s+(\d{4})\s*-\s*(\d{1,2}):(\d{2})", author_line)
     if not match:
         return ""
 
     day, month_token, year, hour, minute = match.groups()
-    month_key = month_token.casefold().replace("ё", "е")
+    month_key = month_token.casefold().replace("С‘", "Рµ")
     month_map = {
-        "янв": "01",
-        "фев": "02",
-        "мар": "03",
-        "апр": "04",
-        "май": "05",
-        "мая": "05",
-        "июн": "06",
-        "июл": "07",
-        "авг": "08",
-        "сен": "09",
-        "сент": "09",
-        "окт": "10",
-        "ноя": "11",
-        "дек": "12",
+        "СЏРЅРІ": "01",
+        "С„РµРІ": "02",
+        "РјР°СЂ": "03",
+        "Р°РїСЂ": "04",
+        "РјР°Р№": "05",
+        "РјР°СЏ": "05",
+        "РёСЋРЅ": "06",
+        "РёСЋР»": "07",
+        "Р°РІРі": "08",
+        "СЃРµРЅ": "09",
+        "СЃРµРЅС‚": "09",
+        "РѕРєС‚": "10",
+        "РЅРѕСЏ": "11",
+        "РґРµРє": "12",
     }
     month = next((value for key, value in month_map.items() if month_key.startswith(key)), "")
     if not month:
@@ -2585,7 +2585,7 @@ def primary_post_sort_key(author_line: str) -> str:
 
 
 def extract_primary_posted_at(author_line: str) -> str:
-    match = re.search(r"\sв\s(.+)$", author_line)
+    match = re.search(r"\sРІ\s(.+)$", author_line)
     if match:
         return collapse_inline_whitespace(match.group(1))
     return author_line
@@ -2638,7 +2638,7 @@ def add_primary_archive_search_link(soup: BeautifulSoup) -> None:
             icon[key] = value
         anchor.append(icon)
         anchor.append(" ")
-    anchor.append("Поиск архива")
+    anchor.append("РџРѕРёСЃРє Р°СЂС…РёРІР°")
     target_item.append(anchor)
     target_item.append(" \xa0")
 
@@ -2657,7 +2657,7 @@ def add_secondary_archive_search_link(soup: BeautifulSoup) -> None:
     anchor = soup.new_tag("a")
     anchor["href"] = "search/index.html"
     label = soup.new_tag("span")
-    label.string = "Поиск архива"
+    label.string = "РџРѕРёСЃРє Р°СЂС…РёРІР°"
     anchor.append(label)
     item.append(anchor)
 
@@ -3425,5 +3425,464 @@ def main() -> None:
     if secondary_report is not None:
         print(json.dumps({"secondary_archive": secondary_report["summary"]}, ensure_ascii=False, indent=2))
 
+from datetime import datetime, timedelta, timezone
+
+SEARCH_SCHEMA_VERSION = 2
+SEARCH_FIELD_NAMES = ("body", "topic", "forum", "author")
+SEARCH_DEFAULT_FIELD = "body"
+SEARCH_DATE_INDEX_FILENAME = "dates.json"
+SECONDARY_FORUM_TIME_OFFSET_SECONDS = 3 * 60 * 60
+SEARCH_V2_ASSET_CACHE: dict[str, str] = {}
+
+
+def load_search_v2_asset(filename: str) -> str:
+    cached = SEARCH_V2_ASSET_CACHE.get(filename)
+    if cached is not None:
+        return cached
+    asset_path = Path(__file__).resolve().parent / filename
+    cached = asset_path.read_text(encoding="utf-8")
+    SEARCH_V2_ASSET_CACHE[filename] = cached
+    return cached
+
+
+
+def render_search_page(site_title: str) -> str:
+    return load_search_v2_asset("search_v2_page.html").replace("__SITE_TITLE__", escape(site_title))
+
+
+
+def render_search_css() -> str:
+    return load_search_v2_asset("search_v2.css")
+
+
+
+def render_search_js() -> str:
+    return load_search_v2_asset("search_v2.js")
+
+
+
+def render_search_worker_js() -> str:
+    return load_search_v2_asset("search_v2_worker.js")
+
+
+
+def write_search_bundle_payload(search_root: Path, filename: str, data: object) -> None:
+    write_json(search_root / filename, data)
+
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Build a read-only GitHub Pages archive from offline forum dumps.")
+    parser.add_argument("--src", help="Primary source dump root, e.g. 7dl_site")
+    parser.add_argument("--out", required=True, help="Output directory, e.g. docs")
+    parser.add_argument("--forum-dir", required=True, help="Primary forum directory inside source root")
+    parser.add_argument("--report", help="Path to JSON build report")
+    parser.add_argument("--primary-prefix", default="bl7dl-2x2forum-ru", help="Output subdirectory for the primary archive")
+    parser.add_argument("--secondary-src", default="7dneyleta_site", help="Secondary source dump root")
+    parser.add_argument("--secondary-prefix", default="7dneyleta-ru", help="Output subdirectory for the secondary archive")
+    parser.add_argument(
+        "--incremental",
+        action="store_true",
+        help="Reuse existing output files when inputs look unchanged; does not prune stale artifacts.",
+    )
+    parser.add_argument(
+        "--fast",
+        action="store_true",
+        help="Shortcut local iteration mode: implies --incremental and skips the forbidden-pattern scan.",
+    )
+    parser.add_argument(
+        "--only",
+        choices=("all", "root-landing", "search"),
+        default="all",
+        help="Limit the run to one output area. 'root-landing' rewrites only docs/index.html and docs/.nojekyll. 'search' rebuilds only search bundles from existing docs/.",
+    )
+    parser.add_argument("--disable-secondary", action="store_true", help="Skip building the secondary archive")
+    args = parser.parse_args()
+    if args.only not in {"root-landing", "search"}:
+        if not args.src:
+            parser.error("--src is required unless --only root-landing or --only search is used")
+    if args.only != "root-landing" and not args.report:
+        parser.error("--report is required unless --only root-landing is used")
+    return args
+
+
+
+def search_content_text(container: Tag | None) -> tuple[str, str]:
+    if container is None:
+        return "", ""
+    fragment = BeautifulSoup(str(container), "lxml").find(True)
+    if fragment is None:
+        return "", ""
+    for selector in (".lastedit",):
+        for tag in list(fragment.select(selector)):
+            tag.decompose()
+    text = extract_text(fragment)
+    return text, truncate_search_excerpt(text)
+
+
+
+def extract_secondary_posted_at(post: Tag) -> tuple[str, str]:
+    permalink = extract_text(post.select_one("a.permalink"))
+    if re.match(r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$", permalink):
+        return permalink, permalink
+
+    sort_key = ""
+    timestamp = post.get("data-posted")
+    if isinstance(timestamp, str) and timestamp.isdigit():
+        dt = datetime.fromtimestamp(int(timestamp), timezone.utc) + timedelta(seconds=SECONDARY_FORUM_TIME_OFFSET_SECONDS)
+        sort_key = dt.strftime("%Y-%m-%d %H:%M:%S")
+    return permalink, sort_key
+
+
+
+def collect_primary_search_documents(archive_root: Path) -> list[dict[str, str]]:
+    documents: list[dict[str, str]] = []
+
+    for page in sorted(archive_root.iterdir(), key=lambda path: path.name):
+        if not page.is_file() or not PRIMARY_TOPIC_OUTPUT_PATTERN.match(page.name):
+            continue
+
+        soup = BeautifulSoup(read_html_document(page), "lxml")
+        topic_title = extract_text(soup.select_one("h1.page-title a")) or extract_text(soup.select_one("h1.page-title"))
+        breadcrumb_items = [extract_text(node) for node in soup.select(".pathname-box a.nav span, .pathname-box a.nav")]
+        breadcrumb_items = [item for item in breadcrumb_items if item]
+        forum_title = breadcrumb_items[-1] if breadcrumb_items else ""
+
+        for post in soup.select("div.post[id]"):
+            post_id = collapse_inline_whitespace(post.get("id") or "")
+            if not post_id.startswith("p"):
+                continue
+
+            author = extract_text(post.select_one(".postprofile dt strong")) or extract_text(post.select_one("p.author"))
+            author_line = extract_text(post.select_one("p.author"))
+            posted_at = extract_primary_posted_at(author_line)
+            body_text, excerpt = search_content_text(post.select_one(".content"))
+            documents.append(
+                {
+                    "url": f"../{page.name}#{post_id}",
+                    "post_id": post_id,
+                    "topic_title": topic_title,
+                    "forum_title": forum_title,
+                    "author": author,
+                    "posted_at": posted_at,
+                    "sort_key": primary_post_sort_key(author_line),
+                    "excerpt": excerpt,
+                    "body_text": body_text,
+                }
+            )
+
+    return documents
+
+
+
+def collect_secondary_search_documents(archive_root: Path) -> list[dict[str, str]]:
+    documents: list[dict[str, str]] = []
+
+    for page in sorted(archive_root.iterdir(), key=lambda path: path.name):
+        if not page.is_file() or not SECONDARY_TOPIC_OUTPUT_PATTERN.match(page.name):
+            continue
+
+        soup = BeautifulSoup(read_html_document(page), "lxml")
+        topic_title = extract_text(soup.select_one("#pun-main > h1 span")) or extract_text(soup.select_one("#pun-main > h1"))
+        breadcrumb_links = [extract_text(node) for node in soup.select("#pun-crumbs1 a")]
+        breadcrumb_links = [item for item in breadcrumb_links if item]
+        forum_title = breadcrumb_links[-1] if breadcrumb_links else ""
+
+        for post in soup.select("div.post[id]"):
+            post_id = collapse_inline_whitespace(post.get("id") or "")
+            if not post_id.startswith("p"):
+                continue
+
+            author = extract_text(post.select_one(".pa-author a")) or extract_text(post.select_one(".pa-author strong"))
+            posted_at, sort_key = extract_secondary_posted_at(post)
+            body_text, excerpt = search_content_text(post.select_one(".post-content"))
+            documents.append(
+                {
+                    "url": f"../{page.name}#{post_id}",
+                    "post_id": post_id,
+                    "topic_title": topic_title,
+                    "forum_title": forum_title,
+                    "author": author,
+                    "posted_at": posted_at,
+                    "sort_key": sort_key,
+                    "excerpt": excerpt,
+                    "body_text": body_text,
+                }
+            )
+
+    return documents
+
+
+
+def build_search_bundle(archive_root: Path, documents: list[dict[str, str]]) -> dict[str, object]:
+    site_title = extract_search_site_title(archive_root)
+    search_root = archive_root / "search"
+    if search_root.exists():
+        shutil.rmtree(search_root)
+    search_root.mkdir(parents=True, exist_ok=True)
+
+    field_postings = {field: defaultdict(dict) for field in SEARCH_FIELD_NAMES}
+    field_lexicons = {field: set() for field in SEARCH_FIELD_NAMES}
+    doc_shards: list[list[dict[str, object]]] = []
+    current_shard: list[dict[str, object]] = []
+    dated_documents: list[list[object]] = []
+
+    for doc_id, document in enumerate(documents):
+        doc_record = {
+            "doc_id": doc_id,
+            "url": document["url"],
+            "post_id": document["post_id"],
+            "topic_title": document["topic_title"],
+            "forum_title": document["forum_title"],
+            "author": document["author"],
+            "posted_at": document["posted_at"],
+            "sort_key": document["sort_key"],
+            "excerpt": document["excerpt"],
+            "body_text": document["body_text"],
+        }
+        current_shard.append(doc_record)
+        if len(current_shard) == SEARCH_DOC_SHARD_SIZE:
+            doc_shards.append(current_shard)
+            current_shard = []
+
+        if document["sort_key"]:
+            dated_documents.append([document["sort_key"], doc_id])
+
+        field_texts = {
+            "body": document["body_text"],
+            "topic": document["topic_title"],
+            "forum": document["forum_title"],
+            "author": document["author"],
+        }
+        for field, field_text in field_texts.items():
+            for token in tokenize_search_text(field_text):
+                bucket = field_postings[field][search_term_bucket(token)]
+                bucket.setdefault(token, []).append(doc_id)
+                field_lexicons[field].add(token)
+
+    if current_shard or not doc_shards:
+        doc_shards.append(current_shard)
+
+    for shard_number, shard_docs in enumerate(doc_shards):
+        write_search_bundle_payload(search_root, f"docs-{shard_number:03d}.json", shard_docs)
+
+    for field in SEARCH_FIELD_NAMES:
+        write_search_bundle_payload(search_root, f"lexicon-{field}.json", sorted(field_lexicons[field]))
+        for bucket_number in range(SEARCH_TERM_BUCKETS):
+            payload = field_postings[field].get(bucket_number, {})
+            payload = {token: doc_ids for token, doc_ids in sorted(payload.items())}
+            write_search_bundle_payload(search_root, f"terms-{field}-{bucket_number:02d}.json", payload)
+
+    dated_documents.sort(key=lambda item: item[0])
+    write_search_bundle_payload(search_root, SEARCH_DATE_INDEX_FILENAME, dated_documents)
+
+    manifest = {
+        "enabled": True,
+        "schema_version": SEARCH_SCHEMA_VERSION,
+        "site_title": site_title,
+        "documents": len(documents),
+        "fields": list(SEARCH_FIELD_NAMES),
+        "default_field": SEARCH_DEFAULT_FIELD,
+        "term_buckets": SEARCH_TERM_BUCKETS,
+        "doc_shard_size": SEARCH_DOC_SHARD_SIZE,
+        "doc_shards": len(doc_shards),
+        "date_index": SEARCH_DATE_INDEX_FILENAME,
+        "supports": {
+            "boolean": True,
+            "phrases": True,
+            "prefix_wildcard": True,
+            "field_search": True,
+            "date_filters": True,
+        },
+        "output_dir": "search",
+    }
+    write_search_bundle_payload(search_root, "manifest.json", manifest)
+    write_text(search_root / "index.html", render_search_page(site_title))
+    write_text(search_root / "search.css", render_search_css())
+    write_text(search_root / "search.js", render_search_js())
+    write_text(search_root / "search-worker.js", render_search_worker_js())
+
+    return {
+        "enabled": True,
+        "schema_version": SEARCH_SCHEMA_VERSION,
+        "documents": len(documents),
+        "fields": list(SEARCH_FIELD_NAMES),
+        "default_field": SEARCH_DEFAULT_FIELD,
+        "term_buckets": SEARCH_TERM_BUCKETS,
+        "doc_shards": len(doc_shards),
+        "date_index": SEARCH_DATE_INDEX_FILENAME,
+        "output_dir": path_to_posix(search_root),
+    }
+
+
+
+
+def normalize_search_text(value: str) -> str:
+    normalized = value.casefold().replace("ё", "е")
+    normalized = re.sub(r"[^0-9a-zа-я]+", " ", normalized)
+    return re.sub(r"\s+", " ", normalized).strip()
+
+
+
+def tokenize_search_text(value: str) -> list[str]:
+    tokens = [token for token in normalize_search_text(value).split(" ") if len(token) >= 2]
+    return list(dict.fromkeys(tokens))
+
+
+
+def primary_post_sort_key(author_line: str) -> str:
+    match = re.search(r"(\d{1,2})\s+([А-Яа-яЁё]+)\s+(\d{4})\s*-\s*(\d{1,2}):(\d{2})", author_line)
+    if not match:
+        return ""
+
+    day, month_token, year, hour, minute = match.groups()
+    month_key = month_token.casefold().replace("ё", "е")
+    month_map = {
+        "янв": "01",
+        "фев": "02",
+        "мар": "03",
+        "апр": "04",
+        "май": "05",
+        "мая": "05",
+        "июн": "06",
+        "июл": "07",
+        "авг": "08",
+        "сен": "09",
+        "сент": "09",
+        "окт": "10",
+        "ноя": "11",
+        "дек": "12",
+    }
+    month = next((value for key, value in month_map.items() if month_key.startswith(key)), "")
+    if not month:
+        return ""
+    return f"{year}-{month}-{int(day):02d} {int(hour):02d}:{minute}:00"
+
+
+
+def extract_primary_posted_at(author_line: str) -> str:
+    match = re.search(r"\sв\s(.+)$", author_line)
+    if match:
+        return collapse_inline_whitespace(match.group(1))
+    return author_line
+
+def rebuild_search_from_existing_docs(out_root: Path, report_path: Path, args: argparse.Namespace) -> dict[str, object]:
+    primary_archive_root = out_root / args.primary_prefix / args.forum_dir
+    if not primary_archive_root.is_dir():
+        raise SystemExit(f"Primary archive root not found: {primary_archive_root}")
+
+    primary_search_index = build_search_bundle(primary_archive_root, collect_primary_search_documents(primary_archive_root))
+    secondary_search_index = None
+
+    secondary_archive_root = out_root / args.secondary_prefix / "7dneyleta.ru"
+    if not args.disable_secondary and secondary_archive_root.is_dir():
+        secondary_search_index = build_search_bundle(secondary_archive_root, collect_secondary_search_documents(secondary_archive_root))
+
+    report: dict[str, object] = {}
+    if report_path.is_file():
+        try:
+            report = json.loads(report_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            report = {}
+
+    report["search_index"] = primary_search_index
+    report["search_bundle_version"] = SEARCH_SCHEMA_VERSION
+    if secondary_search_index is not None:
+        secondary_report = report.get("secondary_archive")
+        if not isinstance(secondary_report, dict):
+            secondary_report = {}
+        secondary_report["search_index"] = secondary_search_index
+        report["secondary_archive"] = secondary_report
+
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    write_json(report_path, report, pretty=True)
+
+    return {
+        "partial_build": "search",
+        "search_bundle_version": SEARCH_SCHEMA_VERSION,
+        "report_updated": True,
+        "primary_search": primary_search_index,
+        "secondary_search": secondary_search_index,
+    }
+
+
+
+def main() -> None:
+    args = parse_args()
+    out_root = Path(args.out).resolve()
+
+    if args.only == "root-landing":
+        include_secondary = should_render_multi_archive_landing_page(
+            out_root,
+            args.secondary_src,
+            args.secondary_prefix,
+            args.disable_secondary,
+        )
+        out_root.mkdir(parents=True, exist_ok=True)
+        write_root_outputs(
+            out_root,
+            args.primary_prefix,
+            args.forum_dir,
+            args.secondary_prefix,
+            include_secondary=include_secondary,
+        )
+        print(
+            json.dumps(
+                {
+                    "partial_build": "root-landing",
+                    "output_root": path_to_posix(out_root),
+                    "landing_variant": "multi-archive" if include_secondary else "single-archive",
+                    "written_files": [
+                        path_to_posix(out_root / "index.html"),
+                        path_to_posix(out_root / ".nojekyll"),
+                    ],
+                    "report_updated": False,
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return
+
+    if args.only == "search":
+        summary = rebuild_search_from_existing_docs(out_root, Path(args.report).resolve(), args)
+        print(json.dumps(summary, ensure_ascii=False, indent=2))
+        return
+
+    options = BuildOptions.from_args(args)
+    src_root = Path(args.src).resolve()
+    out_root = Path(args.out).resolve()
+    report_path = Path(args.report).resolve()
+    primary_out_root = out_root / args.primary_prefix
+    secondary_src_root = Path(args.secondary_src).resolve()
+
+    if path_exists(out_root) and not options.incremental:
+        shutil.rmtree(out_root)
+    out_root.mkdir(parents=True, exist_ok=True)
+
+    report = build_archive(src_root, primary_out_root, args.forum_dir, report_path, options)
+    secondary_report = None
+
+    if not args.disable_secondary and secondary_src_root.is_dir():
+        secondary_out_root = out_root / args.secondary_prefix
+        secondary_report = build_secondary_archive(secondary_src_root, secondary_out_root, options)
+        report["secondary_archive"] = secondary_report
+
+    write_json(report_path, report, pretty=True)
+    write_root_outputs(
+        out_root,
+        args.primary_prefix,
+        args.forum_dir,
+        args.secondary_prefix,
+        include_secondary=secondary_report is not None,
+    )
+
+    print(json.dumps(report["summary"], ensure_ascii=False, indent=2))
+    if secondary_report is not None:
+        print(json.dumps({"secondary_archive": secondary_report["summary"]}, ensure_ascii=False, indent=2))
+
 if __name__ == "__main__":
     main()
+
+
+

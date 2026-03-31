@@ -1,79 +1,47 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Поиск — 7 дней лета</title>
-  <link rel="stylesheet" href="../../forumstatic.ru/style/Mybb_Patriot/Mybb_Patriot.css" type="text/css">
-  <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="../../forumstatic.ru/style/style_fix.css" /><![endif]-->
-  <!--[if IE 7]><link rel="stylesheet" type="text/css" href="../../forumstatic.ru/style/style_fix7.css" /><![endif]-->
-  <link rel="stylesheet" href="../../forumstatic.ru/style/extra.41.css" type="text/css">
-  <link rel="stylesheet" href="../../forumstatic.ru/style/mobile.5.css" type="text/css">
+  <title>Поиск по архиву — 7 дней лета</title>
   <link rel="stylesheet" href="../archive.css" type="text/css">
   <link rel="stylesheet" href="search.css" type="text/css">
   <script defer src="search.js"></script>
 </head>
 <body class="archive-readonly archive-search-page">
-  <div id="pun_wrap">
-    <div class="ru isguest gid3" id="pun">
-      <div class="punbb archive-search-view" id="pun-archivesearch">
-        <div id="html-header">
-          <img src="../../forumfiles.ru/files/0016/da/f1/41051.jpg" alt="7 дней лета">
-        </div>
-        <div class="section" id="pun-title">
-          <table cellspacing="0" id="title-logo-table">
-            <tbody id="title-logo-tbody">
-              <tr id="title-logo-tr">
-                <td class="title-logo-tdl" id="title-logo-tdl">
-                  <h1 class="title-logo"><span>7 дней лета</span></h1>
-                </td>
-                <td class="title-logo-tdr" id="title-logo-tdr"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="section" id="pun-navlinks">
-          <h2><span>Меню навигации</span></h2>
-          <ul class="container">
-            <li id="navindex"><a href="../index.html"><span>Форум</span></a></li>
-            <li id="navuserlist"><a href="../userlist.php.html" rel="nofollow"><span>Участники</span></a></li>
-            <li id="navrules"><a href="../misc.php@action=rules.html" rel="nofollow"><span>Правила</span></a></li>
-            <li class="isactive" id="navsearch-archive"><a href="index.html"><span>Поиск</span></a></li>
-          </ul>
-        </div>
-        <div class="section" id="pun-crumbs1">
-          <p class="container crumbs"><strong>Вы здесь</strong> » <a href="../index.html">7 дней лета</a> » <span>Поиск</span></p>
-        </div>
-        <div class="main" id="pun-main">
-          <h1><span>Поиск</span></h1>
-          <div class="category archive-search-intro">
-            <h2><span>Поиск по архиву</span></h2>
-            <div class="container">
-              <p class="archive-search-subtitle">Поиск по сообщениям, названиям тем и именам авторов в архиве нового форума.</p>
-              <form class="archive-search-form" id="archive-search-form">
-                <label class="archive-search-label" for="archive-search-query">Запрос</label>
-                <div class="archive-search-row">
-                  <input id="archive-search-query" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="Введите слово или несколько слов">
-                  <button type="submit">Искать</button>
-                </div>
-                <p class="archive-search-hint">Морфология не используется; “е” и “ё” считаются одинаковыми. Для точных результатов лучше вводить 2-3 ключевых слова.</p>
-              </form>
-            </div>
-          </div>
-          <div class="category archive-search-output">
-            <h2><span>Результаты</span></h2>
-            <div class="container">
-              <section class="archive-search-status" id="archive-search-status" aria-live="polite"></section>
-              <ol class="archive-search-results" id="archive-search-results"></ol>
-              <p class="archive-search-more-wrap archive-hidden" id="archive-search-more-wrap">
-                <button id="archive-search-more" type="button">Показать ещё</button>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+  <main class="archive-search-shell">
+    <div class="archive-search-header">
+      <p class="archive-search-breadcrumb"><a href="../index.html">Вернуться к архиву</a></p>
+      <h1>Поиск по архиву</h1>
+      <p class="archive-search-subtitle">7 дней лета</p>
     </div>
-  </div>
+    <form class="archive-search-form" id="archive-search-form">
+      <label class="archive-search-label" for="archive-search-query">Запрос</label>
+      <div class="archive-search-row">
+        <input id="archive-search-query" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="Введите слово или несколько слов">
+        <button type="submit">Искать</button>
+      </div>
+      <p class="archive-search-hint">По умолчанию поиск идёт по тексту сообщений. Морфология не используется; “е” и “ё” считаются одинаковыми.</p>
+      <details class="archive-search-help">
+        <summary>Синтаксис запросов</summary>
+        <ul class="archive-search-help-list">
+          <li><code>мику алиса</code> — оба слова в тексте сообщения</li>
+          <li><code>мику OR алиса</code> — любое из слов</li>
+          <li><code>мику -спойлер</code> — исключить слово</li>
+          <li><code>"семь дней лета"</code> — точная фраза</li>
+          <li><code>огромн*</code> — префиксный поиск</li>
+          <li><code>author:salotor</code>, <code>topic:"QTE"</code>, <code>forum:Флудилка</code>, <code>body:"точная фраза"</code></li>
+          <li><code>after:2018-01-01</code>, <code>before:2019-12-31</code> — фильтры по дате</li>
+          <li><code>author:(salotor OR dancerh) after:2017-01-01</code> — комбинированный запрос</li>
+        </ul>
+      </details>
+    </form>
+    <section class="archive-search-status" id="archive-search-status" aria-live="polite"></section>
+    <ol class="archive-search-results" id="archive-search-results"></ol>
+    <p class="archive-search-more-wrap archive-hidden" id="archive-search-more-wrap">
+      <button id="archive-search-more" type="button">Показать ещё</button>
+    </p>
+  </main>
 </body>
 </html>

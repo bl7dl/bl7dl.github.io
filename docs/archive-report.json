@@ -16,9 +16,18 @@
   },
   "search_index": {
     "enabled": true,
+    "schema_version": 2,
     "documents": 25325,
+    "fields": [
+      "body",
+      "topic",
+      "forum",
+      "author"
+    ],
+    "default_field": "body",
     "term_buckets": 64,
     "doc_shards": 26,
+    "date_index": "dates.json",
     "output_dir": "G:/Программы/7dl-archive/docs/bl7dl-2x2forum-ru/bl7dl.2x2forum.ru/search"
   },
   "summary": {
@@ -1365,9 +1374,18 @@
     },
     "search_index": {
       "enabled": true,
+      "schema_version": 2,
       "documents": 11717,
+      "fields": [
+        "body",
+        "topic",
+        "forum",
+        "author"
+      ],
+      "default_field": "body",
       "term_buckets": 64,
       "doc_shards": 12,
+      "date_index": "dates.json",
       "output_dir": "G:/Программы/7dl-archive/docs/7dneyleta-ru/7dneyleta.ru/search"
     },
     "summary": {
@@ -2696,5 +2714,6 @@
       "7daysofsummer.ru/tracklist"
     ],
     "forbidden_pattern_scan": null
-  }
+  },
+  "search_bundle_version": 2
 }

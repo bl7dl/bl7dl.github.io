@@ -1,0 +1,181 @@
+﻿body.archive-search-page {
+  background: #f4f6f9;
+}
+
+.archive-search-shell {
+  box-sizing: border-box;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.archive-search-header {
+  margin-bottom: 20px;
+}
+
+.archive-search-breadcrumb {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+}
+
+.archive-search-header h1 {
+  margin: 0;
+}
+
+.archive-search-subtitle {
+  margin: 8px 0 0;
+  color: #536171;
+}
+
+.archive-search-form {
+  margin-bottom: 20px;
+  padding: 18px 20px;
+  background: #ffffff;
+  border: 1px solid #d9e1ea;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(18, 34, 56, 0.08);
+}
+
+.archive-search-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.archive-search-row {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.archive-search-row input {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #bfc9d6;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.archive-search-row input:focus {
+  outline: 2px solid #4f7dd9;
+  outline-offset: 1px;
+  border-color: #4f7dd9;
+}
+
+.archive-search-row button,
+.archive-search-more-wrap button {
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #2f5fb3;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.archive-search-row button:hover,
+.archive-search-more-wrap button:hover {
+  background: #274f95;
+}
+
+.archive-search-row button:disabled,
+.archive-search-more-wrap button:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+.archive-search-hint {
+  margin: 12px 0 0;
+  color: #536171;
+}
+
+.archive-search-help {
+  margin-top: 12px;
+}
+
+.archive-search-help-list {
+  margin: 10px 0 0;
+  padding-left: 20px;
+}
+
+.archive-search-help-list li + li {
+  margin-top: 6px;
+}
+
+.archive-search-status {
+  min-height: 24px;
+  margin-bottom: 18px;
+  color: #243244;
+}
+
+.archive-search-status[data-state="error"] {
+  color: #9b1d1d;
+}
+
+.archive-search-status[data-state="busy"] {
+  color: #2f5fb3;
+}
+
+.archive-search-results {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.archive-search-result {
+  margin: 0 0 16px;
+  padding: 18px 20px;
+  background: #ffffff;
+  border: 1px solid #d9e1ea;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(18, 34, 56, 0.06);
+}
+
+.archive-search-result-title {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.archive-search-result-title a {
+  text-decoration: none;
+}
+
+.archive-search-result-title a:hover {
+  text-decoration: underline;
+}
+
+.archive-search-result-meta {
+  margin: 0 0 10px;
+  color: #536171;
+  font-size: 0.95rem;
+}
+
+.archive-search-result-excerpt {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.archive-search-more-wrap {
+  margin: 20px 0 0;
+}
+
+.archive-hidden {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .archive-search-shell {
+    padding: 20px 14px 36px;
+  }
+
+  .archive-search-row {
+    flex-direction: column;
+  }
+
+  .archive-search-row button,
+  .archive-search-more-wrap button {
+    width: 100%;
+  }
+}
