@@ -52,7 +52,8 @@
       return;
     }
 
-    const worker = new Worker("search-worker.js");
+    const searchBaseUrl = new URL("./", window.location.href).toString();
+    const worker = new Worker(new URL("search-worker.js", searchBaseUrl).toString());
     let renderedCount = 0;
     let totalCount = 0;
     let ready = false;
@@ -175,6 +176,6 @@
     });
 
     setStatus("Инициализирую поиск…", "busy");
-    worker.postMessage({ type: "init" });
+    worker.postMessage({ type: "init", base_url: searchBaseUrl });
   });
 })();

@@ -21,6 +21,7 @@ const state = {
   dateMap: null,
   allDocIds: null,
   lastMatches: [],
+  baseUrl: new URL("./", self.location.href).toString(),
 };
 
 function collapseWhitespace(value) {
@@ -51,12 +52,16 @@ function hashToken(token, bucketCount) {
   return hashValue % bucketCount;
 }
 
+function resolveSearchBaseUrl() {
+  return state.baseUrl || new URL("./", self.location.href).toString();
+}
+
 function jsonUrl(filename) {
-  return new URL(filename, self.location.href).toString();
+  return new URL(filename, resolveSearchBaseUrl()).toString();
 }
 
 async function fetchJson(filename) {
-  const response = await fetch(jsonUrl(filename));
+  const response = await fetch(jsonUrl(filename), { cache: "no-store" });
   if (!response.ok) {
     throw new Error(`Не удалось загрузить ${filename}: ${response.status}`);
   }
@@ -718,6 +723,9 @@ self.addEventListener("message", async (event) => {
   const payload = event.data || {};
   try {
     if (payload.type === "init") {
+      if (typeof payload.base_url === "string" && payload.base_url) {
+        state.baseUrl = new URL("./", payload.base_url).toString();
+      }
       const manifest = await ensureManifest();
       self.postMessage({ type: "ready", site_title: manifest.site_title || "" });
       return;
