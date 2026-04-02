@@ -46,6 +46,12 @@ function tokenizeSearchText(value) {
     .filter((token) => token.length >= 2);
 }
 
+function normalizeResultUrl(value) {
+  return String(value || "")
+    .replace(/(viewtopic\.php@id=\d+)&p=1(\.html(?:#.*)?)$/i, "$1$2")
+    .replace(/(t\d+)p1(-topic\.html(?:#.*)?)$/i, "$1$2");
+}
+
 function hashToken(token, bucketCount) {
   let hashValue = 2166136261;
   for (const char of token) {
@@ -685,6 +691,28 @@ function compareMatches(left, right) {
   return right.docId - left.docId;
 }
 
+async function dedupeMatches(matches) {
+  const documents = await getDocs(matches.map((match) => match.docId));
+  const byId = new Map(documents.map((documentRecord) => [documentRecord.doc_id, documentRecord]));
+  const deduped = [];
+  const seenUrls = new Set();
+
+  for (const match of matches) {
+    const documentRecord = byId.get(match.docId);
+    if (!documentRecord) {
+      continue;
+    }
+    const normalizedUrl = normalizeResultUrl(documentRecord.url);
+    if (seenUrls.has(normalizedUrl)) {
+      continue;
+    }
+    seenUrls.add(normalizedUrl);
+    deduped.push(match);
+  }
+
+  return deduped;
+}
+
 async function buildItems(offset, limit, needles) {
   const slice = state.lastMatches.slice(offset, offset + limit);
   const docIds = slice.map((match) => match.docId);
@@ -697,7 +725,7 @@ async function buildItems(offset, limit, needles) {
         return null;
       }
       return {
-        url: documentRecord.url,
+        url: normalizeResultUrl(documentRecord.url),
         topic_title: documentRecord.topic_title,
         forum_title: documentRecord.forum_title,
         author: documentRecord.author,
@@ -721,9 +749,9 @@ async function runSearch(query, limit) {
   if (matches.length > MAX_RESULTS) {
     matches.length = MAX_RESULTS;
   }
-  state.lastMatches = matches;
+  state.lastMatches = await dedupeMatches(matches);
   return {
-    total: matches.length,
+    total: state.lastMatches.length,
     items: await buildItems(0, limit, needles),
     needles,
   };
