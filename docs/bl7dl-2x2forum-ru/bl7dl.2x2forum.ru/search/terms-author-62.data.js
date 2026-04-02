@@ -1,0 +1,2 @@
+self.__archiveSearchData = self.__archiveSearchData || Object.create(null);
+self.__archiveSearchData["terms-author-62.json"] = {"mr":[2920,2931,2936,2937,2940,2945],"navigator":[2107,3046,3520,14033,14035,16299,16319,19784,19786,19789,19792]};

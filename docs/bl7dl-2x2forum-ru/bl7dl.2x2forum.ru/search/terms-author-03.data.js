@@ -1,0 +1,2 @@
+self.__archiveSearchData = self.__archiveSearchData || Object.create(null);
+self.__archiveSearchData["terms-author-03.json"] = {"blinkfrog":[11172,11179,11210,11211,11212],"maig":[336,339,341,346,348,351,363,367,395,16264,16268,16270,16272,16274,16276,16279,16281,16284,16286,16306,20887]};

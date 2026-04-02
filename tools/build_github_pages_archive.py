@@ -2502,7 +2502,7 @@ def truncate_search_excerpt(value: str, limit: int = SEARCH_EXCERPT_LENGTH) -> s
         shortened = shortened[:split_at]
     else:
         shortened = shortened[:limit]
-    return shortened.rstrip(" ,.;:-") + "вЂ¦"
+    return shortened.rstrip(" ,.;:-") + "\u2026"
 
 
 def search_term_bucket(token: str, bucket_count: int = SEARCH_TERM_BUCKETS) -> int:
@@ -2532,6 +2532,20 @@ def render_search_data_js(filename: str, data: object) -> str:
 
 def write_search_bundle_payload(search_root: Path, filename: str, data: object) -> None:
     write_json(search_root / filename, data)
+    if filename.endswith(".json"):
+        payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+        wrapper = (
+            "self.__archiveSearchData = self.__archiveSearchData || Object.create(null);\n"
+            f"self.__archiveSearchData[{json.dumps(filename, ensure_ascii=False)}] = {payload};\n"
+        )
+        write_text(search_root / f"{filename[:-5]}.data.js", wrapper)
+    if filename.endswith(".json"):
+        payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+        wrapper = (
+            "self.__archiveSearchData = self.__archiveSearchData || Object.create(null);\n"
+            f"self.__archiveSearchData[{json.dumps(filename, ensure_ascii=False)}] = {payload};\n"
+        )
+        write_text(search_root / f"{filename[:-5]}.data.js", wrapper)
     if filename.endswith(".json"):
         write_text(search_root / f"{filename[:-5]}.data.js", render_search_data_js(filename, data))
 
@@ -2749,6 +2763,7 @@ def collect_secondary_search_documents(archive_root: Path) -> list[dict[str, str
 
 def build_search_bundle(archive_root: Path, documents: list[dict[str, str]]) -> dict[str, object]:
     site_title = extract_search_site_title(archive_root)
+    search_theme = detect_search_theme(archive_root)
     search_root = archive_root / "search"
     if search_root.exists():
         shutil.rmtree(search_root)
@@ -3446,18 +3461,37 @@ def load_search_v2_asset(filename: str) -> str:
 
 
 
-def render_search_page(site_title: str) -> str:
-    return load_search_v2_asset("search_v2_page.html").replace("__SITE_TITLE__", escape(site_title))
+def detect_search_theme(archive_root: Path) -> str:
+    index_path = archive_root / "index.html"
+    if not index_path.is_file():
+        return "primary"
+
+    soup = BeautifulSoup(read_html_document(index_path), "lxml")
+    if soup.select_one("#pun") or soup.select_one("#pun-title"):
+        return "secondary"
+    return "primary"
 
 
 
-def render_search_css() -> str:
-    return load_search_v2_asset("search_v2.css")
+def render_search_page(site_title: str, search_theme: str) -> str:
+    asset_name = "search_v2_secondary_page.html" if search_theme == "secondary" else "search_v2_page.html"
+    return load_search_v2_asset(asset_name).replace("__SITE_TITLE__", escape(site_title))
+
+
+
+def render_search_css(search_theme: str) -> str:
+    asset_name = "search_v2_secondary.css" if search_theme == "secondary" else "search_v2.css"
+    return load_search_v2_asset(asset_name)
 
 
 
 def render_search_js() -> str:
     return load_search_v2_asset("search_v2.js")
+
+
+
+def render_search_file_js() -> str:
+    return load_search_v2_asset("search_v2_file.js")
 
 
 
@@ -3468,6 +3502,13 @@ def render_search_worker_js() -> str:
 
 def write_search_bundle_payload(search_root: Path, filename: str, data: object) -> None:
     write_json(search_root / filename, data)
+    if filename.endswith(".json"):
+        payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+        wrapper = (
+            "self.__archiveSearchData = self.__archiveSearchData || Object.create(null);\n"
+            f"self.__archiveSearchData[{json.dumps(filename, ensure_ascii=False)}] = {payload};\n"
+        )
+        write_text(search_root / f"{filename[:-5]}.data.js", wrapper)
 
 
 
@@ -3616,6 +3657,7 @@ def collect_secondary_search_documents(archive_root: Path) -> list[dict[str, str
 
 def build_search_bundle(archive_root: Path, documents: list[dict[str, str]]) -> dict[str, object]:
     site_title = extract_search_site_title(archive_root)
+    search_theme = detect_search_theme(archive_root)
     search_root = archive_root / "search"
     if search_root.exists():
         shutil.rmtree(search_root)
@@ -3697,9 +3739,10 @@ def build_search_bundle(archive_root: Path, documents: list[dict[str, str]]) -> 
         "output_dir": "search",
     }
     write_search_bundle_payload(search_root, "manifest.json", manifest)
-    write_text(search_root / "index.html", render_search_page(site_title))
-    write_text(search_root / "search.css", render_search_css())
+    write_text(search_root / "index.html", render_search_page(site_title, search_theme))
+    write_text(search_root / "search.css", render_search_css(search_theme))
     write_text(search_root / "search.js", render_search_js())
+    write_text(search_root / "search-file.js", render_search_file_js())
     write_text(search_root / "search-worker.js", render_search_worker_js())
 
     return {

@@ -182,7 +182,7 @@ function lexQuery(query) {
   let index = 0;
   while (index < query.length) {
     const char = query[index];
-    if (/\s/.test(char)) {
+    if (/\s/.test(char) || char === ",") {
       index += 1;
       continue;
     }
@@ -227,7 +227,7 @@ function lexQuery(query) {
       continue;
     }
     let cursor = index;
-    while (cursor < query.length && !/\s/.test(query[cursor]) && !['(', ')', ':', '"'].includes(query[cursor])) {
+    while (cursor < query.length && !/\s/.test(query[cursor]) && query[cursor] !== "," && !['(', ')', ':', '"'].includes(query[cursor])) {
       cursor += 1;
     }
     const value = query.slice(index, cursor);

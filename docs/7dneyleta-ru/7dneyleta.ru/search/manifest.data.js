@@ -1,0 +1,2 @@
+self.__archiveSearchData = self.__archiveSearchData || Object.create(null);
+self.__archiveSearchData["manifest.json"] = {"enabled":true,"schema_version":2,"site_title":"7 дней лета","documents":11717,"fields":["body","topic","forum","author"],"default_field":"body","term_buckets":64,"doc_shard_size":1000,"doc_shards":12,"date_index":"dates.json","supports":{"boolean":true,"phrases":true,"prefix_wildcard":true,"field_search":true,"date_filters":true},"output_dir":"search"};

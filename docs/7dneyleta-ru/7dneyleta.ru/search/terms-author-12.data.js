@@ -1,0 +1,2 @@
+self.__archiveSearchData = self.__archiveSearchData || Object.create(null);
+self.__archiveSearchData["terms-author-12.json"] = {"dmitsom":[6657,8520,8524,8525,8527,8528,8529,8532],"gary2che":[2696],"gralex":[1847],"horrich":[869,2156,2158,2162,2274,2277,2279,2281,2374,2381,2492,2494,2498,2814,2822,4704,7180,7195,7197,8495,8497,8502,8668,10124,10126],"kilan":[2359,2362,11616],"mideripomidorchic":[1852],"mrz":[2713,8333],"record":[10912]};

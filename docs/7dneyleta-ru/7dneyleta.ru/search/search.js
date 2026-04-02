@@ -1,4 +1,4 @@
-﻿(() => {
+(() => {
   const RESULTS_PER_PAGE = 50;
 
   function createResultItem(documentRecord) {
@@ -13,7 +13,7 @@
     title.appendChild(link);
 
     const meta = document.createElement("p");
-    meta.className = "archive-search-result-meta";
+    meta.className = "archive-search-meta archive-search-result-meta";
     const metaParts = [];
     if (documentRecord.author) {
       metaParts.push(`Автор: ${documentRecord.author}`);
@@ -27,7 +27,7 @@
     meta.textContent = metaParts.join(" | ");
 
     const excerpt = document.createElement("p");
-    excerpt.className = "archive-search-result-excerpt";
+    excerpt.className = "archive-search-snippet archive-search-result-excerpt";
     excerpt.textContent = documentRecord.excerpt || "";
 
     item.appendChild(title);
@@ -53,7 +53,9 @@
     }
 
     const searchBaseUrl = new URL("./", window.location.href).toString();
-    const worker = new Worker(new URL("search-worker.js", searchBaseUrl).toString());
+    const isFileProtocol = window.location.protocol === "file:";
+    let worker = null;
+    let fileRuntime = null;
     let renderedCount = 0;
     let totalCount = 0;
     let ready = false;
@@ -68,6 +70,16 @@
       results.innerHTML = "";
       renderedCount = 0;
       totalCount = 0;
+      moreWrap.classList.add("archive-hidden");
+      moreButton.disabled = false;
+    }
+
+    function showEmptyResult(message) {
+      results.innerHTML = "";
+      const item = document.createElement("li");
+      item.className = "archive-search-empty";
+      item.textContent = message;
+      results.appendChild(item);
       moreWrap.classList.add("archive-hidden");
       moreButton.disabled = false;
     }
@@ -106,16 +118,103 @@
       setStatus(describeProgress(tookMs));
     }
 
-    function runSearch() {
+    function handleReady() {
+      ready = true;
+      const initialQuery = new URLSearchParams(window.location.search).get("q") || "";
+      if (initialQuery) {
+        queryInput.value = initialQuery;
+        if (!initialQuerySubmitted) {
+          initialQuerySubmitted = true;
+          void runSearch();
+        }
+      } else {
+        setStatus("Введите поисковый запрос.");
+      }
+    }
+
+    function handleResults(payload) {
+      totalCount = payload.total || 0;
+      if (!totalCount) {
+        resetResults();
+        setStatus(payload.message || "Ничего не найдено.");
+        showEmptyResult("Подходящих сообщений не найдено.");
+        return;
+      }
+      renderBatch(Array.isArray(payload.items) ? payload.items : [], payload.mode, payload.took_ms);
+    }
+
+    function handleError(message, isWorkerFailure = false) {
+      moreWrap.classList.add("archive-hidden");
+      moreButton.disabled = false;
+      if (!results.children.length) {
+        showEmptyResult(message);
+      }
+      setStatus(message, "error");
+      if (isWorkerFailure) {
+        ready = false;
+      }
+    }
+
+    function handlePayload(payload) {
+      if (payload.type === "ready") {
+        handleReady();
+        return;
+      }
+      if (payload.type === "results") {
+        handleResults(payload);
+        return;
+      }
+      if (payload.type === "error") {
+        handleError(payload.message || "Не удалось выполнить поиск.");
+      }
+    }
+
+    function loadScript(url) {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = url;
+        script.onload = () => resolve();
+        script.onerror = () => reject(new Error(`Не удалось загрузить ${url}.`));
+        document.head.appendChild(script);
+      });
+    }
+
+    async function ensureFileRuntime() {
+      if (fileRuntime) {
+        return fileRuntime;
+      }
+      if (!self.ArchiveSearchFile) {
+        await loadScript(new URL("search-file.js", searchBaseUrl).toString());
+      }
+      if (!self.ArchiveSearchFile) {
+        throw new Error("Не удалось инициализировать локальный поиск.");
+      }
+      fileRuntime = self.ArchiveSearchFile;
+      return fileRuntime;
+    }
+
+    async function runSearch() {
       const query = queryInput.value.trim();
       syncQueryToLocation(query);
       resetResults();
       if (!query) {
         setStatus("Введите поисковый запрос.");
+        showEmptyResult("Поиск по пустому запросу не выполняется.");
         return;
       }
       setStatus("Ищу…", "busy");
-      worker.postMessage({ type: "search", query, limit: RESULTS_PER_PAGE });
+      if (isFileProtocol) {
+        try {
+          const runtime = await ensureFileRuntime();
+          handlePayload(await runtime.search(query, RESULTS_PER_PAGE));
+        } catch (error) {
+          handleError(error instanceof Error ? error.message : "Не удалось выполнить поиск.");
+        }
+        return;
+      }
+      if (worker) {
+        worker.postMessage({ type: "search", query, limit: RESULTS_PER_PAGE });
+      }
     }
 
     form.addEventListener("submit", (event) => {
@@ -124,58 +223,54 @@
         setStatus("Поиск ещё инициализируется…", "busy");
         return;
       }
-      runSearch();
+      void runSearch();
     });
 
-    moreButton.addEventListener("click", () => {
+    moreButton.addEventListener("click", async () => {
       if (renderedCount >= totalCount) {
         return;
       }
       moreButton.disabled = true;
       setStatus(`Загружаю результаты ${renderedCount + 1}-${Math.min(renderedCount + RESULTS_PER_PAGE, totalCount)}…`, "busy");
-      worker.postMessage({ type: "page", offset: renderedCount, limit: RESULTS_PER_PAGE });
-    });
-
-    worker.addEventListener("message", (event) => {
-      const payload = event.data || {};
-      if (payload.type === "ready") {
-        ready = true;
-        const initialQuery = new URLSearchParams(window.location.search).get("q") || "";
-        if (initialQuery) {
-          queryInput.value = initialQuery;
-          if (!initialQuerySubmitted) {
-            initialQuerySubmitted = true;
-            runSearch();
-          }
-        } else {
-          setStatus("Введите поисковый запрос.");
+      if (isFileProtocol) {
+        try {
+          const runtime = await ensureFileRuntime();
+          handlePayload(await runtime.page(renderedCount, RESULTS_PER_PAGE));
+        } catch (error) {
+          handleError(error instanceof Error ? error.message : "Не удалось выполнить поиск.");
         }
         return;
       }
-
-      if (payload.type === "results") {
-        totalCount = payload.total || 0;
-        if (!totalCount) {
-          resetResults();
-          setStatus(payload.message || "Ничего не найдено.");
-          return;
-        }
-        renderBatch(Array.isArray(payload.items) ? payload.items : [], payload.mode, payload.took_ms);
-        return;
-      }
-
-      if (payload.type === "error") {
-        moreWrap.classList.add("archive-hidden");
-        moreButton.disabled = false;
-        setStatus(payload.message || "Не удалось выполнить поиск.", "error");
+      if (worker) {
+        worker.postMessage({ type: "page", offset: renderedCount, limit: RESULTS_PER_PAGE });
       }
     });
 
-    worker.addEventListener("error", () => {
-      setStatus("Ошибка в search-worker.js.", "error");
-    });
+    async function initializeFileMode() {
+      try {
+        const runtime = await ensureFileRuntime();
+        handlePayload(await runtime.init(searchBaseUrl));
+      } catch (error) {
+        handleError(error instanceof Error ? error.message : "Не удалось инициализировать локальный поиск.");
+      }
+    }
+
+    function initializeWorkerMode() {
+      worker = new Worker(new URL("search-worker.js", searchBaseUrl).toString());
+      worker.addEventListener("message", (event) => {
+        handlePayload(event.data || {});
+      });
+      worker.addEventListener("error", () => {
+        handleError("Ошибка в search-worker.js.", true);
+      });
+      worker.postMessage({ type: "init", base_url: searchBaseUrl });
+    }
 
     setStatus("Инициализирую поиск…", "busy");
-    worker.postMessage({ type: "init", base_url: searchBaseUrl });
+    if (isFileProtocol) {
+      void initializeFileMode();
+    } else {
+      initializeWorkerMode();
+    }
   });
 })();
