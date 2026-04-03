@@ -1375,7 +1375,7 @@
     "search_index": {
       "enabled": true,
       "schema_version": 2,
-      "documents": 11717,
+      "documents": 14459,
       "fields": [
         "body",
         "topic",
@@ -1384,7 +1384,7 @@
       ],
       "default_field": "body",
       "term_buckets": 64,
-      "doc_shards": 12,
+      "doc_shards": 15,
       "date_index": "dates.json",
       "output_dir": "G:/Программы/7dl-site/docs/7dneyleta-ru/7dneyleta.ru/search"
     },

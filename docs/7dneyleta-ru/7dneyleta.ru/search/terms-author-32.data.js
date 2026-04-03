@@ -1,2 +1,2 @@
 self.__archiveSearchData = self.__archiveSearchData || Object.create(null);
-self.__archiveSearchData["terms-author-32.json"] = {"comraddisc":[4507,4539,7531],"cradevescent":[2249,2835],"fijn":[6609],"harp":[2254,2256],"ru":[7160,7163],"skif":[1826],"tomatnyanchous":[167,4053,4058,7610,7612],"никита":[5296],"сергей":[2429,6064],"сергей1995":[1345,1347,1349]};
+self.__archiveSearchData["terms-author-32.json"] = {"comraddisc":[5208,5240,8602],"cradevescent":[2769,3388],"fijn":[7520],"harp":[2774,2776],"ru":[8191,8194],"skif":[2054],"tomatnyanchous":[167,4736,4741,8681,8683],"никита":[6057],"сергей":[2949,6855],"сергей1995":[1483,1485,1487]};
