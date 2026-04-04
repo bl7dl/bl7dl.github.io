@@ -3576,6 +3576,14 @@ def extract_secondary_posted_at(post: Tag) -> tuple[str, str]:
 
 
 
+def parse_secondary_topic_page_name(name: str) -> tuple[int, int] | None:
+    match = re.match(r"^viewtopic\.php@id=(\d+)(?:&p=(\d+))?\.html$", name)
+    if match is None:
+        return None
+    return int(match.group(1)), int(match.group(2) or "1")
+
+
+
 def collect_primary_search_documents(archive_root: Path) -> list[dict[str, str]]:
     documents: list[dict[str, str]] = []
 
@@ -3618,10 +3626,19 @@ def collect_primary_search_documents(archive_root: Path) -> list[dict[str, str]]
 
 def collect_secondary_search_documents(archive_root: Path) -> list[dict[str, str]]:
     documents: list[dict[str, str]] = []
+    seen_post_keys: set[tuple[int, str]] = set()
+    pages: list[tuple[int, int, int, Path]] = []
 
-    for page in sorted(archive_root.iterdir(), key=lambda path: path.name):
-        if not page.is_file() or not SECONDARY_TOPIC_OUTPUT_PATTERN.match(page.name):
+    for page in archive_root.iterdir():
+        if not page.is_file():
             continue
+        page_key = parse_secondary_topic_page_name(page.name)
+        if page_key is None:
+            continue
+        topic_id, page_number = page_key
+        pages.append((topic_id, page_number, 0 if "&p=" not in page.name else 1, page))
+
+    for topic_id, _, _, page in sorted(pages, key=lambda item: (item[0], item[1], item[2], item[3].name)):
 
         soup = BeautifulSoup(read_html_document(page), "lxml")
         topic_title = extract_text(soup.select_one("#pun-main > h1 span")) or extract_text(soup.select_one("#pun-main > h1"))
@@ -3633,6 +3650,10 @@ def collect_secondary_search_documents(archive_root: Path) -> list[dict[str, str
             post_id = collapse_inline_whitespace(post.get("id") or "")
             if not post_id.startswith("p"):
                 continue
+            post_key = (topic_id, post_id)
+            if post_key in seen_post_keys:
+                continue
+            seen_post_keys.add(post_key)
 
             author = extract_text(post.select_one(".pa-author a")) or extract_text(post.select_one(".pa-author strong"))
             posted_at, sort_key = extract_secondary_posted_at(post)

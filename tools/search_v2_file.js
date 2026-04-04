@@ -52,6 +52,49 @@ function normalizeResultUrl(value) {
     .replace(/(t\d+)p1(-topic\.html(?:#.*)?)$/i, "$1$2");
 }
 
+function dedupeResultKey(value) {
+  const raw = String(value || "");
+  const secondaryMatch = raw.match(/^(.*?viewtopic\.php@id=\d+)(?:&p=\d+)?\.html(?:#(p\d+))?$/i);
+  if (secondaryMatch && secondaryMatch[2]) {
+    return `${secondaryMatch[1]}#${secondaryMatch[2]}`;
+  }
+  const primaryMatch = raw.match(/^(.*?t\d+)(?:[np]\d+)?-topic\.html(?:#(p\d+))?$/i);
+  if (primaryMatch && primaryMatch[2]) {
+    return `${primaryMatch[1]}#${primaryMatch[2]}`;
+  }
+  return normalizeResultUrl(raw);
+}
+
+function resultUrlPageRank(value) {
+  const raw = String(value || "");
+  const secondaryMatch = raw.match(/^.*?viewtopic\.php@id=\d+(?:&p=(\d+))?\.html(?:#.*)?$/i);
+  if (secondaryMatch) {
+    return Number(secondaryMatch[1] || 1);
+  }
+  const primaryMatch = raw.match(/^.*?t\d+(?:[np](\d+))?-topic\.html(?:#.*)?$/i);
+  if (primaryMatch) {
+    return Number(primaryMatch[1] || 1);
+  }
+  return Number.POSITIVE_INFINITY;
+}
+
+function isBetterResultUrl(candidate, current) {
+  const candidateRank = resultUrlPageRank(candidate);
+  const currentRank = resultUrlPageRank(current);
+  if (candidateRank !== currentRank) {
+    return candidateRank < currentRank;
+  }
+  if (String(candidate || "").length !== String(current || "").length) {
+    return String(candidate || "").length < String(current || "").length;
+  }
+  const normalizedCandidate = normalizeResultUrl(candidate);
+  const normalizedCurrent = normalizeResultUrl(current);
+  if (normalizedCandidate.length !== normalizedCurrent.length) {
+    return normalizedCandidate.length < normalizedCurrent.length;
+  }
+  return normalizedCandidate.localeCompare(normalizedCurrent) < 0;
+}
+
 function hashToken(token, bucketCount) {
   let hashValue = 2166136261;
   for (const char of token) {
@@ -695,22 +738,26 @@ async function dedupeMatches(matches) {
   const documents = await getDocs(matches.map((match) => match.docId));
   const byId = new Map(documents.map((documentRecord) => [documentRecord.doc_id, documentRecord]));
   const deduped = [];
-  const seenUrls = new Set();
+  const seenKeys = new Map();
 
   for (const match of matches) {
     const documentRecord = byId.get(match.docId);
     if (!documentRecord) {
       continue;
     }
-    const normalizedUrl = normalizeResultUrl(documentRecord.url);
-    if (seenUrls.has(normalizedUrl)) {
+    const resultKey = dedupeResultKey(documentRecord.url);
+    const existingIndex = seenKeys.get(resultKey);
+    if (existingIndex === undefined) {
+      seenKeys.set(resultKey, deduped.length);
+      deduped.push({ match, url: documentRecord.url });
       continue;
     }
-    seenUrls.add(normalizedUrl);
-    deduped.push(match);
+    if (isBetterResultUrl(documentRecord.url, deduped[existingIndex].url)) {
+      deduped[existingIndex] = { match, url: documentRecord.url };
+    }
   }
 
-  return deduped;
+  return deduped.map((entry) => entry.match);
 }
 
 async function buildItems(offset, limit, needles) {

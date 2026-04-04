@@ -1,2 +1,2 @@
 self.__archiveSearchData = self.__archiveSearchData || Object.create(null);
-self.__archiveSearchData["terms-topic-33.json"] = {"лучшую":[8243,8244,8245,8246,8247,8248,8249,8250,8251,8252,8253,8254,8255]};
+self.__archiveSearchData["terms-topic-33.json"] = {"лучшую":[7855,7856,7857,7858,7859,7860,7861,7862,7863,7864,7865,7866,7867]};
